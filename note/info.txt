@@ -1,0 +1,46 @@
+#Liste des choses à savoir
+Si le pc freeze a cause de btrfs-cleaner a 100%, alors executer la commmande suivante :
+sudo btrfs quota disable /
+
+
+Pour installer un avec zypper
+sudo zypper in --no-recommend <nom>
+
+# pour redemarrer un service reseau
+sudo rcnetwork restart enp3s0
+
+# pour redemarrer le service son
+pulseaudio -k
+
+#Decouvrir les volumes sur un serveur nfs
+showmount -e <ip>
+
+#monter un partage nfs manuellement
+sudo mount -t nfs <ip>:<repnfs> <replocal>
+
+#monter un partage auto en modifiant /etc/fstab
+<ip>:<repnfs> <replocal> nfs defaults 0 0
+
+#install windows deco sierrabreeze
+https://github.com/ishovkun/SierraBreeze
+
+zypper addrepo https://download.opensuse.org/repositories/home:trmdi/openSUSE_Tumbleweed/home:trmdi.repo
+zypper refresh
+zypper install sierra-breeze
+
+
+#configuration du terminal
+https://www.volted.net/un-prompt-zsh-au-poil18555.html --> Configuration de ZSH ?
+http://denisrosenkranz.com/installation-et-configuration-de-zsh/  Configuration de ZSH ?
+
+
+
+# Configuration de VIM
+https://www.volted.net/un-vimrc-remis-au-propre18752.html --> configuration de VIM ?
+https://github.com/VundleVim/Vundle.vim --> Suite configuration VIM (pluging)
+https://github.com/tomasr/molokai --> Suite configuration VIM (pluging)
+https://github.com/scrooloose/nerdtree --> Suite configuration VIM (pluging)
+
+
+https://github.com/georgewatson/dotfiles
+https://github.com/bhilburn/powerlevel9k
