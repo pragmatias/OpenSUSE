@@ -49,6 +49,7 @@ All the work is based on the following ressources :
 
 Todo :
  - [ ] Color of Konsole
+ - [ ] KSH by default for Konsole
  - [ ] Configuration of Firefox
 
 
