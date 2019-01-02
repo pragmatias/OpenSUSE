@@ -86,9 +86,9 @@ if [ ! -z "$(ls -A /home)" ]; then
         if [ $? -ne 0 ]; then ko ; fi
         chown $UTILISATEUR:users /home/$UTILISATEUR/.config/autostart
     fi
-    cp /usr/share/applications/org.kde.latte-dock.desktop ~/.config/autostart/org.kde.latte-dock.desktop
+    cp /usr/share/applications/org.kde.latte-dock.desktop /home/$UTILISATEUR/.config/autostart/org.kde.latte-dock.desktop
     if [ $? -ne 0 ]; then ko ; fi
-    chown $UTILISATEUR:users /home/$UTILISATEUR/.config/autostart-scripts/org.kde.latte-dock.desktop
+    chown $UTILISATEUR:users /home/$UTILISATEUR/.config/autostart/org.kde.latte-dock.desktop
 	if [ $? -ne 0 ]; then ko ; fi
   done
 fi

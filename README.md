@@ -10,10 +10,11 @@ All the work is based on the following ressources :
  
 Todo :
  - [ ] Keyboard Shortcuts for Window Quick Tile and Desktop Switch
+ - [ ] Add fonts [NerdFonts](https://nerdfonts.com)
  - [ ] Konsole Config (Color & more)
  - [ ] Firefox Config
  - [ ] Thunderbird Config
- 
+
 ## Requirement
  1. Install [OpenSUSE Tumbleweed](https://software.opensuse.org/distributions/tumbleweed) with the [KDE/Plasma Desktop](https://www.kde.org/plasma-desktop)
  2. Install [GIT](https://git-scm.com/) : `sudo zypper in --no-recommend git`
