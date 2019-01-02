@@ -81,6 +81,15 @@ if [ ! -z "$(ls -A /home)" ]; then
     if [ $? -ne 0 ]; then ko ; fi
     chown $UTILISATEUR:users /home/$UTILISATEUR/.config/latte/users.layout.latte
 	if [ $? -ne 0 ]; then ko ; fi
+	if [ ! -e /home/$UTILISATEUR/.config/autostart ]; then
+        mkdir /home/$UTILISATEUR/.config/autostart
+        if [ $? -ne 0 ]; then ko ; fi
+        chown $UTILISATEUR:users /home/$UTILISATEUR/.config/autostart
+    fi
+    cp /usr/share/applications/org.kde.latte-dock.desktop ~/.config/autostart/org.kde.latte-dock.desktop
+    if [ $? -ne 0 ]; then ko ; fi
+    chown $UTILISATEUR:users /home/$UTILISATEUR/.config/autostart-scripts/org.kde.latte-dock.desktop
+	if [ $? -ne 0 ]; then ko ; fi
   done
 fi
 ok

@@ -76,14 +76,18 @@ Todo :
  4. Update packages : `sudo zypper up`
  5. Search packages : `sudo zypper se package` or `sudo zypper se -is package`
 > Note: replace **package** by the package name
+
 ### btrfs issue
 If btrfs-cleaner use 100% of your CPU and freeze your computer, you can stop it with the following command :
 `sudo btrfs quota disable /`
+
 ### Restart sound service (Pulseaudio)
 `pulseaudio -k`
+
 ### Restart network service 
 ` sudo rcnetwork restart network_interface`
 > Note: replace **network_interface** by your interface name (using ifconfig)
+
 ### Configuration the NFS client
  - Discover the shared volumes on the NFS server : ` showmount -e <ip>`
  - Mount a shared volume from the NFS server (manually) : `sudo mount -t nfs <ip>:<repnfs> <replocal>`
@@ -91,3 +95,11 @@ If btrfs-cleaner use 100% of your CPU and freeze your computer, you can stop it 
 > - **ip** of the NFS server
 > - **repnfs** : path/folder on the NFS server
 > - **replocal** : path/folder on the NFS client
+
+### Autostart (KDE)
+Copy a file **org.kde.*.desktop** in the folder **~/.config/autostart**
+> You could find them in the folder */usr/share/applications*
+
+### Reset KDE Session
+To reset the current KDE session (killing all process & logout) : `pkill -kill -u username`
+> Note : replace **username** by the name of the choosen one
