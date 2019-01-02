@@ -7,12 +7,24 @@ All the work is based on the following ressources :
  - [www.volted.net](https://www.volted.net/) *([ZSH](un-prompt-zsh-au-poil18555.html)/[VIM](https://www.volted.net/un-vimrc-remis-au-propre18752.html))*
  - [denisrosenkranz.com](http://denisrosenkranz.com/installation-et-configuration-de-zsh/) *([ZSH](http://denisrosenkranz.com/installation-et-configuration-de-zsh/))*
 
+ 
 ## Requirement
  1. Install [OpenSUSE Tumbleweed](https://software.opensuse.org/distributions/tumbleweed) with the [KDE/Plasma Desktop](https://www.kde.org/plasma-desktop)
  2. Install [GIT](https://git-scm.com/) : `sudo zypper in --no-recommend git`
- 3. Get this git [repository](https://github.com/pragmatias/opensuse) : `git clone https://github.com/pragmatias/opensuse.git ~/tmp_install`
+ 3. Get this git [repository](https://github.com/pragmatias/opensuse) : `git clone https://github.com/pragmatias/OpenSUSE.git ~/tmp_install`
  4. Go to the scripts folder : `cd ~/tmp_install/scripts`
 
+>  **Proxy** : somes information if you want to install OpenSUSE Tumbleweed behind a proxy
+> ##### With Yast
+> 1. Open Yast > Network Services > Proxy
+> 2. Click on Enable Proxy and fill all the needed information in "Proxy Setting" and "Proxy Authentification"
+> ##### With Bashrc
+ > 1. Add http information : `echo "export http_proxy=http://proxy_ip:proxy_port" >> ~/.bashrc`
+ > 2. Add https information : `echo "export https_proxy=http://proxy_ip:proxy_port" >> ~/.bashrc`
+ > 3. Add no proxy information : `echo "export no_proxy=localhost,127.0.0.1" >> ~/.bashrc`
+ > 4. Add ftp information : `echo "export ftp_proxy=http://proxy_ip:proxy_port" >> ~/.bashrc`
+
+ 
 ## Steps
  1. Configure the repositories list : `sudo ./01_TW_config_repository.sh`
 > *Note* : you need to remove the nvidia repository if you don't have a nvidia graphic card
@@ -22,7 +34,10 @@ All the work is based on the following ressources :
  4. Install of truetype proprietary fonts : `sudo ./04_TW_install_fonts_truetype.sh`
  5. Customization of users : `sudo ./05_TW_customize_users.sh` 
  6. Install the graphic card driver (manually) : `sudo zypper in --no-recommend nvidia-glG05`
+ 7. Restart your computer : `sudo shutdown -r 0`
+ 8. Remove the tmp_install folder : `rm -rf ~/tmp_install`
 
+ 
 # Customization of OpenSUSE Tumbleweed (KDE/Plasma Desktop)
 - Prerequisite : 
 	- Install of the [SierraBreeze](https://github.com/ishovkun/SierraBreeze) Window decoration :
@@ -39,7 +54,7 @@ All the work is based on the following ressources :
 	-	Fonts > Fonts > Ubuntu (Hack for "Fixed  width")
 	-	Application Style > Window Decorations > Sierra-breeze (with "Tiny" border size)
 	-	Desktop Behavior > Workspace > Click behavior > Double-click to open files and folders
-	-	Comportement de l'espace de travail > Screen Locking > deactivation Lock screen automatically
+	-	Desktop Behavior > Screen Locking > deactivation Lock screen automatically
 	-	Input Devices > Keyboard > NumLock on Plasma Startup > Turn on
 
 

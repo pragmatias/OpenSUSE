@@ -32,7 +32,7 @@ DELAY=1
 
 # Afficher [OK] en cas de succès
 function ok () {
-		echo -e "[${VERT}OK${GRIS}] \c"
+    echo -e "[${VERT}OK${GRIS}] \c"
   	sleep $DELAY
   	echo
 }
@@ -40,6 +40,7 @@ function ok () {
 function ko () {
   	echo -e "[${ROUGE}KO${GRIS}] \c"
   	sleep $DELAY
+  	echo
   	exit ${cr_tmp}
 }
 

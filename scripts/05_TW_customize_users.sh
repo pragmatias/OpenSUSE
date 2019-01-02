@@ -61,13 +61,6 @@ if [ ! -z "$(ls -A /home)" ]; then
     if [ $? -ne 0 ]; then ko ; fi
     chown $UTILISATEUR:users /home/$UTILISATEUR/.vimrc
 	if [ $? -ne 0 ]; then ko ; fi
-	if [ -e /home/$UTILISATEUR/.vim/bundle ]; then
-		rm -rf /home/$UTILISATEUR/.vim/bundle
-	fi
-	git clone https://github.com/VundleVim/Vundle.vim.git /home/$UTILISATEUR/.vim/bundle/Vundle.vim >> $LOG 2>&1
-	if [ $? -ne 0 ]; then ko ; fi
-	chown -R $UTILISATEUR:users /home/$UTILISATEUR/.vim
-	if [ $? -ne 0 ]; then ko ; fi
   done
 fi
 ok

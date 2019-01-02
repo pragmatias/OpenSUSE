@@ -1,0 +1,44 @@
+Loading repository data...
+Reading installed packages...
+Resolving package dependencies...
+
+Problem: vlc-codecs-3.0.4-4.15.x86_64 requires libavcodec58(unrestricted), but this requirement cannot be provided
+  not installable providers: libavcodec58-4.1-5.2.i586[packman]
+                   libavcodec58-4.1-5.2.x86_64[packman]
+ Solution 1: Following actions will be done:
+  install libavcodec58-4.1-5.2.x86_64 (with vendor change)
+    openSUSE  -->  http://packman.links2linux.de
+  install libavformat58-4.1-5.2.x86_64 (with vendor change)
+    openSUSE  -->  http://packman.links2linux.de
+  install libavfilter7-4.1-5.2.x86_64 (with vendor change)
+    openSUSE  -->  http://packman.links2linux.de
+  install libavdevice58-4.1-5.2.x86_64 (with vendor change)
+    openSUSE  -->  http://packman.links2linux.de
+  install ffmpeg-4-4.1-5.2.x86_64 (with vendor change)
+    openSUSE  -->  http://packman.links2linux.de
+ Solution 2: do not install vlc-codecs-3.0.4-4.15.x86_64
+ Solution 3: break vlc-codecs-3.0.4-4.15.x86_64 by ignoring some of its dependencies
+
+Choose from above solutions by number or cancel [1/2/3/c] (c): c
+Loading repository data...
+Reading installed packages...
+Resolving package dependencies...
+
+Problem: vlc-codecs-3.0.4-4.15.x86_64 requires libavcodec58(unrestricted), but this requirement cannot be provided
+  not installable providers: libavcodec58-4.1-5.2.i586[packman]
+                   libavcodec58-4.1-5.2.x86_64[packman]
+ Solution 1: Following actions will be done:
+  install libavcodec58-4.1-5.2.x86_64 (with vendor change)
+    openSUSE  -->  http://packman.links2linux.de
+  install libavformat58-4.1-5.2.x86_64 (with vendor change)
+    openSUSE  -->  http://packman.links2linux.de
+  install libavfilter7-4.1-5.2.x86_64 (with vendor change)
+    openSUSE  -->  http://packman.links2linux.de
+  install libavdevice58-4.1-5.2.x86_64 (with vendor change)
+    openSUSE  -->  http://packman.links2linux.de
+  install ffmpeg-4-4.1-5.2.x86_64 (with vendor change)
+    openSUSE  -->  http://packman.links2linux.de
+ Solution 2: do not install vlc-codecs-3.0.4-4.15.x86_64
+ Solution 3: break vlc-codecs-3.0.4-4.15.x86_64 by ignoring some of its dependencies
+
+Choose from above solutions by number or cancel [1/2/3/c] (c): c

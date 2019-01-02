@@ -39,7 +39,6 @@ set autoread         " Auto lecture si le fichier a été modifié depuis l'ext�
 
 " UI :
 " -----------------------------------------------------------------------------
-" colorscheme molokai  " Thème de couleur
 syntax enable        " Active la coloration syntaxique
 " Contenu de la barre de status
 set statusline=%F\ Type=%y\ %=Pos=%l,%c\ (%p%%)\ SLOC=%L\ %P
@@ -53,47 +52,6 @@ set number           " Afficher les numéros de ligne
 set splitright
 " set relativenumber   " Mode numérotation des lignes relative
 
-" INDENT :
-" -----------------------------------------------------------------------------
-" set smartindent
-" Options d'indentation pour un fichier C
-" set cinoptions=(0
-" set shiftwidth=4     " Nombre d'espace dans l'indentation
-
-" MAPPING :
-" -----------------------------------------------------------------------------
-" Remapper pour conserver la sélection
-vnoremap < <gv
-vnoremap > >gv
-" Mapper Y pour copie jusqu'à fin de ligne
-map Y y$
-" U n'est pas utile, en faire un redo (Ctrl - R)
-map U <C-r>
-" kj est plus rapide à atteindre que <Esc>
-inoremap kj <Esc>
-cnoremap kj <Esc>
-" L sépare une ligne à la position du curseur (inverse de J)
-nnoremap L i<Enter><Esc>
-" Mapper pour split navigation
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-" Mapper leader key
-let mapleader = ","
-" ,r passe en mode num ligne relatives
-map <leader>r :set relativenumber<CR>
-" Folding avec espace
-nnoremap <space> za
-
-" POWERLINE :
-" -----------------------------------------------------------------------------
-" set rtp+=/usr/share/vim/vimfiles/plugin/powerline.vim
-" python from powerline.vim import setup as powerline_setup
-" python powerline_setup()
-" python del powerline_setup
-" set laststatus=2
-" set t_Co=256
 
 " SCROLLING :
 " -----------------------------------------------------------------------------
@@ -107,86 +65,3 @@ set sidescroll=1
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 " :set scrollbind    " Scroller syncro entre 2 fenêtres
 
-
-" txt2tags
-au BufNewFile,BufRead *.t2t map 2l :w<CR>:!txt2tags -t html "%" ; unoconv -f odt "%:r.html" <CR>
-au BufNewFile,BufRead *.t2t map 2h :w<CR>:!txt2tags -t html -o /tmp/txt2tags_apercu.html "%" ; firefox "file:///tmp/txt2tags_apercu.html" <CR>
-au BufRead,BufNewFile *.t2t set tw=78
-au BufNewFile,BufRead *.t2t set spell
-au BufNewFile,BufRead *.t2t setlocal spell spelllang=fr
-au BufNewFile,BufRead *.t2t set ft=txt2tags
-au BufNewFile,BufRead *.t2t set noexpandtab
-
-" PYTHON IDE :
-" -----------------------------------------------------------------------------
-" Exécuter le script avec '2p'
-au BufNewFile,BufRead *.py map 2p :w<CR>:!python3 "%"<CR>
-" Vérifier conformité du script à la PEP8 avec '2P'
-au BufNewFile,BufRead *.py map 2P :w<CR>:!python3-pep8 '%'<CR>
-" Paraméter le fichier pour conformité à la PEP8
-au BufNewFile,BufRead *.py
-    \ set tabstop=4 |
-    \ set softtabstop=4 |
-    \ set shiftwidth=4 |
-    \ set textwidth=79 |
-    \ set expandtab |
-    \ set autoindent |
-    \ set fileformat=unix |
-
-let python_highlight_all=1                  " Highlight du code
-
-" VUNDLE ET CONFIGURATION DES PLUGINS ET DE LEUR ENVIRONNEMENT :
-" -----------------------------------------------------------------------------
-set rtp+=~/.vim/bundle/Vundle.vim
-" L'environnement Vim inclus Vundle et l'exécute au lancement
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-
-" Ajouter les plugins ci-dessous :
-" (note older versions of Vundle used Bundle instead of Plugin)
-" -----------------------------------------------------------------------------
-Plugin 'tmhedberg/SimpylFold'               " Meilleur folding
-let g:SimpylFold_docstring_preview=1        " Voir la docstring du code foldé
-
-" Indentation conforme PEP8
-Plugin 'vim-scripts/indentpython.vim'
-
-" Meilleur autocomplétion Python
-Bundle 'Valloric/YouCompleteMe'
-
-" Fermer la fenêtre d'autocomplétion après usage
-let g:ycm_autoclose_preview_window_after_completion=1
-
-" ,g amène vers la définition de l'élément complété
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-
-" Python avec support virtualenv (pour PATH plugin YoukCompleteMe):
-" -----------------------------------------------------------------------------
-py << EOF
-import os
-import sys
-if 'VIRTUAL_ENV' in os.environ:
-  project_base_dir = os.environ['VIRTUAL_ENV']
-  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-  execfile(activate_this, dict(__file__=activate_this))
-EOF
-
-Plugin 'scrooloose/syntastic'               " Vérif syntaxe Python
-Plugin 'nvie/vim-flake8'                    " Ajout check conformité PEP8
-
-" Navigateur de fichiers dans une side-bar
-Plugin 'scrooloose/nerdtree'
-map <leader>t :NERDTreeToggle<CR>           " ,t affiche l'arborescence
-let NERDTreeIgnore=['\.pyc$', '\~$']        " Ignorer fichier .pyc in NERDTree
-
-" Barre de status (+ light que powerline)
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-
-" *TOUS* les plugins sont à ajouter et configurer avant cette ligne !
-call vundle#end()                           " Requis
-filetype plugin indent on                   " Requis
-
-" DEMARRAGE AUTO DES PLUGINS :
-" -----------------------------------------------------------------------------
-" autocmd VimEnter * NERDTree

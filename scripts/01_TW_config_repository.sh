@@ -6,8 +6,9 @@
 
 . functions_install_TW.sh
 
-# Suppression des dépôts existants
 echo
+
+# Suppression des dépôts existants
 echo -e ":: Removal of existing repository... \c"
 sleep $DELAY
 rm -f /etc/zypp/repos.d/*.repo
@@ -56,7 +57,6 @@ zypper --gpg-auto-import-keys refresh >> $LOG 2>&1
 if [ $? -eq 0 ]; then ok ; else ko ; fi
 
 # Mise à jour des paquets
-echo "::"
 echo -e ":: Package update... \c"
 zypper --non-interactive update --allow-vendor-change >> $LOG 2>&1
 if [ $? -eq 0 ]; then ok ; else ko ; fi
