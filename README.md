@@ -9,7 +9,6 @@ All the work is based on the following ressources :
  - [KDE Tips](https://zren.github.io/kde/#configuration)
  
 Todo :
- - [ ] Keyboard Shortcuts for Window Quick Tile and Desktop Switch
  - [ ] Add fonts [NerdFonts](https://nerdfonts.com)
  - [ ] Konsole Config (Color & more)
  - [ ] Firefox Config
@@ -127,5 +126,8 @@ Reset the current KDE session (kill all process & logout) : `pkill -kill -u user
 >| Switch One Desktop to the Right | Meta+Right |
 >| Switch One Desktop Up | Meta+Up |
 2. Right Click on the desktop wallpaper > Configure Desktop > Mouse Actions > Remove action "Switch Desktop" for "Vertical-Scroll"
+
+### Firefox configuration
+The file **places.sqlite** in **$HOME/.mozilla/firefox/%.default** contains bookmarks and history
 
 

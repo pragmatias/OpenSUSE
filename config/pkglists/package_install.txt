@@ -87,6 +87,7 @@ winff-lang
 youtube-dl
 youtube-dl-gui
 youtube-dl-gui-lang
+mcomix
 
 # Tools
 cherrytree
@@ -110,6 +111,7 @@ steam
 # Desktop customization
 latte-dock
 papirus-icon-theme
+neofetcgh
 
 # Package with potential issues
 vlc-codecs
