@@ -6,12 +6,18 @@ All the work is based on the following ressources :
  - [blog.microlinux.fr](https://blog.microlinux.fr) *([OpenSUSE](https://blog.microlinux.fr/tag/opensuse/))*
  - [www.volted.net](https://www.volted.net/) *([ZSH](un-prompt-zsh-au-poil18555.html)/[VIM](https://www.volted.net/un-vimrc-remis-au-propre18752.html))*
  - [denisrosenkranz.com](http://denisrosenkranz.com/installation-et-configuration-de-zsh/) *([ZSH](http://denisrosenkranz.com/installation-et-configuration-de-zsh/))*
-
+ - [KDE Tips](https://zren.github.io/kde/#configuration)
+ 
+Todo :
+ - [ ] Keyboard Shortcuts for Window Quick Tile and Desktop Switch
+ - [ ] Konsole Config (Color & more)
+ - [ ] Firefox Config
+ - [ ] Thunderbird Config
  
 ## Requirement
  1. Install [OpenSUSE Tumbleweed](https://software.opensuse.org/distributions/tumbleweed) with the [KDE/Plasma Desktop](https://www.kde.org/plasma-desktop)
  2. Install [GIT](https://git-scm.com/) : `sudo zypper in --no-recommend git`
- 3. Get this git [repository](https://github.com/pragmatias/opensuse) : `git clone https://github.com/pragmatias/OpenSUSE.git ~/tmp_install`
+ 3. Get this git [repository](https://github.com/pragmatias/OpenSUSE) : `git clone https://github.com/pragmatias/OpenSUSE.git ~/tmp_install`
  4. Go to the scripts folder : `cd ~/tmp_install/scripts`
 
 >  **Proxy** : somes information if you want to install OpenSUSE Tumbleweed behind a proxy
@@ -59,13 +65,10 @@ All the work is based on the following ressources :
 
 
 - KDE Desktop
-	- 	Right click on KDE dock > Panek Options >  Configure Panel >  More Settings > Remove Panel
-	-	launch "latte-dock" > Choose the layout "users"
+    - Right Click on the desktop wallpaper > Configure Desktop > Tweask > Uncheck Show the desktop toolbox
+    - Right Click on KDE dock > Panek Options >  Configure Panel >  More Settings > Remove Panel
+	- launch "latte-dock" > Choose the layout "users"
 
-Todo :
- - [ ] Color of Konsole
- - [ ] KSH by default for Konsole
- - [ ] Configuration of Firefox
 
 
 # Usefull Information about OpenSUSE Tumbleweed
@@ -100,6 +103,28 @@ If btrfs-cleaner use 100% of your CPU and freeze your computer, you can stop it 
 Copy a file **org.kde.*.desktop** in the folder **~/.config/autostart**
 > You could find them in the folder */usr/share/applications*
 
+Or use System Settings > Startup and Shutdown > Autostart
+
 ### Reset KDE Session
-To reset the current KDE session (killing all process & logout) : `pkill -kill -u username`
+Reset the current KDE session (kill all process & logout) : `pkill -kill -u username`
 > Note : replace **username** by the name of the choosen one
+
+### Configure Bind to Switch Desktop and Quick tile Window
+1. Go to System Settings > Shortcuts > Global Shortcuts > System Settings
+>| Action | Global |
+>|--|--|
+>| Quick Tile Window to the Bottom | Meta+Num+2 |
+>| Quick Tile Window to the Bottom Left | Meta+Num+1 |
+>| Quick Tile Window to the Bottom Right | Meta+Num+3 |
+>| Quick Tile Window to the Left | Meta+Num+4 |
+>| Quick Tile Window to the Right | Meta+Num+6 |
+>| Quick Tile Window to the Top | Meta+Num+8 |
+>| Quick Tile Window to the Top Left | Meta+Num+7 |
+>| Quick Tile Window to the Top Right | Meta+Num+9 |
+>| Switch One Desktop Down | Meta+Down |
+>| Switch One Desktop to the Left | Meta+Left |
+>| Switch One Desktop to the Right | Meta+Right |
+>| Switch One Desktop Up | Meta+Up |
+2. Right Click on the desktop wallpaper > Configure Desktop > Mouse Actions > Remove action "Switch Desktop" for "Vertical-Scroll"
+
+
