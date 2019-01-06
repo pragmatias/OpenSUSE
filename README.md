@@ -109,6 +109,15 @@ Or use System Settings > Startup and Shutdown > Autostart
 Reset the current KDE session (kill all process & logout) : `pkill -kill -u username`
 > Note : replace **username** by the name of the choosen one
 
+
+### Konsole configuration
+In Config > Modify profil
+1. General > Profil name > Users
+2. General > Commande > /bin/zsh
+3. Appearance > Model > Monolai-Flat
+4. Keyboard > Console Linux
+
+
 ### Configure Bind to Switch Desktop and Quick tile Window
 1. Go to System Settings > Shortcuts > Global Shortcuts > System Settings
 >| Action | Global |
@@ -129,5 +138,18 @@ Reset the current KDE session (kill all process & logout) : `pkill -kill -u user
 
 ### Firefox configuration
 The file **places.sqlite** in **$HOME/.mozilla/firefox/%.default** contains bookmarks and history
+
+> List of interesting addons :
+> - Ublock Origin
+> - Canvasblocker
+> - Cookie autodelete
+> - Css exfil protection
+> - DecentralEyes
+> - Redirector
+> - Select context search
+> - Awesome RSS
+> - Privacy Badger
+> - No Coin
+
 
 

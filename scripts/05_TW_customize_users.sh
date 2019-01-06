@@ -82,18 +82,36 @@ if [ ! -z "$(ls -A /home)" ]; then
     chown $UTILISATEUR:users /home/$UTILISATEUR/.config/latte/users.layout.latte
 	if [ $? -ne 0 ]; then ko ; fi
 	if [ ! -e /home/$UTILISATEUR/.config/autostart ]; then
-        mkdir /home/$UTILISATEUR/.config/autostart
-        if [ $? -ne 0 ]; then ko ; fi
-        chown $UTILISATEUR:users /home/$UTILISATEUR/.config/autostart
-    fi
-    cp /usr/share/applications/org.kde.latte-dock.desktop /home/$UTILISATEUR/.config/autostart/org.kde.latte-dock.desktop
+    mkdir /home/$UTILISATEUR/.config/autostart
     if [ $? -ne 0 ]; then ko ; fi
-    chown $UTILISATEUR:users /home/$UTILISATEUR/.config/autostart/org.kde.latte-dock.desktop
+    chown $UTILISATEUR:users /home/$UTILISATEUR/.config/autostart
+  fi
+  cp /usr/share/applications/org.kde.latte-dock.desktop /home/$UTILISATEUR/.config/autostart/org.kde.latte-dock.desktop
+  if [ $? -ne 0 ]; then ko ; fi
+  chown $UTILISATEUR:users /home/$UTILISATEUR/.config/autostart/org.kde.latte-dock.desktop
 	if [ $? -ne 0 ]; then ko ; fi
   done
 fi
 ok
 
+
+# Personnalisation de Konsole pour les utilisateurs (colorscheme)
+echo -e ":: Customization of Konsole for users... \c"
+sleep $DELAY
+if [ ! -z "$(ls -A /home)" ]; then
+  for UTILISATEUR in $(ls /home); do
+    if [ ! -e /home/$UTILISATEUR/.local/share/konsole ]; then
+      mkdir /home/$UTILISATEUR/.local/share/konsole
+      if [ $? -ne 0 ]; then ko ; fi
+      chown $UTILISATEUR:users /home/$UTILISATEUR/.local/share/konsole
+    fi
+    cp $CWD/../config/konsole/*.colorscheme > /home/$UTILISATEUR/.local/share/konsole/.
+    if [ $? -ne 0 ]; then ko ; fi
+    chown -R $UTILISATEUR:users /home/$UTILISATEUR/.local/share/konsole
+    if [ $? -ne 0 ]; then ko ; fi
+  done
+fi
+ok
 
 
 echo

@@ -53,6 +53,7 @@ powerline-fonts
 powerline-docs
 vim-plugin-powerline
 tmux-powerline
+emacs
 
 # Graphisme
 gimp
