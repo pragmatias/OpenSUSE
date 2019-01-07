@@ -10,7 +10,7 @@ All the work is based on the following ressources :
  
 Todo :
  - [ ] Add fonts [NerdFonts](https://nerdfonts.com)
- - [ ] Konsole Config (Color & more)
+ - [ ] Latte Dock Config
  - [ ] Firefox Config
  - [ ] Thunderbird Config
 
@@ -94,7 +94,7 @@ If btrfs-cleaner use 100% of your CPU and freeze your computer, you can stop it 
 ### Configuration the NFS client
  - Discover the shared volumes on the NFS server : ` showmount -e <ip>`
  - Mount a shared volume from the NFS server (manually) : `sudo mount -t nfs <ip>:<repnfs> <replocal>`
- - Mount a shared volume from the NFS server (automatically) : `sudo vi /etc/fstab` and add the line `<ip>:<repnfs> <replocal> nfs defaults 0 0`
+ - Mount a shared volume from the NFS server (automatically) : `sudo vi /etc/fstab` and add the line `<ip>:<repnfs> <replocal> nfs defaults,_netdev 0 0`
 > - **ip** of the NFS server
 > - **repnfs** : path/folder on the NFS server
 > - **replocal** : path/folder on the NFS client
@@ -111,11 +111,11 @@ Reset the current KDE session (kill all process & logout) : `pkill -kill -u user
 
 
 ### Konsole configuration
-In Config > Modify profil
-1. General > Profil name > Users
-2. General > Commande > /bin/zsh
-3. Appearance > Model > Monolai-Flat
-4. Keyboard > Console Linux
+In Stteings > Edit Current Profile
+1. General > Profile name > Users
+2. General > Command > /bin/zsh
+3. Appearance > Color Scheme & Background > Monokai-Flat
+4. Keyboard > Linux console
 
 
 ### Configure Bind to Switch Desktop and Quick tile Window

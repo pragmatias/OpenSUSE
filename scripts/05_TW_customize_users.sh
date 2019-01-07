@@ -105,7 +105,7 @@ if [ ! -z "$(ls -A /home)" ]; then
       if [ $? -ne 0 ]; then ko ; fi
       chown $UTILISATEUR:users /home/$UTILISATEUR/.local/share/konsole
     fi
-    cp $CWD/../config/konsole/*.colorscheme > /home/$UTILISATEUR/.local/share/konsole/.
+    cp $CWD/../config/konsole/* /home/$UTILISATEUR/.local/share/konsole/.
     if [ $? -ne 0 ]; then ko ; fi
     chown -R $UTILISATEUR:users /home/$UTILISATEUR/.local/share/konsole
     if [ $? -ne 0 ]; then ko ; fi
