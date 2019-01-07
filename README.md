@@ -111,7 +111,7 @@ Reset the current KDE session (kill all process & logout) : `pkill -kill -u user
 
 
 ### Konsole configuration
-In Stteings > Edit Current Profile
+In Settings > Edit Current Profile
 1. General > Profile name > Users
 2. General > Command > /bin/zsh
 3. Appearance > Color Scheme & Background > Monokai-Flat
