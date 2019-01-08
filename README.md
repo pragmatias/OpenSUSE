@@ -151,5 +151,21 @@ The file **places.sqlite** in **$HOME/.mozilla/firefox/%.default** contains book
 > - Privacy Badger
 > - No Coin
 
+### Latte Config (Test)
+Latte Dock - Widgets :
+- Application Menu
+- Pager
+- Global Menu
+- Active Window Control
+- Justify Splitter
+- Digital Clock
+- Justify Splitter
+- System Load Viewer
+- Weather Report
+- System Tray
+- Lock/Logout
+
+Edit the file ~/.config/kwinrc to add the line: `BorderlessMaximizedWindows=true`
+Restart kwin : `kwin_x11 --replace` or `kwin_wayland --replace`
 
 
