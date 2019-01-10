@@ -13,6 +13,9 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias vi='vim'
 
+# Zypper Alias
+alias zypin='zypper in --no-recommend'
+
 # PS1
 VERT='\[\033[0;32m\]'
 ORANGE='\[\033[1;33m\]'

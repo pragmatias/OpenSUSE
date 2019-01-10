@@ -58,7 +58,7 @@ Todo :
 	-	Splash Screen > openSUSE
 	-   Icons > Icons > Papirus-Dark
 	-	Fonts > Fonts > Ubuntu (Hack for "Fixed  width")
-	-	Application Style > Window Decorations > Sierra-breeze (with "Tiny" border size)
+	-	Application Style > Window Decorations > Breeze (with "Tiny" border size)
 	-	Desktop Behavior > Workspace > Click behavior > Double-click to open files and folders
 	-	Desktop Behavior > Screen Locking > deactivation Lock screen automatically
 	-	Input Devices > Keyboard > NumLock on Plasma Startup > Turn on
@@ -66,6 +66,7 @@ Todo :
 
 - KDE Desktop
     - Right Click on the desktop wallpaper > Configure Desktop > Tweask > Uncheck Show the desktop toolbox
+    - Right Click on the desktop wallpaper > Configure Desktop > Filter > Show Files Matching
     - Right Click on KDE dock > Panek Options >  Configure Panel >  More Settings > Remove Panel
 	- launch "latte-dock" > Choose the layout "users"
 
@@ -154,18 +155,18 @@ The file **places.sqlite** in **$HOME/.mozilla/firefox/%.default** contains book
 ### Latte Config (Test)
 Latte Dock - Widgets :
 - Application Menu
-- Pager
 - Global Menu
 - Active Window Control
 - Justify Splitter
 - Digital Clock
 - Justify Splitter
+- Pager
 - System Load Viewer
 - Weather Report
 - System Tray
 - Lock/Logout
 
-Edit the file ~/.config/kwinrc to add the line: `BorderlessMaximizedWindows=true`
+Edit the file ~/.config/kwinrc to add the line: `BorderlessMaximizedWindows=true` in the section `[Windows]`
 Restart kwin : `kwin_x11 --replace` or `kwin_wayland --replace`
 
 

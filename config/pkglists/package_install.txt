@@ -20,14 +20,11 @@ whois
 htop
 redshift
 zsh
-tmux
 python3-requests
 wxWidgets-lang
 
 # KDE
 fontforge
-gos-wallpapers
-plasma5-workspace-wallpapers
 
 # Internet
 enigmail
@@ -48,11 +45,6 @@ chromium-ffmpeg-extra
 
 # Developpement
 sublime-text
-powerline
-powerline-fonts
-powerline-docs
-vim-plugin-powerline
-tmux-powerline
 emacs
 
 # Graphisme
@@ -85,9 +77,6 @@ vlc
 vlc-lang
 winff
 winff-lang
-youtube-dl
-youtube-dl-gui
-youtube-dl-gui-lang
 mcomix
 
 # Tools

@@ -77,9 +77,9 @@ if [ ! -z "$(ls -A /home)" ]; then
         if [ $? -ne 0 ]; then ko ; fi
         chown $UTILISATEUR:users /home/$UTILISATEUR/.config/latte
     fi
-    cat $CWD/../config/latte/users.layout.latte > /home/$UTILISATEUR/.config/latte/users.layout.latte
+    cp $CWD/../config/latte/* /home/$UTILISATEUR/.config/latte/.
     if [ $? -ne 0 ]; then ko ; fi
-    chown $UTILISATEUR:users /home/$UTILISATEUR/.config/latte/users.layout.latte
+    chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/latte
 	if [ $? -ne 0 ]; then ko ; fi
 	if [ ! -e /home/$UTILISATEUR/.config/autostart ]; then
     mkdir /home/$UTILISATEUR/.config/autostart
