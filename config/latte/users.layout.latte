@@ -43,16 +43,12 @@ plugin=org.kde.latte.plasmoid
 [Containments][1][Applets][2][Configuration]
 PreloadWeight=0
 
-[Containments][1][Applets][2][Configuration][General]
-isInLatteDock=true
-launchers59=applications:org.kde.konsole.desktop,applications:org.kde.dolphin.desktop,applications:firefox.desktop,applications:thunderbird.desktop,applications:org.keepassxc.KeePassXC.desktop,applications:steam.desktop,applications:sublime_text.desktop
-
 [Containments][1][Applets][21]
 immutability=1
 plugin=org.kde.plasma.weather
 
 [Containments][1][Applets][21][Configuration]
-PreloadWeight=8
+PreloadWeight=0
 pressureUnit=5028
 source=bbcukmet|weather|Paris, France|2988507
 speedUnit=9002
@@ -70,7 +66,7 @@ immutability=1
 plugin=org.kde.plasma.kicker
 
 [Containments][1][Applets][4][Configuration]
-PreloadWeight=83
+PreloadWeight=82
 
 [Containments][1][Applets][4][Configuration][ConfigDialog]
 DialogHeight=480
@@ -90,7 +86,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][1][Applets][5][Configuration]
-PreloadWeight=23
+PreloadWeight=12
 SystrayContainmentId=6
 
 [Containments][1][Applets][60]
@@ -131,11 +127,17 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][1][Applets][68][Configuration]
-PreloadWeight=22
+PreloadWeight=14
 
 [Containments][1][Applets][68][Configuration][ConfigDialog]
 DialogHeight=480
 DialogWidth=640
+
+[Containments][1][Applets][71][Configuration]
+PreloadWeight=42
+
+[Containments][1][Applets][72][Configuration]
+PreloadWeight=42
 
 [Containments][1][ConfigDialog]
 DialogHeight=546
@@ -209,7 +211,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][13][Applets][42][Configuration]
-PreloadWeight=22
+PreloadWeight=6
 
 [Containments][13][Applets][42][Configuration][ConfigDialog]
 DialogHeight=480
@@ -246,7 +248,7 @@ immutability=1
 plugin=org.kde.plasma.kicker
 
 [Containments][13][Applets][45][Configuration]
-PreloadWeight=100
+PreloadWeight=84
 
 [Containments][13][Applets][45][Configuration][ConfigDialog]
 DialogHeight=480
@@ -266,7 +268,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][13][Applets][46][Configuration]
-PreloadWeight=23
+PreloadWeight=7
 SystrayContainmentId=15
 
 [Containments][13][Applets][47]
@@ -359,58 +361,12 @@ location=4
 plugin=org.kde.plasma.private.systemtray
 wallpaperplugin=org.kde.image
 
-[Containments][15][Applets][49]
-immutability=1
-plugin=org.kde.plasma.devicenotifier
-
-[Containments][15][Applets][49][Configuration]
-PreloadWeight=0
-
-[Containments][15][Applets][50]
-immutability=1
-plugin=org.kde.plasma.notifications
-
-[Containments][15][Applets][50][Configuration]
-PreloadWeight=0
-
-[Containments][15][Applets][51]
-immutability=1
-plugin=org.kde.plasma.pkupdates
-
-[Containments][15][Applets][51][Configuration]
-PreloadWeight=0
-
-[Containments][15][Applets][52]
-immutability=1
-plugin=org.kde.plasma.volume
-
-[Containments][15][Applets][52][Configuration]
-PreloadWeight=0
-
-[Containments][15][Applets][53]
-immutability=1
-plugin=org.kde.plasma.networkmanagement
-
-[Containments][15][Applets][53][Configuration]
-PreloadWeight=0
-
-[Containments][15][Applets][54]
-immutability=1
-plugin=org.kde.kdeconnect
-
-[Containments][15][Applets][54][Configuration]
-PreloadWeight=0
-
-[Containments][15][Applets][55]
-immutability=1
-plugin=org.kde.plasma.keyboardindicator
-
-[Containments][15][Applets][55][Configuration]
-PreloadWeight=0
-
 [Containments][15][ConfigDialog]
 DialogHeight=480
 DialogWidth=640
+
+[Containments][15][Configuration]
+PreloadWeight=34
 
 [Containments][15][General]
 extraItems=org.kde.plasma.pkupdates,org.kde.plasma.networkmanagement,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.notifications,org.kde.plasma.keyboardindicator,org.kde.plasma.volume
@@ -488,7 +444,7 @@ activities=
 background=
 color=blue
 disableBordersForMaximizedWindows=false
-lastUsedActivity=afe92852-6f75-4059-aebc-648dc67f9994
+lastUsedActivity=0dd04b9b-42c4-4170-93bb-ec5b03bbe83d
 launchers=
 showInMenu=true
 textColor=fcfcfc
