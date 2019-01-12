@@ -10,7 +10,6 @@ All the work is based on the following ressources :
  
 Todo :
  - [ ] Add fonts [NerdFonts](https://nerdfonts.com)
- - [ ] Latte Dock Config
  - [ ] Firefox Config
  - [ ] Thunderbird Config
 
@@ -45,12 +44,6 @@ Todo :
 
  
 # Customization of OpenSUSE Tumbleweed (KDE/Plasma Desktop)
-- Prerequisite : 
-	- Install of the [SierraBreeze](https://github.com/ishovkun/SierraBreeze) Window decoration :
-		- 1. `sudo zypper addrepo https://download.opensuse.org/repositories/home:trmdi/openSUSE_Tumbleweed/home:trmdi.repo`
-		-  2. `sudo zypper refresh`
-		-  3. `sudo zypper install sierra-breeze`
-
 
 - KDE System (System settings)
 	-	Workspace Theme > Look And Feel > Breeze Dark
