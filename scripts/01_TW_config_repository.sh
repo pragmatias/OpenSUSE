@@ -56,6 +56,11 @@ echo -e ":: Synchronization and import of the GPG Keys... \c"
 zypper --gpg-auto-import-keys refresh >> $LOG 2>&1
 if [ $? -eq 0 ]; then ok ; else ko ; fi
 
+# Mise a niveau des paquets
+echo -e ":: Package dist-update... \c"
+zypper --non-interactive dup --allow-vendor-change >> $LOG 2>&1
+if [ $? -eq 0 ]; then ok ; else ko ; fi
+
 # Mise à jour des paquets
 echo -e ":: Package update... \c"
 zypper --non-interactive update --allow-vendor-change >> $LOG 2>&1
