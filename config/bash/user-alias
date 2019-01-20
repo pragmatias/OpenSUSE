@@ -10,7 +10,7 @@ alias vi='vim'
 
 # Zypper Alias
 alias zypin='sudo zypper in --no-recommend'
-
+alias zyprm='sudo zypper rm --clean-deps'
 
 # PS1
 VERT='\[\033[0;32m\]'
@@ -19,7 +19,7 @@ BLANC='\[\033[1;37m\]'
 GRIS='\[\033[0;m\]'
 ROUGE='\[\033[0;31m\]'
 
-PS1="${GRIS}[${VERT}\u${GRIS} (\h): ${ORANGE}\W${GRIS}] ${VERT}\$ ${GRIS}"
+PS1="${GRIS}[${VERT}\u${GRIS} (\h): ${ORANGE}\w${GRIS}] ${VERT}\$ ${GRIS}"
 
 # Vim 
 EDITOR=vim

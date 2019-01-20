@@ -145,7 +145,30 @@ The file **places.sqlite** in **$HOME/.mozilla/firefox/%.default** contains book
 > - Privacy Badger
 > - No Coin
 
-### Latte Config (Test)
+
+### Kpanel
+Widgets list
+
+Left :
+- Application Menu
+- Application list icons (firefox/konsole/doplhin/kate)
+- Task Manager
+
+Right :
+- Pager
+- Redshift
+- System Tray
+- Digital Clock
+- Lock/Logout
+
+To restore plasma config (panel) :
+ 1- `kquitapp plasmashell`
+ 2- `sleep 10s`
+ 3- `cp <plasma_files_backup> $HOME/.config/.`
+ 4- `plasmashell &`
+
+
+### Old
 Latte Dock - Widgets :
 - Application Menu
 - Global Menu
@@ -160,6 +183,6 @@ Latte Dock - Widgets :
 - Lock/Logout
 
 Edit the file ~/.config/kwinrc to add the line: `BorderlessMaximizedWindows=true` in the section `[Windows]`
-Restart kwin : `kwin_x11 --replace` or `kwin_wayland --replace`
+Restart kwin : `kwin_x11 --replace &` or `kwin_wayland --replace &`
 
 

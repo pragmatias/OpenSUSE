@@ -19,7 +19,7 @@ vim
 whois
 htop
 redshift
-zsh
+#zsh
 python3-requests
 wxWidgets-lang
 
@@ -88,18 +88,17 @@ keepassxc-lang
 
 # Fonts
 ubuntu-fonts
-google-inconsolata-fonts
 adobe-sourcecodepro-fonts
+google-inconsolata-fonts
 google-roboto-mono-fonts
-hack-fonts
 google-opensans-fonts
-lato-fonts
+hack-fonts
 
 # Games
 steam
 
 # Desktop customization
-latte-dock
+#latte-dock
 papirus-icon-theme
 neofetch
 
