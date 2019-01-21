@@ -58,7 +58,7 @@ if [ $? -eq 0 ]; then ok ; else ko ; fi
 
 # Mise a niveau des paquets
 echo -e ":: Package dist-update... \c"
-zypper --non-interactive dup --allow-vendor-change >> $LOG 2>&1
+zypper --non-interactive dist-upgrade --allow-vendor-change >> $LOG 2>&1
 if [ $? -eq 0 ]; then ok ; else ko ; fi
 
 # Mise à jour des paquets
