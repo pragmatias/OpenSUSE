@@ -6,30 +6,6 @@ wheel:Vertical;NoModifier=org.kde.switchdesktop
 [ActionPlugins][1]
 RightButton;NoModifier=org.kde.contextmenu
 
-[Containments][1]
-activityId=0dd04b9b-42c4-4170-93bb-ec5b03bbe83d
-formfactor=0
-immutability=1
-lastScreen=0
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
-
-[Containments][1][ConfigDialog]
-DialogHeight=540
-DialogWidth=724
-
-[Containments][1][Configuration]
-PreloadWeight=0
-
-[Containments][1][General]
-filterMimeTypes=\\0
-filterMode=1
-showToolbox=false
-
-[Containments][1][Wallpaper][org.kde.image][General]
-Image=file://$HOME/Pictures/wallhaven-81839.jpg
-
 [Containments][2]
 activityId=
 formfactor=2
@@ -109,7 +85,6 @@ PreloadWeight=60
 
 [Containments][2][Applets][48][Configuration][Appearance]
 dateFormat=longDate
-showDate=true
 showSeconds=true
 use24hFormat=2
 
@@ -145,12 +120,18 @@ plugin=org.kde.plasma.taskmanager
 DialogHeight=540
 DialogWidth=720
 
+[Containments][2][Applets][57][Configuration][General]
+middleClickAction=NewInstance
+showOnlyCurrentActivity=false
+showOnlyCurrentScreen=true
+showToolTips=false
+
 [Containments][2][Applets][58]
 immutability=1
 plugin=org.kde.plasma.icon
 
 [Containments][2][Applets][58][Configuration]
-localPath=$HOME/.local/share/plasma_icons/firefox.desktop
+localPath=/home/gmatias/.local/share/plasma_icons/firefox.desktop
 url=file:///usr/share/applications/firefox.desktop
 
 [Containments][2][Applets][59]
@@ -158,7 +139,7 @@ immutability=1
 plugin=org.kde.plasma.icon
 
 [Containments][2][Applets][59][Configuration]
-localPath=$HOME/.local/share/plasma_icons/org.kde.konsole.desktop
+localPath=/home/gmatias/.local/share/plasma_icons/org.kde.konsole.desktop
 url=file:///usr/share/applications/org.kde.konsole.desktop
 
 [Containments][2][Applets][6]
@@ -166,7 +147,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][2][Applets][6][Configuration]
-PreloadWeight=70
+PreloadWeight=75
 SystrayContainmentId=7
 
 [Containments][2][Applets][60]
@@ -174,7 +155,7 @@ immutability=1
 plugin=org.kde.plasma.icon
 
 [Containments][2][Applets][60][Configuration]
-localPath=$HOME/.local/share/plasma_icons/org.kde.dolphin.desktop
+localPath=/home/gmatias/.local/share/plasma_icons/org.kde.dolphin.desktop
 url=file:///usr/share/applications/org.kde.dolphin.desktop
 
 [Containments][2][Applets][61]
@@ -182,7 +163,7 @@ immutability=1
 plugin=org.kde.plasma.icon
 
 [Containments][2][Applets][61][Configuration]
-localPath=$HOME/.local/share/plasma_icons/org.kde.kate.desktop
+localPath=/home/gmatias/.local/share/plasma_icons/org.kde.kate.desktop
 url=file:///usr/share/applications/org.kde.kate.desktop
 
 [Containments][2][Applets][63]
@@ -194,13 +175,22 @@ DialogHeight=84
 DialogWidth=1920
 
 [Containments][2][General]
-AppletOrder=46;58;59;60;61;57;45;63;6;48;54
+AppletOrder=46;58;59;60;61;57;45;6;48;54
+
+[Containments][64]
+activityId=7f8efb22-3d6a-4183-8145-c15f980fb47e
+formfactor=0
+immutability=1
+lastScreen=0
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
 
 [Containments][7]
 activityId=
 formfactor=2
 immutability=1
-lastScreen=-1
+lastScreen=0
 location=3
 plugin=org.kde.plasma.private.systemtray
 wallpaperplugin=org.kde.image
@@ -262,6 +252,9 @@ PreloadWeight=55
 extraItems=org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.devicenotifier,org.kde.plasma.clipboard,org.kde.kdeconnect,org.kde.plasma.bluetooth,org.kde.plasma.keyboardindicator,org.kde.plasma.battery,org.kde.plasma.mediacontroller,org.kde.plasma.pkupdates,org.kde.plasma.networkmanagement
 knownItems=org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.devicenotifier,org.kde.plasma.clipboard,org.kde.kdeconnect,org.kde.plasma.bluetooth,org.kde.plasma.keyboardindicator,org.kde.plasma.battery,org.kde.plasma.mediacontroller,org.kde.plasma.pkupdates,org.kde.plasma.networkmanagement
 
+[General]
+immutability=2
+
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/Home.desktop,0,desktop:/trash.desktop,0
+screenMapping=
