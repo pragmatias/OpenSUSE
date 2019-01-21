@@ -107,7 +107,7 @@ Reset the current KDE session (kill all process & logout) : `pkill -kill -u user
 ### Konsole configuration
 In Settings > Edit Current Profile
 1. General > Profile name > Users
-2. General > Command > /bin/zsh
+2. General > Command > /bin/bash
 3. Appearance > Color Scheme & Background > Monokai-Flat
 4. Keyboard > Linux console
 
