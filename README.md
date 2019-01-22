@@ -1,19 +1,28 @@
-# OpenSUSE Tumbleweed
+<h1 align="center">OpenSUSE Tumbleweed</h1>
 
 Here, you will find some scripts and config files for [OpenSUSE Tumbleweed](https://www.opensuse.org/#Tumbleweed).
 
+1. [Install](#Install)
+2. [Customization](#Customization)
+3. [Tips](#Tips)
+
+<h2 align="center">Introduction</h2>
 All the work is based on the following resources :
  - [blog.microlinux.fr](https://blog.microlinux.fr) *([OpenSUSE](https://blog.microlinux.fr/tag/opensuse/))*
  - [www.volted.net](https://www.volted.net/) *([ZSH](un-prompt-zsh-au-poil18555.html)/[VIM](https://www.volted.net/un-vimrc-remis-au-propre18752.html))*
  - [denisrosenkranz.com](http://denisrosenkranz.com/installation-et-configuration-de-zsh/) *([ZSH](http://denisrosenkranz.com/installation-et-configuration-de-zsh/))*
  - [KDE Tips](https://zren.github.io/kde/#configuration)
  
-Todo :
+### Todo List
  - [ ] Add fonts [NerdFonts](https://nerdfonts.com)
  - [ ] Firefox Config
  - [ ] Thunderbird Config
 
-## Requirement
+
+<div id="Install">
+<h2 align="center"> Install </h2>
+
+### Requirement
  1. Install [OpenSUSE Tumbleweed](https://software.opensuse.org/distributions/tumbleweed) with the [KDE/Plasma Desktop](https://www.kde.org/plasma-desktop)
  2. Install [GIT](https://git-scm.com/) : `sudo zypper in --no-recommend git`
  3. Get this git [repository](https://github.com/pragmatias/OpenSUSE) : `git clone https://github.com/pragmatias/OpenSUSE.git ~/tmp_install`
@@ -29,8 +38,7 @@ Todo :
  > 3. Add no proxy information : `echo "export no_proxy=localhost,127.0.0.1" >> ~/.bashrc`
  > 4. Add ftp information : `echo "export ftp_proxy=http://proxy_ip:proxy_port" >> ~/.bashrc`
 
- 
-## Steps
+<h3 align="left"> Steps </h3>
  1. Configure the repositories list : `sudo ./01_TW_config_repository.sh`
 > *Note* : you need to remove the nvidia repository if you don't have a nvidia graphic card
  2. Remove the listed packages : `sudo ./02_TW_remove_package.sh`
@@ -42,30 +50,31 @@ Todo :
  7. Restart your computer : `sudo shutdown -r 0`
  8. Remove the tmp_install folder : `rm -rf ~/tmp_install`
 
- 
-# Customization of OpenSUSE Tumbleweed (KDE/Plasma Desktop)
+</div>
 
-- KDE System (System settings)
-	-	Workspace Theme > Look And Feel > Breeze Dark
-	-	Workspace Theme > Desktop Theme > Breeze Dark
-	-	Splash Screen > openSUSE
-	-   Icons > Icons > Papirus-Dark
-	-	Fonts > Fonts > Ubuntu (Hack for "Fixed  width")
-	-	Application Style > Window Decorations > Breeze (with "Tiny" border size)
-	-	Desktop Behavior > Workspace > Click behavior > Double-click to open files and folders
-	-	Desktop Behavior > Screen Locking > deactivation Lock screen automatically
-	-	Input Devices > Keyboard > NumLock on Plasma Startup > Turn on
+<div id="Customization">
+<h2 align="center"> Customization of OpenSUSE Tumbleweed (KDE/Plasma Desktop) </h2>
 
+* KDE System (System settings)
+	*	Workspace Theme > Look And Feel > Breeze Dark
+	*	Workspace Theme > Desktop Theme > Breeze Dark
+	*	Splash Screen > openSUSE
+	*   Icons > Icons > Papirus-Dark
+	*	Fonts > Fonts > Ubuntu (Hack for "Fixed  width")
+	*	Application Style > Window Decorations > Breeze (with "Tiny" border size)
+	*	Desktop Behavior > Workspace > Click behavior > Double-click to open files and folders
+	*	Desktop Behavior > Screen Locking > deactivation Lock screen automatically
+	*	Input Devices > Keyboard > NumLock on Plasma Startup > Turn on
+* KDE Desktop
+    * Right Click on the desktop wallpaper > Configure Desktop > Tweask > Uncheck Show the desktop toolbox
+    * Right Click on the desktop wallpaper > Configure Desktop > Filter > Show Files Matching
+    * Right Click on KDE dock > Panek Options >  Configure Panel >  More Settings > Remove Panel
 
-- KDE Desktop
-    - Right Click on the desktop wallpaper > Configure Desktop > Tweask > Uncheck Show the desktop toolbox
-    - Right Click on the desktop wallpaper > Configure Desktop > Filter > Show Files Matching
-    - Right Click on KDE dock > Panek Options >  Configure Panel >  More Settings > Remove Panel
-	- launch "latte-dock" > Choose the layout "users"
+</div>
 
+<div id="Tips">
+<h2 align="center"> Usefull Information about OpenSUSE Tumbleweed </h2>
 
-
-# Usefull Information about OpenSUSE Tumbleweed
 ### Zypper
  1. Install a package : ` sudo zypper in --no-recommend package`
  2. Remove a package : ` sudo zypper rm --clean-deprs package`
@@ -152,21 +161,29 @@ Widgets list
 Left :
 - Application Menu
 - Application list icons (firefox/konsole/doplhin/kate)
-- Task Manager
+- Task Manager (need to tweak it)
 
 Right :
 - Pager
-- Redshift
+- Redshift (need to download it)
 - System Tray
 - Digital Clock
 - Lock/Logout
 
 To restore plasma config (panel) :
- 1- `kquitapp plasmashell`
- 2- `sleep 10s`
- 3- `cp <plasma_files_backup> $HOME/.config/.`
- 4- `plasmashell &`
+ 1. `kquitapp plasmashell`
+ 2. `sleep 10s`
+ 3. `cp <plasma_files_backup> $HOME/.config/.`
+ 4. `plasmashell &`
 
+
+### WMware tips
+[Shared Folder] (https://en.opensuse.org/SDB:VMware_Tools) :
+- Listing of shared folder : `vmware-hgfsclient`
+- Mount a shared folder : `vmhgfs-fuse -o allow_other .host: /mnt/`
+- Unmount a shared folder : `fusermount -uz /mnt/`or `umount -f /mnt/`
+
+</div>
 
 ### Old
 Latte Dock - Widgets :
