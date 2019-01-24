@@ -33,10 +33,10 @@ All the work is based on the following resources :
 > 1. Open Yast > Network Services > Proxy
 > 2. Click on Enable Proxy and fill all the needed information in "Proxy Setting" and "Proxy Authentification"
 > ##### With Bashrc
- > 1. Add http information : `echo "export http_proxy=http://proxy_ip:proxy_port" >> ~/.bashrc`
- > 2. Add https information : `echo "export https_proxy=http://proxy_ip:proxy_port" >> ~/.bashrc`
- > 3. Add no proxy information : `echo "export no_proxy=localhost,127.0.0.1" >> ~/.bashrc`
- > 4. Add ftp information : `echo "export ftp_proxy=http://proxy_ip:proxy_port" >> ~/.bashrc`
+> 1. Add http information : `echo "export http_proxy=http://proxy_ip:proxy_port" >> ~/.bashrc`
+> 2. Add https information : `echo "export https_proxy=http://proxy_ip:proxy_port" >> ~/.bashrc`
+> 3. Add no proxy information : `echo "export no_proxy=localhost,127.0.0.1" >> ~/.bashrc`
+> 4. Add ftp information : `echo "export ftp_proxy=http://proxy_ip:proxy_port" >> ~/.bashrc`
 
 <h3 align="left"> Steps </h3>
  1. Configure the repositories list : `sudo ./01_TW_config_repository.sh`
@@ -68,8 +68,6 @@ All the work is based on the following resources :
 * KDE Desktop
     * Right Click on the desktop wallpaper > Configure Desktop > Tweask > Uncheck Show the desktop toolbox
     * Right Click on the desktop wallpaper > Configure Desktop > Filter > Show Files Matching
-    * Right Click on KDE dock > Panek Options >  Configure Panel >  More Settings > Remove Panel
-
 </div>
 
 <div id="Tips">
@@ -77,10 +75,11 @@ All the work is based on the following resources :
 
 ### Zypper
  1. Install a package : ` sudo zypper in --no-recommend package`
- 2. Remove a package : ` sudo zypper rm --clean-deprs package`
+ 2. Remove a package : ` sudo zypper rm --clean-deps package`
  3. Refresh repositories : `sudo zypper ref` or `sudo zypper ref -f`
  4. Update packages : `sudo zypper up`
- 5. Search packages : `sudo zypper se package` or `sudo zypper se -is package`
+ 5. Upgrade Distribution : `sudo zypper dup`
+ 6. Search packages : `sudo zypper se package` or `sudo zypper se -is package`
 > Note: replace **package** by the package name
 
 ### btrfs issue
@@ -185,8 +184,12 @@ To restore plasma config (panel) :
 
 </div>
 
-### Old
-Latte Dock - Widgets :
+
+
+<div id="Archive">
+<h2 align="center"> Old </h2>
+
+### Latte Dock - Widgets
 - Application Menu
 - Global Menu
 - Active Window Control
@@ -199,7 +202,9 @@ Latte Dock - Widgets :
 - System Tray
 - Lock/Logout
 
+### Maximized Windows (kwin)
 Edit the file ~/.config/kwinrc to add the line: `BorderlessMaximizedWindows=true` in the section `[Windows]`
 Restart kwin : `kwin_x11 --replace &` or `kwin_wayland --replace &`
+
 
 
