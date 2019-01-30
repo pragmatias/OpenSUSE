@@ -154,20 +154,20 @@ The file **places.sqlite** in **$HOME/.mozilla/firefox/%.default** contains book
 > - No Coin
 
 
-### Kpanel
-Widgets list
-
-Left :
+### Latte Dock
+List of widgets :
 - Application Menu
-- Application list icons (firefox/konsole/doplhin/kate)
-- Task Manager (need to tweak it)
-
-Right :
 - Pager
-- Redshift (need to download it)
+- Latte plasmoid
+- Justify Splitter
+- Justify Splitter
+- Redshift
 - System Tray
 - Digital Clock
 - Lock/Logout
+
+> You need to download and add manually the widget "redshift"
+
 
 To restore plasma config (panel) :
  1. `kquitapp plasmashell`
@@ -189,18 +189,7 @@ To restore plasma config (panel) :
 <div id="Archive">
 <h2 align="center"> Old </h2>
 
-### Latte Dock - Widgets
-- Application Menu
-- Global Menu
-- Active Window Control
-- Justify Splitter
-- Digital Clock
-- Justify Splitter
-- Pager
-- System Load Viewer
-- Weather Report
-- System Tray
-- Lock/Logout
+
 
 ### Maximized Windows (kwin)
 Edit the file ~/.config/kwinrc to add the line: `BorderlessMaximizedWindows=true` in the section `[Windows]`
