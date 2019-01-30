@@ -98,7 +98,7 @@ hack-fonts
 steam
 
 # Desktop customization
-#latte-dock
+latte-dock
 papirus-icon-theme
 neofetch
 

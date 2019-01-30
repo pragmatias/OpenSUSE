@@ -68,31 +68,35 @@ ok
 
 
 # Personnalisation de latte_dock
-#echo -e ":: Customization of the latte-dock for users... \c"
-#sleep $DELAY
-#if [ ! -z "$(ls -A /home)" ]; then
-#  for UTILISATEUR in $(ls /home); do
-#    if [ ! -e /home/$UTILISATEUR/.config/latte ]; then
-#        mkdir /home/$UTILISATEUR/.config/latte
-#        if [ $? -ne 0 ]; then ko ; fi
-#        chown $UTILISATEUR:users /home/$UTILISATEUR/.config/latte
-#    fi
-#    cp $CWD/../config/latte/* /home/$UTILISATEUR/.config/latte/.
-#    if [ $? -ne 0 ]; then ko ; fi
-#    chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/latte
-#	if [ $? -ne 0 ]; then ko ; fi
-#	if [ ! -e /home/$UTILISATEUR/.config/autostart ]; then
-#    mkdir /home/$UTILISATEUR/.config/autostart
-#    if [ $? -ne 0 ]; then ko ; fi
-#    chown $UTILISATEUR:users /home/$UTILISATEUR/.config/autostart
-#  fi
-#  cp /usr/share/applications/org.kde.latte-dock.desktop /home/$UTILISATEUR/.config/autostart/org.kde.latte-dock.desktop
-#  if [ $? -ne 0 ]; then ko ; fi
-#  chown $UTILISATEUR:users /home/$UTILISATEUR/.config/autostart/org.kde.latte-dock.desktop
-#	if [ $? -ne 0 ]; then ko ; fi
-#  done
-#fi
-#ok
+echo -e ":: Customization of the latte-dock for users... \c"
+sleep $DELAY
+if [ ! -z "$(ls -A /home)" ]; then
+  for UTILISATEUR in $(ls /home); do
+    if [ ! -e /home/$UTILISATEUR/.config/latte ]; then
+        mkdir /home/$UTILISATEUR/.config/latte
+        if [ $? -ne 0 ]; then ko ; fi
+        chown $UTILISATEUR:users /home/$UTILISATEUR/.config/latte
+    fi
+    cp $CWD/../config/latte/* /home/$UTILISATEUR/.config/latte/.
+    if [ $? -ne 0 ]; then ko ; fi
+    chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/latte
+	if [ $? -ne 0 ]; then ko ; fi
+    cp $CWD/../config/lattedockrc /home/$UTILISATEUR/.config/lattedockrc
+    if [ $? -ne 0 ]; then ko ; fi
+    chown $UTILISATEUR:users /home/$UTILISATEUR/.config/lattedockrc
+	if [ $? -ne 0 ]; then ko ; fi
+	if [ ! -e /home/$UTILISATEUR/.config/autostart ]; then
+    mkdir /home/$UTILISATEUR/.config/autostart
+    if [ $? -ne 0 ]; then ko ; fi
+    chown $UTILISATEUR:users /home/$UTILISATEUR/.config/autostart
+  fi
+  cp /usr/share/applications/org.kde.latte-dock.desktop /home/$UTILISATEUR/.config/autostart/org.kde.latte-dock.desktop
+  if [ $? -ne 0 ]; then ko ; fi
+  chown $UTILISATEUR:users /home/$UTILISATEUR/.config/autostart/org.kde.latte-dock.desktop
+	if [ $? -ne 0 ]; then ko ; fi
+  done
+fi
+ok
 
 
 # Personnalisation de Konsole pour les utilisateurs (colorscheme)
@@ -174,7 +178,7 @@ ok
 
 
 # Panel Configuration
-echo -e ":: Customization of Kpanel for users... \c"
+echo -e ":: Deactivation of Kpanel for users... \c"
 sleep $DELAY
 if [ ! -z "$(ls -A /home)" ]; then
   for UTILISATEUR in $(ls /home); do

@@ -1,0 +1,23 @@
+[KFileDialog Settings]
+Recent Files[$e]=file:$HOME/.config/latte/User_bottom.layout.latte
+
+[PlasmaTransientsConfig]
+PreloadWeight=34
+
+[ScreenConnectors]
+10=Virtual1
+
+[UniversalSettings]
+canDisableBorders=false
+currentLayout=User_bottom
+downloadWindowSize=800,550
+lastNonAssignedLayout=User_bottom
+launchers=applications:org.kde.konsole.desktop,applications:org.kde.dolphin.desktop,applications:org.kde.kate.desktop,applications:sublime_text.desktop,applications:firefox.desktop,applications:chromium-browser.desktop,applications:vivaldi.desktop,applications:thunderbird.desktop,applications:qbittorrent.desktop,applications:org.keepassxc.KeePassXC.desktop,applications:vlc.desktop,applications:steam.desktop,applications:writer.desktop,applications:calc.desktop
+layoutsColumnWidths=86,76,63,0
+layoutsWindowSize=700,553
+memoryUsage=0
+mouseSensitivity=2
+screenTrackerInterval=2500
+showInfoWindow=true
+unifiedGlobalShortcuts=true
+version=2
