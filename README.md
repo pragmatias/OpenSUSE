@@ -7,17 +7,25 @@ Here, you will find some scripts and config files for [OpenSUSE Tumbleweed](http
 3. [Tips](#Tips)
 
 <h2 align="center">Introduction</h2>
+
 All the work is based on the following resources :
+
  - [blog.microlinux.fr](https://blog.microlinux.fr) *([OpenSUSE](https://blog.microlinux.fr/tag/opensuse/))*
  - [www.volted.net](https://www.volted.net/) *([ZSH](un-prompt-zsh-au-poil18555.html)/[VIM](https://www.volted.net/un-vimrc-remis-au-propre18752.html))*
  - [denisrosenkranz.com](http://denisrosenkranz.com/installation-et-configuration-de-zsh/) *([ZSH](http://denisrosenkranz.com/installation-et-configuration-de-zsh/))*
  - [KDE Tips](https://zren.github.io/kde/#configuration)
  
 ### Todo List
- - [ ] Add fonts [NerdFonts](https://nerdfonts.com)
- - [ ] Firefox Config
- - [ ] Thunderbird Config
+- [ ] Find a way to move windows with more position than "Quick Tile"
+- [ ] Configure "Win+1" to switch on Desktop 1 (not Ctrl+F1) [Same for all the desktop]
+- [ ] Learn how to use "KDE Activities"
 
+### Things to do manually after install
+ - Firefox Config (bookmarks)
+ - Thunderbird Config (account)
+ - NFS Config (NAS)
+ - KeepassXC Config (file)
+ - Add "Redshift Widget" in Latte-Dock (before System Tray)
 
 <div id="Install">
 <h2 align="center"> Install </h2>
@@ -39,6 +47,7 @@ All the work is based on the following resources :
 > 4. Add ftp information : `echo "export ftp_proxy=http://proxy_ip:proxy_port" >> ~/.bashrc`
 
 <h3 align="left"> Steps </h3>
+
  1. Configure the repositories list : `sudo ./01_TW_config_repository.sh`
 > *Note* : you need to remove the nvidia repository if you don't have a nvidia graphic card
  2. Remove the listed packages : `sudo ./02_TW_remove_package.sh`
@@ -61,13 +70,16 @@ All the work is based on the following resources :
 	*	Splash Screen > openSUSE
 	*   Icons > Icons > Papirus-Dark
 	*	Fonts > Fonts > Ubuntu (Hack for "Fixed  width")
-	*	Application Style > Window Decorations > Breeze (with "Tiny" border size)
+	*	Application Style > Window Decorations > Border size : No Borders
+	*	Application Style > Window Decorations > Breeze (Customize : "Small" Button Size, check only "Draw window background gradient")
 	*	Desktop Behavior > Workspace > Click behavior > Double-click to open files and folders
 	*	Desktop Behavior > Screen Locking > deactivation Lock screen automatically
+	*	Desltop Behavior > Virtual Desktop > Desktop (Customize : Number of desktops = 4 and Number of rows = 1)
 	*	Input Devices > Keyboard > NumLock on Plasma Startup > Turn on
 * KDE Desktop
     * Right Click on the desktop wallpaper > Configure Desktop > Tweask > Uncheck Show the desktop toolbox
     * Right Click on the desktop wallpaper > Configure Desktop > Filter > Show Files Matching
+    * Right Click on the desktop wallpaper > Configure Desktop > Wallpaper > Add Image > Choose your wallpaper
 </div>
 
 <div id="Tips">
@@ -101,24 +113,6 @@ If btrfs-cleaner use 100% of your CPU and freeze your computer, you can stop it 
 > - **repnfs** : path/folder on the NFS server
 > - **replocal** : path/folder on the NFS client
 
-### Autostart (KDE)
-Copy a file **org.kde.*.desktop** in the folder **~/.config/autostart**
-> You could find them in the folder */usr/share/applications*
-
-Or use System Settings > Startup and Shutdown > Autostart
-
-### Reset KDE Session
-Reset the current KDE session (kill all process & logout) : `pkill -kill -u username`
-> Note : replace **username** by the name of the choosen one
-
-
-### Konsole configuration
-In Settings > Edit Current Profile
-1. General > Profile name > Users
-2. General > Command > /bin/bash
-3. Appearance > Color Scheme & Background > Monokai-Flat
-4. Keyboard > Linux console
-
 
 ### Configure Bind to Switch Desktop and Quick tile Window
 1. Go to System Settings > Shortcuts > Global Shortcuts > System Settings
@@ -137,6 +131,26 @@ In Settings > Edit Current Profile
 >| Switch One Desktop to the Right | Meta+Right |
 >| Switch One Desktop Up | Meta+Up |
 2. Right Click on the desktop wallpaper > Configure Desktop > Mouse Actions > Remove action "Switch Desktop" for "Vertical-Scroll"
+
+
+### Autostart (KDE)
+Copy a file **org.kde.*.desktop** in the folder **~/.config/autostart**
+> You could find them in the folder */usr/share/applications*
+
+Or use System Settings > Startup and Shutdown > Autostart
+
+### Reset KDE Session
+Reset the current KDE session (kill all process & logout) : `pkill -kill -u username`
+> Note : replace **username** by the name of the choosen one
+
+
+### Konsole configuration
+In Settings > Edit Current Profile
+1. General > Profile name > Users
+2. General > Command > /bin/bash
+3. Appearance > Color Scheme & Background > Monokai-Flat
+4. Keyboard > Linux console
+
 
 ### Firefox configuration
 The file **places.sqlite** in **$HOME/.mozilla/firefox/%.default** contains bookmarks and history
@@ -183,17 +197,5 @@ To restore plasma config (panel) :
 - Unmount a shared folder : `fusermount -uz /mnt/`or `umount -f /mnt/`
 
 </div>
-
-
-
-<div id="Archive">
-<h2 align="center"> Old </h2>
-
-
-
-### Maximized Windows (kwin)
-Edit the file ~/.config/kwinrc to add the line: `BorderlessMaximizedWindows=true` in the section `[Windows]`
-Restart kwin : `kwin_x11 --replace &` or `kwin_wayland --replace &`
-
 
 
