@@ -138,22 +138,22 @@ ok
 
 
 # Personnalisation de Neofetch pour les utilisateurs (info)
-echo -e ":: Customization of Neofetch for users... \c"
-sleep $DELAY
-if [ ! -z "$(ls -A /home)" ]; then
-  for UTILISATEUR in $(ls /home); do
-    if [ ! -e /home/$UTILISATEUR/.config/neofetch ]; then
-      mkdir /home/$UTILISATEUR/.config/neofetch
-      if [ $? -ne 0 ]; then ko ; fi
-      chown $UTILISATEUR:users /home/$UTILISATEUR/.config/neofetch
-    fi
-    cp $CWD/../config/neofetch/* /home/$UTILISATEUR/.config/neofetch/.
-    if [ $? -ne 0 ]; then ko ; fi
-    chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/neofetch
-    if [ $? -ne 0 ]; then ko ; fi
-  done
-fi
-ok
+#echo -e ":: Customization of Neofetch for users... \c"
+#sleep $DELAY
+#if [ ! -z "$(ls -A /home)" ]; then
+#  for UTILISATEUR in $(ls /home); do
+#    if [ ! -e /home/$UTILISATEUR/.config/neofetch ]; then
+#      mkdir /home/$UTILISATEUR/.config/neofetch
+#      if [ $? -ne 0 ]; then ko ; fi
+#      chown $UTILISATEUR:users /home/$UTILISATEUR/.config/neofetch
+#    fi
+#    cp $CWD/../config/neofetch/* /home/$UTILISATEUR/.config/neofetch/.
+#    if [ $? -ne 0 ]; then ko ; fi
+#    chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/neofetch
+#    if [ $? -ne 0 ]; then ko ; fi
+#  done
+#fi
+#ok
 
 
 

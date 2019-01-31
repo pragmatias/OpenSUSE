@@ -100,7 +100,8 @@ steam
 # Desktop customization
 latte-dock
 papirus-icon-theme
-neofetch
+#neofetch
+#screenfetch
 
 # Package with potential issues
 vlc-codecs
