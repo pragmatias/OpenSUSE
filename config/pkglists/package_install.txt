@@ -45,7 +45,7 @@ chromium-ffmpeg-extra
 
 # Developpement
 sublime-text
-emacs
+#emacs
 
 # Graphisme
 gimp
@@ -100,7 +100,7 @@ steam
 # Desktop customization
 latte-dock
 papirus-icon-theme
-#neofetch
+neofetch
 #screenfetch
 
 # Package with potential issues

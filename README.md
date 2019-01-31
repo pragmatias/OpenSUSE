@@ -55,7 +55,7 @@ All the work is based on the following resources :
 > *Note* : if the "vlc-codecs" installation isn't [OK], you need to install it manually with the command `sudo zypper in --no-recommend vlc-codecs` and choose options with vendor change for the libraries
  4. Install of truetype proprietary fonts : `sudo ./04_TW_install_fonts_truetype.sh`
  5. Customization of users : `sudo ./05_TW_customize_users.sh` 
- 6. Install the graphic card driver (manually) : `sudo zypper in --no-recommend nvidia-glG05`
+ 6. Install the graphic card driver (manually) : `sudo zypper in nvidia-glG05`
  7. Restart your computer : `sudo shutdown -r 0`
  8. Remove the tmp_install folder : `rm -rf ~/tmp_install`
 
