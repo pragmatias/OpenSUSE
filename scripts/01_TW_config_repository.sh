@@ -57,9 +57,9 @@ zypper --gpg-auto-import-keys refresh >> $LOG 2>&1
 if [ $? -eq 0 ]; then ok ; else ko ; fi
 
 # Mise a niveau des paquets
-echo -e ":: Package dist-update... \c"
-zypper --non-interactive dist-upgrade --allow-vendor-change >> $LOG 2>&1
-if [ $? -eq 0 ]; then ok ; else ko ; fi
+#echo -e ":: Package dist-update... \c"
+#zypper --non-interactive dist-upgrade --allow-vendor-change >> $LOG 2>&1
+#if [ $? -eq 0 ]; then ok ; else ko ; fi
 
 # Mise à jour des paquets
 echo -e ":: Package update... \c"
