@@ -105,6 +105,18 @@ If btrfs-cleaner use 100% of your CPU and freeze your computer, you can stop it 
 ` sudo rcnetwork restart network_interface`
 > Note: replace **network_interface** by your interface name (using ifconfig)
 
+### Configuration Fstab (with ntfs drive)
+For each drive :
+ 1. Create the following folder : `mkdir /mnt/<name>`
+ 2. change the folder owner : `chown anybody:wheel /mnt/<name>` 
+ 3. update the fstab file `sudo vi /etc/fstab` with the following line : `/dev/<drive>          /mnt/<name>          ntfs     rw,nosuid,nodev,relatime   0  0` 
+
+Tips :
+ - list partitions : `sudo fdisk -l`
+ - list block devices : ` lsblk`
+ - list uuid : `sudo blkid`
+
+
 ### Configuration the NFS client
  - Discover the shared volumes on the NFS server : ` showmount -e <ip>`
  - Mount a shared volume from the NFS server (manually) : `sudo mount -t nfs <ip>:<repnfs> <replocal>`

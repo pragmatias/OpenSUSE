@@ -84,10 +84,10 @@ ${font Ubuntu:pixelsize=13} Swap ${alignr}${color0}${swap}${color} / ${color0}${
 #${font Ubuntu:pixelsize=13} ${alignr}${color}${swapbar 5,120}
 ${font Ubuntu:pixelsize=13} / (Root) ${alignr}${color0}${fs_used /}${color} / ${color0}${fs_size /}${color}  (${color0}${fs_used_perc /}%${color})
 #${font Ubuntu:pixelsize=13} ${alignr}${color}${fs_bar 5,120 /}
-${font Ubuntu:pixelsize=13} /run/media/gmatias/Win10 ${alignr}${color0}${fs_used /run/media/gmatias/Win10}${color} / ${color0}${fs_size /run/media/gmatias/Win10}${color}  (${color0}${fs_used_perc //run/media/gmatias/Win10}%${color})
-${font Ubuntu:pixelsize=13} /run/media/gmatias/Bittorent ${alignr}${color0}${fs_used /run/media/gmatias/Bittorent}${color} / ${color0}${fs_size /run/media/gmatias/Bittorent}${color}  (${color0}${fs_used_perc //run/media/gmatias/Bittorent}%${color})
-${font Ubuntu:pixelsize=13} /run/media/gmatias/Games ${alignr}${color0}${fs_used /run/media/gmatias/Games}${color} / ${color0}${fs_size /run/media/gmatias/Games}${color}  (${color0}${fs_used_perc //run/media/gmatias/Games}%${color})
-${font Ubuntu:pixelsize=13} /run/media/gmatias/Work ${alignr}${color0}${fs_used /run/media/gmatias/Work}${color} / ${color0}${fs_size /run/media/gmatias/Work}${color}  (${color0}${fs_used_perc //run/media/gmatias/Work}%${color})
+${font Ubuntu:pixelsize=13} /mnt/Win10 ${alignr}${color0}${fs_used /mnt/Win10}${color} / ${color0}${fs_size /mnt/Win10}${color}  (${color0}${fs_used_perc //mnt/Win10}%${color})
+${font Ubuntu:pixelsize=13} /mnt/Bittorent ${alignr}${color0}${fs_used /mnt/Bittorent}${color} / ${color0}${fs_size /mnt/Bittorent}${color}  (${color0}${fs_used_perc //mnt/Bittorent}%${color})
+${font Ubuntu:pixelsize=13} /mnt/Games ${alignr}${color0}${fs_used /mnt/Games}${color} / ${color0}${fs_size /mnt/Games}${color}  (${color0}${fs_used_perc //mnt/Games}%${color})
+${font Ubuntu:pixelsize=13} /mnt/Work ${alignr}${color0}${fs_used /mnt/Work}${color} / ${color0}${fs_size /mnt/Work}${color}  (${color0}${fs_used_perc //mnt/Work}%${color})
 ${font Ubuntu:pixelsize=13} /mnt/Share (NAS) ${alignr}${color0}${fs_used /mnt/Share}${color} / ${color0}${fs_size /mnt/Share}${color}  (${color0}${fs_used_perc /mnt/Share}%${color})
 
 # Network
