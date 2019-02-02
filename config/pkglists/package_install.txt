@@ -22,6 +22,8 @@ redshift
 #zsh
 python3-requests
 wxWidgets-lang
+lsb
+lsb-release
 
 # KDE
 fontforge
@@ -85,9 +87,11 @@ cherrytree-lang
 kwrite
 keepassxc
 keepassxc-lang
+conky
 
 # Fonts
 ubuntu-fonts
+fontawesome-fonts
 adobe-sourcecodepro-fonts
 google-inconsolata-fonts
 google-roboto-mono-fonts

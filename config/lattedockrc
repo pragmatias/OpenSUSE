@@ -1,18 +1,51 @@
+[Containments][22][General]
+extraItems=org.kde.plasma.pkupdates,org.kde.plasma.devicenotifier,org.kde.plasma.bluetooth,org.kde.plasma.keyboardindicator,org.kde.plasma.notifications,org.kde.plasma.clipboard,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.kdeconnect,org.kde.plasma.weather
+knownItems=org.kde.plasma.pkupdates,org.kde.plasma.devicenotifier,org.kde.plasma.bluetooth,org.kde.plasma.keyboardindicator,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.kdeconnect,org.kde.plasma.mediacontroller,org.kde.plasma.printmanager
+
+[Containments][23][General]
+advanced=true
+appletOrder=56;51;55;52;54;57
+dotsOnActive=true
+iconMargin=55
+iconSize=25
+launchersGroup=Global
+panelPosition=10
+panelSize=100
+reverseLinesPosition=true
+shadowOpacity=60
+shadowSize=40
+showOnlyCurrentActivity=false
+showOnlyCurrentScreen=true
+solidBackgroundForMaximized=true
+splitterPosition=2
+splitterPosition2=4
+titleTooltips=false
+zoomLevel=0
+
 [KFileDialog Settings]
 Recent Files[$e]=file:$HOME/.config/latte/User_bottom.layout.latte
 
+[PlasmaRunnerManager]
+pluginWhiteList=services,shell,bookmarks,baloosearch,locations
+
 [PlasmaTransientsConfig]
-PreloadWeight=34
+PreloadWeight=10
+enableKWinEdges=true
+raiseOnActivityChange=false
+raiseOnDesktopChange=false
+timerHide=700
+timerShow=200
 
 [ScreenConnectors]
-10=Virtual1
+11=DVI-I-1
+12=HDMI-0
 
 [UniversalSettings]
 canDisableBorders=false
 currentLayout=User_bottom
 downloadWindowSize=800,550
 lastNonAssignedLayout=User_bottom
-launchers=applications:org.kde.konsole.desktop,applications:org.kde.dolphin.desktop,applications:org.kde.kate.desktop,applications:sublime_text.desktop,applications:firefox.desktop,applications:chromium-browser.desktop,applications:vivaldi.desktop,applications:thunderbird.desktop,applications:qbittorrent.desktop,applications:org.keepassxc.KeePassXC.desktop,applications:vlc.desktop,applications:steam.desktop,applications:writer.desktop,applications:calc.desktop
+launchers=applications:org.kde.konsole.desktop,applications:org.kde.dolphin.desktop,applications:org.kde.kate.desktop,applications:sublime_text.desktop,applications:firefox.desktop,applications:chromium-browser.desktop,applications:vivaldi.desktop,applications:thunderbird.desktop,applications:qbittorrent.desktop,applications:org.keepassxc.KeePassXC.desktop,applications:vlc.desktop,applications:steam.desktop,applications:discord.desktop,applications:writer.desktop,applications:calc.desktop
 layoutsColumnWidths=86,76,63,0
 layoutsWindowSize=700,553
 memoryUsage=0
