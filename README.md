@@ -17,6 +17,7 @@ All the work is based on the following resources :
  
 ### Todo List
 - [ ] Find a way to move windows with more position than "Quick Tile"
+- [ ] Install & Use KDE Connect
 - [ ] Learn how to use "KDE Activities"
 
 ### Things to do manually after install
