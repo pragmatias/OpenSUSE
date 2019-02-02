@@ -96,12 +96,12 @@ hack-fonts
 
 # Games
 steam
+discord
 
 # Desktop customization
 latte-dock
 papirus-icon-theme
 neofetch
-#screenfetch
 
 # Package with potential issues
 vlc-codecs

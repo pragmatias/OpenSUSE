@@ -17,7 +17,6 @@ All the work is based on the following resources :
  
 ### Todo List
 - [ ] Find a way to move windows with more position than "Quick Tile"
-- [ ] Configure "Win+1" to switch on Desktop 1 (not Ctrl+F1) [Same for all the desktop]
 - [ ] Learn how to use "KDE Activities"
 
 ### Things to do manually after install
@@ -108,14 +107,15 @@ If btrfs-cleaner use 100% of your CPU and freeze your computer, you can stop it 
 ### Configuration the NFS client
  - Discover the shared volumes on the NFS server : ` showmount -e <ip>`
  - Mount a shared volume from the NFS server (manually) : `sudo mount -t nfs <ip>:<repnfs> <replocal>`
- - Mount a shared volume from the NFS server (automatically) : `sudo vi /etc/fstab` and add the line `<ip>:<repnfs> <replocal> nfs defaults,_netdev 0 0`
+ - Mount a shared volume from the NFS server (automatically) : `sudo vi /etc/fstab` and add the line `<ip>:<repnfs> <replocal> nfs rw,noauto,_netdev 0 0`
+ - Mount all the fstab (reload) : `mount -a`
 > - **ip** of the NFS server
 > - **repnfs** : path/folder on the NFS server
 > - **replocal** : path/folder on the NFS client
 
 
 ### Configure Bind to Switch Desktop and Quick tile Window
-1. Go to System Settings > Shortcuts > Global Shortcuts > System Settings
+1. Go to System Settings > Shortcuts > Global Shortcuts > System Settings or Kwin
 >| Action | Global |
 >|--|--|
 >| Quick Tile Window to the Bottom | Meta+Num+2 |
@@ -130,6 +130,7 @@ If btrfs-cleaner use 100% of your CPU and freeze your computer, you can stop it 
 >| Switch One Desktop to the Left | Meta+Left |
 >| Switch One Desktop to the Right | Meta+Right |
 >| Switch One Desktop Up | Meta+Up |
+>| Full screen Window | Meta+f |
 2. Right Click on the desktop wallpaper > Configure Desktop > Mouse Actions > Remove action "Switch Desktop" for "Vertical-Scroll"
 
 
@@ -157,6 +158,7 @@ The file **places.sqlite** in **$HOME/.mozilla/firefox/%.default** contains book
 
 > List of interesting addons :
 > - Ublock Origin
+> - HTTPS Everywhere
 > - Canvasblocker
 > - Cookie autodelete
 > - Css exfil protection
@@ -172,10 +174,9 @@ The file **places.sqlite** in **$HOME/.mozilla/firefox/%.default** contains book
 List of widgets :
 - Application Menu
 - Pager
+- Justify Splitter
 - Latte plasmoid
 - Justify Splitter
-- Justify Splitter
-- Redshift
 - System Tray
 - Digital Clock
 - Lock/Logout
