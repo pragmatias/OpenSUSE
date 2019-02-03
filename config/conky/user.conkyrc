@@ -101,9 +101,9 @@ ${font Ubuntu:pixelsize=13} Down: ${color0}${downspeed enp3s0}${color} (Total: $
 # Detail
 ${font Ubuntu:Regular:size=13}${color}Detail ${color0}${hr 1 }${color}
 ${font Ubuntu:pixelsize=13}${color}CPU 
-${font Ubuntu:pixelsize=13}${color}N° 1 : ${color0} ${cpu cpu1}% ${color} | ${color}N° 2  : ${color0} ${cpu cpu2}% ${color} | ${color}N° 3  : ${color0} ${cpu cpu3}% ${color} | ${color}N° 4 : ${color0} ${cpu cpu4}% ${color}
-${font Ubuntu:pixelsize=13}${color}N° 5 : ${color0} ${cpu cpu5}% ${color} | ${color}N° 6  : ${color0} ${cpu cpu6}% ${color} | ${color}N° 7  : ${color0} ${cpu cpu7}% ${color} I ${color}N° 8 : ${color0} ${cpu cpu8}% ${color}
-${font Ubuntu:pixelsize=13}${color}N° 9 : ${color0} ${cpu cpu9}% ${color} I ${color}N°10 : ${color0} ${cpu cpu10}% ${color} | ${color}N°11 : ${color0} ${cpu cpu11}% ${color} I ${color}N°12 : ${color0} ${cpu cpu12}% ${color}
+${font Ubuntu:pixelsize=13}${color}     N° 1 : ${color0} ${cpu cpu1}% ${color} | ${color}N° 2  : ${color0} ${cpu cpu2}% ${color} | ${color}N° 3  : ${color0} ${cpu cpu3}% ${color} | ${color}N° 4 : ${color0} ${cpu cpu4}% ${color}
+${font Ubuntu:pixelsize=13}${color}     N° 5 : ${color0} ${cpu cpu5}% ${color} | ${color}N° 6  : ${color0} ${cpu cpu6}% ${color} | ${color}N° 7  : ${color0} ${cpu cpu7}% ${color} I ${color}N° 8 : ${color0} ${cpu cpu8}% ${color}
+${font Ubuntu:pixelsize=13}${color}     N° 9 : ${color0} ${cpu cpu9}% ${color} I ${color}N°10 : ${color0} ${cpu cpu10}% ${color} | ${color}N°11 : ${color0} ${cpu cpu11}% ${color} I ${color}N°12 : ${color0} ${cpu cpu12}% ${color}
 ${font Ubuntu:pixelsize=13}${color}Process Name              ${alignr}PID      CPU       MEM
 ${color}     ${top name 1} ${alignr}${color0}${top pid 1} ${top cpu 1}% ${top mem 1}%
 ${color}     ${top name 2} ${alignr}${color0}${top pid 2} ${top cpu 2}% ${top mem 2}%
