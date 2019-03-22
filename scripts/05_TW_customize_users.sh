@@ -84,7 +84,7 @@ if [ ! -z "$(ls -A /home)" ]; then
     cp $CWD/../config/lattedockrc /home/$UTILISATEUR/.config/lattedockrc
     if [ $? -ne 0 ]; then ko ; fi
     chown $UTILISATEUR:users /home/$UTILISATEUR/.config/lattedockrc
-	if [ $? -ne 0 ]; then ko ; fi
+	  if [ $? -ne 0 ]; then ko ; fi
 	if [ ! -e /home/$UTILISATEUR/.config/autostart ]; then
     mkdir /home/$UTILISATEUR/.config/autostart
     if [ $? -ne 0 ]; then ko ; fi
@@ -189,6 +189,37 @@ ok
 #  done
 #fi
 #ok
+
+
+
+# Personnalisation de conky
+echo -e ":: Customization of Conky ... \c"
+sleep $DELAY
+if [ ! -z "$(ls -A /home)" ]; then
+  for UTILISATEUR in $(ls /home); do
+    if [ ! -e /home/$UTILISATEUR/.config/conky ]; then
+        mkdir /home/$UTILISATEUR/.config/conky
+        if [ $? -ne 0 ]; then ko ; fi
+        chown $UTILISATEUR:users /home/$UTILISATEUR/.config/conky
+    fi
+    cp $CWD/../config/conky/*.conkyrc /home/$UTILISATEUR/.config/conky/.
+    if [ $? -ne 0 ]; then ko ; fi
+    chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/conky
+    if [ $? -ne 0 ]; then ko ; fi
+    if [ ! -e /home/$UTILISATEUR/.config/autostart-scripts ]; then
+      mkdir /home/$UTILISATEUR/.config/autostart-scripts
+      if [ $? -ne 0 ]; then ko ; fi
+      chown $UTILISATEUR:users /home/$UTILISATEUR/.config/autostart-scripts
+    fi
+    cp $CWD/../config/conky/start_conky.sh /home/$UTILISATEUR/.config/autostart-scripts/start_conky.sh
+    if [ $? -ne 0 ]; then ko ; fi
+    chmod +x /home/$UTILISATEUR/.config/autostart-scripts/start_conky.sh
+    if [ $? -ne 0 ]; then ko ; fi
+    chown $UTILISATEUR:users /home/$UTILISATEUR/.config/autostart-scripts/start_conky.sh
+    if [ $? -ne 0 ]; then ko ; fi
+  done
+fi
+ok
 
 
 
