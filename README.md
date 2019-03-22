@@ -191,10 +191,24 @@ To restore plasma config (panel) :
 
 
 ### WMware tips
-[Shared Folder] (https://en.opensuse.org/SDB:VMware_Tools) :
+[Shared Folder](https://en.opensuse.org/SDB:VMware_Tools) :
 - Listing of shared folder : `vmware-hgfsclient`
 - Mount a shared folder : `vmhgfs-fuse -o allow_other .host: /mnt/`
 - Unmount a shared folder : `fusermount -uz /mnt/`or `umount -f /mnt/`
+
+
+### VirtualBox tips
+
+Install VBoxGuestAdditions :
+ 1. insert file VBoxGuestAdditions*.iso in the cdrom
+ 2. `sudo mkdir -p /media/cdrom`
+ 3. `sudo mount -t iso9660 /dev/cdrom /media/cdrom`
+ 4. `cd /media/cdrom`
+ 5. `sudo ./VBoxLinuxAdditions.run`
+
+Install VirtualBox package :
+ 1. `sudo zypper in virtualbox-guest-tools virtualbox-guest-x11`
+
 
 </div>
 
