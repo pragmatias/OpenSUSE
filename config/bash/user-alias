@@ -1,6 +1,11 @@
 # ~/.alias
 
 # Alias
+export LS_OPTIONS='--color=auto'
+eval "$(dircolors)"
+alias ls='ls $LS_OPTIONS'
+alias ll='ls $LS_OPTIONS -l'
+alias l='ls $LS_OPTIONS -lA'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
@@ -13,11 +18,12 @@ alias zypin='sudo zypper in --no-recommend'
 alias zyprm='sudo zypper rm --clean-deps'
 
 # PS1
-VERT='\[\033[0;32m\]'
-ORANGE='\[\033[1;33m\]'
-BLANC='\[\033[1;37m\]'
-GRIS='\[\033[0;m\]'
 ROUGE='\[\033[0;31m\]'
+VERT='\[\033[0;32m\]'
+ORANGE='\[\033[0;33m\]'
+BLEU='\[\033[0;34m\]'
+BLANC='\[\033[0;37m\]'
+GRIS='\[\033[0;m\]'
 
 PS1="${GRIS}[${VERT}\u${GRIS} (\h): ${ORANGE}\w${GRIS}] ${VERT}\$ ${GRIS}"
 

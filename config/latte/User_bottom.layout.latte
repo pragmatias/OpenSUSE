@@ -7,7 +7,7 @@ dockWindowBehavior=true
 enableKWinEdges=true
 formfactor=2
 immutability=1
-lastScreen=-1
+lastScreen=12
 location=4
 onPrimary=true
 plugin=org.kde.latte.containment
@@ -23,19 +23,14 @@ immutability=1
 plugin=org.kde.plasma.lock_logout
 
 [Containments][1][Applets][18][Configuration]
-PreloadWeight=18
-
-[Containments][1][Applets][19][Configuration][General]
-currentDesktopSelected=ShowDesktop
-displayedText=Number
-showOnlyCurrentScreen=true
+PreloadWeight=0
 
 [Containments][1][Applets][2]
 immutability=1
 plugin=org.kde.latte.plasmoid
 
 [Containments][1][Applets][2][Configuration]
-PreloadWeight=18
+PreloadWeight=0
 
 [Containments][1][Applets][2][Configuration][General]
 isInLatteDock=true
@@ -46,7 +41,7 @@ immutability=1
 plugin=org.kde.plasma.pager
 
 [Containments][1][Applets][21][Configuration]
-PreloadWeight=18
+PreloadWeight=5
 
 [Containments][1][Applets][21][Configuration][ConfigDialog]
 DialogHeight=540
@@ -60,7 +55,7 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][1][Applets][4][Configuration]
-PreloadWeight=18
+PreloadWeight=4
 
 [Containments][1][Applets][4][Configuration][Appearance]
 dateFormat=longDate
@@ -68,37 +63,45 @@ displayTimezoneAsCode=false
 fontFamily=Ubuntu
 use24hFormat=2
 
+[Containments][1][Applets][4][Configuration][ConfigDialog]
+DialogHeight=420
+DialogWidth=560
+
 [Containments][1][Applets][5]
 immutability=1
 plugin=org.kde.plasma.kicker
 
 [Containments][1][Applets][5][Configuration]
-PreloadWeight=78
+PreloadWeight=100
 
 [Containments][1][Applets][5][Configuration][General]
 favoritesPortedToKAstats=true
+
+[Containments][1][Applets][58][Configuration][General]
+manualTemperatureStep=25
+useDefaultIcons=false
 
 [Containments][1][Applets][6]
 immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][1][Applets][6][Configuration]
-PreloadWeight=48
+PreloadWeight=89
 SystrayContainmentId=7
 
 [Containments][1][ConfigDialog]
-DialogHeight=597
-DialogWidth=515
+DialogHeight=546
+DialogWidth=470
 
 [Containments][1][Configuration]
-PreloadWeight=18
+PreloadWeight=0
 
 [Containments][1][General]
 advanced=true
 appletOrder=5;21;2;6;4;18
 dotsOnActive=true
-iconMargin=100
-iconSize=20
+iconMargin=55
+iconSize=25
 launchersGroup=Global
 panelPosition=10
 panelSize=100
@@ -109,17 +112,241 @@ showGlow=false
 showOnlyCurrentActivity=false
 showOnlyCurrentScreen=true
 solidBackgroundForMaximized=true
-splitterPosition=3
+splitterPosition=2
+splitterPosition2=4
+titleTooltips=false
+zoomLevel=0
+
+[Containments][14]
+PreloadWeight=0
+activityId=
+formfactor=2
+immutability=1
+lastScreen=12
+location=4
+plugin=org.kde.plasma.private.systemtray
+wallpaperplugin=org.kde.image
+
+[Containments][14][Applets][40]
+immutability=1
+plugin=org.kde.plasma.networkmanagement
+
+[Containments][14][Applets][40][Configuration]
+PreloadWeight=5
+
+[Containments][14][Applets][41]
+immutability=1
+plugin=org.kde.plasma.notifications
+
+[Containments][14][Applets][41][Configuration]
+PreloadWeight=0
+
+[Containments][14][Applets][42]
+immutability=1
+plugin=org.kde.plasma.weather
+
+[Containments][14][Applets][42][Configuration]
+PreloadWeight=9
+pressureUnit=5028
+showHumidityInTooltip=false
+showPressureInTooltip=false
+showTemperatureInCompactMode=false
+showTemperatureInTooltip=true
+showWindInTooltip=false
+source=bbcukmet|weather|Paris, France|2988507
+speedUnit=9002
+temperatureUnit=6001
+updateInterval=30
+visibilityUnit=-1
+weatherServiceProviders=bbcukmet
+
+[Containments][14][Applets][42][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][14][Applets][43]
+immutability=1
+plugin=org.kde.plasma.pkupdates
+
+[Containments][14][Applets][43][Configuration]
+PreloadWeight=9
+
+[Containments][14][Applets][43][Configuration][ConfigDialog]
+DialogHeight=420
+DialogWidth=560
+
+[Containments][14][Applets][44]
+immutability=1
+plugin=org.kde.plasma.volume
+
+[Containments][14][Applets][44][Configuration]
+PreloadWeight=19
+
+[Containments][14][Applets][45]
+immutability=1
+plugin=org.kde.plasma.clipboard
+
+[Containments][14][Applets][45][Configuration]
+PreloadWeight=4
+
+[Containments][14][Applets][46]
+immutability=1
+plugin=org.kde.plasma.devicenotifier
+
+[Containments][14][Applets][46][Configuration]
+PreloadWeight=5
+
+[Containments][14][Applets][47]
+immutability=1
+plugin=org.kde.plasma.keyboardindicator
+
+[Containments][14][Applets][47][Configuration]
+PreloadWeight=5
+
+[Containments][14][Applets][48]
+immutability=1
+plugin=org.kde.kdeconnect
+
+[Containments][14][Applets][48][Configuration]
+PreloadWeight=0
+
+[Containments][14][Applets][49]
+immutability=1
+plugin=org.kde.redshiftControl
+
+[Containments][14][Applets][49][Configuration]
+PreloadWeight=55
+
+[Containments][14][Applets][49][Configuration][ConfigDialog]
+DialogHeight=420
+DialogWidth=560
+
+[Containments][14][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][14][General]
+extraItems=org.kde.plasma.pkupdates,org.kde.plasma.devicenotifier,org.kde.plasma.bluetooth,org.kde.plasma.keyboardindicator,org.kde.plasma.notifications,org.kde.plasma.clipboard,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.kdeconnect,org.kde.plasma.weather,org.kde.redshiftControl
+knownItems=org.kde.plasma.pkupdates,org.kde.plasma.devicenotifier,org.kde.plasma.bluetooth,org.kde.plasma.keyboardindicator,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.kdeconnect,org.kde.plasma.mediacontroller,org.kde.plasma.printmanager
+
+[Containments][16]
+activityId=
+dockWindowBehavior=true
+enableKWinEdges=true
+formfactor=2
+immutability=1
+lastScreen=11
+location=4
+onPrimary=false
+plugin=org.kde.latte.containment
+raiseOnActivityChange=false
+raiseOnDesktopChange=false
+timerHide=700
+timerShow=200
+visibility=0
+wallpaperplugin=org.kde.image
+
+[Containments][16][Applets][51]
+immutability=1
+plugin=org.kde.plasma.digitalclock
+
+[Containments][16][Applets][51][Configuration]
+PreloadWeight=4
+
+[Containments][16][Applets][51][Configuration][Appearance]
+dateFormat=longDate
+displayTimezoneAsCode=false
+fontFamily=Ubuntu
+use24hFormat=2
+
+[Containments][16][Applets][51][Configuration][ConfigDialog]
+DialogHeight=420
+DialogWidth=560
+
+[Containments][16][Applets][52]
+immutability=1
+plugin=org.kde.plasma.systemtray
+
+[Containments][16][Applets][52][Configuration]
+PreloadWeight=89
+SystrayContainmentId=14
+
+[Containments][16][Applets][53]
+immutability=1
+plugin=org.kde.plasma.kicker
+
+[Containments][16][Applets][53][Configuration]
+PreloadWeight=100
+
+[Containments][16][Applets][53][Configuration][General]
+favoritesPortedToKAstats=true
+
+[Containments][16][Applets][54]
+immutability=1
+plugin=org.kde.plasma.lock_logout
+
+[Containments][16][Applets][54][Configuration]
+PreloadWeight=0
+
+[Containments][16][Applets][55]
+immutability=1
+plugin=org.kde.latte.plasmoid
+
+[Containments][16][Applets][55][Configuration]
+PreloadWeight=0
+
+[Containments][16][Applets][55][Configuration][General]
+isInLatteDock=true
+launchers59=
+
+[Containments][16][Applets][56]
+immutability=1
+plugin=org.kde.plasma.pager
+
+[Containments][16][Applets][56][Configuration]
+PreloadWeight=5
+
+[Containments][16][Applets][56][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][16][Applets][56][Configuration][General]
+displayedText=Number
+
+[Containments][16][ConfigDialog]
+DialogHeight=546
+DialogWidth=470
+
+[Containments][16][Configuration]
+PreloadWeight=0
+
+[Containments][16][General]
+advanced=true
+appletOrder=53;56;55;52;51;54
+dotsOnActive=true
+iconMargin=55
+iconSize=25
+launchersGroup=Global
+panelPosition=10
+panelSize=100
+reverseLinesPosition=true
+shadowOpacity=60
+shadowSize=40
+showGlow=false
+showOnlyCurrentActivity=false
+showOnlyCurrentScreen=true
+solidBackgroundForMaximized=true
+splitterPosition=2
 splitterPosition2=4
 titleTooltips=false
 zoomLevel=0
 
 [Containments][7]
-PreloadWeight=18
+PreloadWeight=0
 activityId=
 formfactor=2
 immutability=1
-lastScreen=-1
+lastScreen=12
 location=4
 plugin=org.kde.plasma.private.systemtray
 wallpaperplugin=org.kde.image
@@ -129,88 +356,101 @@ immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][7][Applets][10][Configuration]
-PreloadWeight=18
+PreloadWeight=5
 
 [Containments][7][Applets][11]
 immutability=1
 plugin=org.kde.kdeconnect
 
 [Containments][7][Applets][11][Configuration]
-PreloadWeight=18
+PreloadWeight=0
 
 [Containments][7][Applets][12]
 immutability=1
 plugin=org.kde.plasma.keyboardindicator
 
 [Containments][7][Applets][12][Configuration]
-PreloadWeight=18
+PreloadWeight=5
 
 [Containments][7][Applets][13]
 immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][7][Applets][13][Configuration]
-PreloadWeight=18
-
-[Containments][7][Applets][14][Configuration]
-PreloadWeight=42
+PreloadWeight=0
 
 [Containments][7][Applets][15]
 immutability=1
 plugin=org.kde.plasma.pkupdates
 
 [Containments][7][Applets][15][Configuration]
-PreloadWeight=18
+PreloadWeight=9
 
-[Containments][7][Applets][16][Configuration]
-PreloadWeight=42
+[Containments][7][Applets][15][Configuration][ConfigDialog]
+DialogHeight=420
+DialogWidth=560
 
 [Containments][7][Applets][17]
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][7][Applets][17][Configuration]
-PreloadWeight=18
+PreloadWeight=5
 
 [Containments][7][Applets][20]
 immutability=1
 plugin=org.kde.plasma.weather
 
 [Containments][7][Applets][20][Configuration]
-PreloadWeight=23
+PreloadWeight=9
+pressureUnit=5028
 showHumidityInTooltip=false
 showPressureInTooltip=false
 showTemperatureInCompactMode=false
 showTemperatureInTooltip=true
 showWindInTooltip=false
-source=
+source=bbcukmet|weather|Paris, France|2988507
+speedUnit=9002
+temperatureUnit=6001
 updateInterval=30
-weatherServiceProviders=wettercom,bbcukmet
+visibilityUnit=-1
+weatherServiceProviders=bbcukmet
 
 [Containments][7][Applets][20][Configuration][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
+
+[Containments][7][Applets][59]
+immutability=1
+plugin=org.kde.redshiftControl
+
+[Containments][7][Applets][59][Configuration]
+PreloadWeight=55
+
+[Containments][7][Applets][59][Configuration][ConfigDialog]
+DialogHeight=420
+DialogWidth=560
 
 [Containments][7][Applets][8]
 immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][7][Applets][8][Configuration]
-PreloadWeight=18
+PreloadWeight=19
 
 [Containments][7][Applets][9]
 immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][7][Applets][9][Configuration]
-PreloadWeight=28
+PreloadWeight=4
 
 [Containments][7][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
 
 [Containments][7][General]
-extraItems=org.kde.plasma.pkupdates,org.kde.plasma.devicenotifier,org.kde.plasma.bluetooth,org.kde.plasma.keyboardindicator,org.kde.plasma.notifications,org.kde.plasma.clipboard,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.kdeconnect,org.kde.plasma.weather
+extraItems=org.kde.plasma.pkupdates,org.kde.plasma.devicenotifier,org.kde.plasma.bluetooth,org.kde.plasma.keyboardindicator,org.kde.plasma.notifications,org.kde.plasma.clipboard,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.kdeconnect,org.kde.plasma.weather,org.kde.redshiftControl
 knownItems=org.kde.plasma.pkupdates,org.kde.plasma.devicenotifier,org.kde.plasma.bluetooth,org.kde.plasma.keyboardindicator,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.kdeconnect,org.kde.plasma.mediacontroller,org.kde.plasma.printmanager
 
 [LayoutSettings]
@@ -218,7 +458,7 @@ activities=
 background=
 color=blue
 disableBordersForMaximizedWindows=true
-lastUsedActivity=d2d9de9c-db8d-47fa-aae5-a62790f83967
+lastUsedActivity=31457bf1-588e-420a-9aef-102d301c915c
 launchers=
 showInMenu=true
 textColor=fcfcfc
