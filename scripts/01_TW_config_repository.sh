@@ -6,67 +6,98 @@
 
 . functions_install_TW.sh
 
-echo
-
 # Suppression des dépôts existants
-echo -e ":: Removal of existing repository... \c"
-sleep $DELAY
-rm -f /etc/zypp/repos.d/*.repo
-if [ $? -eq 0 ]; then ok ; else ko ; fi
+exec_cmd="rm -f /etc/zypp/repos.d/*.repo"
+msg_log="Removal of existing repository"
+logMessage "-1" "${msg_log}... [${exec_cmd}]"
+${exec_cmd} >> $LOG 2>&1
+logMessage "${?}" "${msg_log}"
 
 # Configuration du dépôt [oss]
-echo -e ":: Repository configuration [oss]... \c"
-zypper addrepo $MIRROR/tumbleweed/repo/oss oss >> $LOG 2>&1
-if [ $? -eq 0 ]; then ok ; else ko ; fi
+exec_cmd="zypper addrepo $MIRROR/tumbleweed/repo/oss oss"
+msg_log="Repository configuration [oss]"
+logMessage "-1" "${msg_log}... [${exec_cmd}]"
+${exec_cmd} >> $LOG 2>&1
+logMessage "${?}" "${msg_log}"
+
 
 # Configuration du dépôt [non-oss]
-echo -e ":: Repository configuration [non-oss]... \c"
-zypper addrepo $MIRROR/tumbleweed/repo/non-oss non-oss >> $LOG 2>&1
-if [ $? -eq 0 ]; then ok ; else ko ; fi
+exec_cmd="zypper addrepo $MIRROR/tumbleweed/repo/non-oss non-oss"
+msg_log="Repository configuration [non-oss]"
+logMessage "-1" "${msg_log}... [${exec_cmd}]"
+${exec_cmd} >> $LOG 2>&1
+logMessage "${?}" "${msg_log}"
+
+
 
 # Configuration du dépôt [oss-updates]
-echo -e ":: Repository configuration [oss-updates]... \c"
-zypper addrepo $MIRROR/update/tumbleweed oss-updates >> $LOG 2>&1
-if [ $? -eq 0 ]; then ok ; else ko ; fi
+exec_cmd="zypper addrepo $MIRROR/update/tumbleweed oss-updates"
+msg_log="Repository configuration [oss-updates]"
+logMessage "-1" "${msg_log}... [${exec_cmd}]"
+${exec_cmd} >> $LOG 2>&1
+logMessage "${?}" "${msg_log}"
+
 
 # Configuration du dépôt [nvidia]
-echo -e ":: Repository configuration [nvidia]... \c"
-zypper addrepo $NVIDIA nvidia >> $LOG 2>&1
-if [ $? -eq 0 ]; then ok ; else ko ; fi
+exec_cmd="zypper addrepo $NVIDIA nvidia"
+msg_log="Repository configuration [nvidia]"
+logMessage "-1" "${msg_log}... [${exec_cmd}]"
+${exec_cmd} >> $LOG 2>&1
+logMessage "${?}" "${msg_log}"
+
 
 # Configuration du dépôt [packman]
-echo -e ":: Repository configuration [packman]... \c"
-zypper addrepo --priority 90 $PACKMAN packman >> $LOG 2>&1
-if [ $? -eq 0 ]; then ok ; else ko ; fi
+exec_cmd="zypper addrepo --priority 90 $PACKMAN packman"
+msg_log="Repository configuration [packman]"
+logMessage "-1" "${msg_log}... [${exec_cmd}]"
+${exec_cmd} >> $LOG 2>&1
+logMessage "${?}" "${msg_log}"
+
 
 # Configuration du dépôt [dvdcss]
-echo -e ":: Repository configuration [dvdcss]... \c"
-zypper addrepo $DVDCSS dvdcss >> $LOG 2>&1
-if [ $? -eq 0 ]; then ok ; else ko ; fi
+exec_cmd="zypper addrepo $DVDCSS dvdcss"
+msg_log="Repository configuration [dvdcss]"
+logMessage "-1" "${msg_log}... [${exec_cmd}]"
+${exec_cmd} >> $LOG 2>&1
+logMessage "${?}" "${msg_log}"
+
 
 # Configuration du dépôt [SublimeText]
-echo -e ":: Repository configuration [SublimeText]... \c"
-rpm -v --import $SUBLIMETEXT/sublimehq-rpm-pub.gpg >> $LOG 2>&1
-zypper addrepo -g -f $SUBLIMETEXT/rpm/dev/x86_64/sublime-text.repo >> $LOG 2>&1
-if [ $? -eq 0 ]; then ok ; else ko ; fi
+exec_cmd="rpm -v --import $SUBLIMETEXT/sublimehq-rpm-pub.gpg"
+msg_log="Repository configuration [SublimeText] (gpg key)"
+logMessage "-1" "${msg_log}... [${exec_cmd}]"
+${exec_cmd} >> $LOG 2>&1
+logMessage "${?}" "${msg_log}"
+
+exec_cmd="zypper addrepo -g -f $SUBLIMETEXT/rpm/dev/x86_64/sublime-text.repo"
+msg_log="Repository configuration [SublimeText]"
+logMessage "-1" "${msg_log}... [${exec_cmd}]"
+${exec_cmd} >> $LOG 2>&1
+logMessage "${?}" "${msg_log}"
 
 
 # Synchronisation et import des clés GPG
-echo -e ":: Synchronization and import of the GPG Keys... \c"
-zypper --gpg-auto-import-keys refresh >> $LOG 2>&1
-if [ $? -eq 0 ]; then ok ; else ko ; fi
+exec_cmd="zypper --gpg-auto-import-keys refresh"
+msg_log="Synchronization and import of the GPG Keys"
+logMessage "-1" "${msg_log}... [${exec_cmd}]"
+${exec_cmd} >> $LOG 2>&1
+logMessage "${?}" "${msg_log}"
 
-# Mise a niveau des paquets
-#echo -e ":: Package dist-update... \c"
-#zypper --non-interactive dist-upgrade --allow-vendor-change >> $LOG 2>&1
-#if [ $? -eq 0 ]; then ok ; else ko ; fi
+
+# Mise a niveau de l'image
+exec_cmd="zypper --non-interactive dist-upgrade --allow-vendor-change"
+msg_log="Package dist-update"
+logMessage "-1" "${msg_log}... [${exec_cmd}]"
+${exec_cmd} >> $LOG 2>&1
+logMessage "${?}" "${msg_log}"
+
 
 # Mise à jour des paquets
-echo -e ":: Package update... \c"
-zypper --non-interactive update --allow-vendor-change >> $LOG 2>&1
-if [ $? -eq 0 ]; then ok ; else ko ; fi
-
-echo
+exec_cmd="zypper --non-interactive update --allow-vendor-change"
+msg_log="Package update"
+logMessage "-1" "${msg_log}... [${exec_cmd}]"
+${exec_cmd} >> $LOG 2>&1
+logMessage "${?}" "${msg_log}"
 
 exit 0
 

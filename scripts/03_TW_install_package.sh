@@ -5,19 +5,18 @@
 . functions_install_TW.sh
 
 # Liste des paquets supplémentaires
-EXTRAS=$(egrep -v '(^\#)|(^\s+$)' \
-  $CWD/../config/pkglists/package_install.txt)
+pkg_list_add=$(egrep -v '(^\#)|(^\s+$)' $CWD/../config/pkglists/package_install.txt)
 
 # Installer les paquets supplémentaires
-echo
-for PAQUET in $EXTRAS; do
-  if ! rpm -q $PAQUET 2>&1 > /dev/null ; then
-    echo -e ":: Install of the package $PAQUET... \c"
-    zypper --non-interactive install --no-recommends $PAQUET >> $LOG 2>&1
-    if [ $? -eq 0 ]; then ok ; else ko ; fi
+for pkg_add in ${pkg_list_add}; do
+  if ! rpm -q ${pkg_add} 2>&1 > /dev/null ; then
+	exec_cmd="zypper --non-interactive install --no-recommends ${pkg_add}"
+	msg_log="Install of the package ${pkg_add}"
+	logMessage "-1" "${msg_log}... [${exec_cmd}]"
+	${exec_cmd} >> $LOG 2>&1
+	logMessage "${?}" "${msg_log}"
   fi
 done
 
-echo
-
 exit 0
+
