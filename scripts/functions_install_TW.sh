@@ -1,4 +1,4 @@
-# source.sh
+# functions_install_TW.sh
 #
 # Opérations communes à tous les scripts de ce répertoire
 
@@ -10,6 +10,12 @@ fi
 
 # Répertoire courant
 CWD=$(pwd)
+
+# Journal
+LOG=/tmp/$(basename "$0" .sh).log
+
+# Nettoyer le fichier journal
+echo > $LOG
 
 # Interrompre en cas d'erreur
 set -e
@@ -30,23 +36,37 @@ BLANC="\033[01;37m"
 # Pause entre les opérations
 DELAY=1
 
-# Afficher [OK] en cas de succès
-function ok () {
-    echo -e "[${VERT}OK${GRIS}] \c"
-  	sleep $DELAY
-  	echo
+
+function logMessage () {
+    #gestion des parametres
+    coderetour=$1
+    message=$2
+
+    type="INF"
+    message_sup=""
+    statut_date=`date "+%Y-%m-%d"`
+    statut_time=`date "+%H:%M:%S"`
+
+    if [ ${coderetour} -gt 0 ]
+    then 
+    	type="ERR"
+    	message_sup=" [${ROUGE}KO${GRIS}]"
+    elif [ ${coderetour} -eq 0 ]
+    then
+    	type="INF"
+    	message_sup=" [${VERT}OK${GRIS}]"
+    else
+    	type="INF"
+    	message_sup=""
+    fi
+
+    #affichage du message dans la sortie courante
+    echo -e "${statut_date} ${statut_time} - ${type} - ${message}${message_sup}" >> ${LOG}
+    if [ ${coderetour} -gt 0 ]
+    then
+    	echo -e "${statut_date} ${statut_time} - ERR - log detail [${LOG}]"
+    	exit ${coderetour}
+    fi
+
 }
-
-function ko () {
-  	echo -e "[${ROUGE}KO${GRIS}] \c"
-  	sleep $DELAY
-  	echo
-  	exit ${cr_tmp}
-}
-
-# Journal
-LOG=/tmp/$(basename "$0" .sh).log
-
-# Nettoyer le fichier journal
-echo > $LOG
 
