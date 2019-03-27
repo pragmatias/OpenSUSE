@@ -62,6 +62,7 @@ function logMessage () {
 
     #affichage du message dans la sortie courante
     echo -e "${statut_date} ${statut_time} - ${type} - ${message}${message_sup}" >> ${LOG}
+    echo -e "${statut_date} ${statut_time} - ${type} - ${message}${message_sup}"
     if [ ${coderetour} -gt 0 ]
     then
     	echo -e "${statut_date} ${statut_time} - ERR - log detail [${LOG}]"
