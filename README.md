@@ -224,6 +224,12 @@ Install VirtualBox package :
  1. `sudo zypper in virtualbox-guest-tools virtualbox-guest-x11`
 
 
+### purge tmp folder
+
+ 1. copy the configuration file tmp.conf : `cp /usr/lib/tmpfiles.d/tmp.conf /etc/tmpfiles.d/tmp.conf`
+ 2. modify the line `q /tmp 1777 root root -` by `q /tmp 1777 root root 1d -`
+ 3. modify the line `q /var/tmp 1777 root root -` by `q /var/tmp 1777 root root 7d -`
+
 </div>
 
 
