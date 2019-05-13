@@ -2,7 +2,7 @@
 #
 # Customization of Bash, ZSH and VIM
 
-. functions_install_TW.sh
+. 00_functions_install.sh
 
 
 # Personnalisation du shell Bash pour root

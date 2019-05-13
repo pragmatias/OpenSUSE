@@ -4,7 +4,8 @@
 # Automatic import of GPG Key
 # Refresh repository and Update package
 
-. functions_install_TW.sh
+. 00_functions_install.sh
+. 00_TW_environment.sh
 
 # Suppression des dépôts existants
 exec_cmd="rm -f /etc/zypp/repos.d/*.repo"
@@ -62,6 +63,14 @@ ${exec_cmd} >> $LOG 2>&1
 logMessage "${?}" "${msg_log}"
 
 
+# Configuration du dépôt [obs]
+exec_cmd="zypper addrepo --priority 105 $OBS obs"
+msg_log="Repository configuration [dvdcss]"
+logMessage "-1" "${msg_log}... [${exec_cmd}]"
+${exec_cmd} >> $LOG 2>&1
+logMessage "${?}" "${msg_log}"
+
+
 # Configuration du dépôt [SublimeText]
 exec_cmd="rpm -v --import $SUBLIMETEXT/sublimehq-rpm-pub.gpg"
 msg_log="Repository configuration [SublimeText] (gpg key)"
@@ -91,13 +100,6 @@ logMessage "-1" "${msg_log}... [${exec_cmd}]"
 ${exec_cmd} >> $LOG 2>&1
 logMessage "${?}" "${msg_log}"
 
-
-# Mise à jour des paquets
-exec_cmd="zypper --non-interactive update --allow-vendor-change"
-msg_log="Package update"
-logMessage "-1" "${msg_log}... [${exec_cmd}]"
-${exec_cmd} >> $LOG 2>&1
-logMessage "${?}" "${msg_log}"
 
 exit 0
 

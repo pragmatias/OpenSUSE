@@ -1,0 +1,129 @@
+# Package to install
+
+# System Tools
+iperf
+lftp
+links
+man-pages
+man-pages-fr
+man-pages-fr-extra
+mlocate
+ncftp
+net-tools-deprecated
+nmap
+pinfo
+speedtest-cli
+tree
+unrar
+vim
+whois
+htop
+redshift
+#zsh
+python3-requests
+wxWidgets-lang
+lsb
+lsb-release
+
+# KDE
+fontforge
+
+# Internet
+enigmail
+filezilla
+filezilla-lang
+flash-player
+MozillaThunderbird
+MozillaThunderbird-translations-common
+nextcloud-client
+nextcloud-client-dolphin
+nextcloud-client-doc
+nextcloud-client-lang
+qbittorrent
+qbittorrent-nox
+vivaldi
+chromium
+chromium-ffmpeg-extra
+
+# Developpement
+sublime-text
+
+# Graphisme
+gimp
+gimp-lang
+inkscape
+inkscape-extensions-gimp
+inkscape-lang
+librecad
+librecad-parts
+
+# Multimedia
+audacious
+audacious-lang
+audacious-plugins
+audacious-plugins-lang
+audacity
+audacity-lang
+cheese
+cheese-lang
+handbrake-gtk
+handbrake-gtk-lang
+libdvdcss2
+MPlayer
+normalize
+openshot-qt
+transcode
+vlc
+#vlc-codecs
+vlc-lang
+winff
+winff-lang
+mcomix
+
+# Tools
+cherrytree
+cherrytree-lang
+kwrite
+keepassxc
+keepassxc-lang
+conky
+
+# Fonts
+ubuntu-fonts
+fontawesome-fonts
+adobe-sourcecodepro-fonts
+google-inconsolata-fonts
+google-roboto-mono-fonts
+google-opensans-fonts
+hack-fonts
+
+# Games
+steam
+discord
+
+# Desktop customization
+latte-dock
+papirus-icon-theme
+neofetch
+
+# Desktop I3-gaps
+i3-gaps
+i3lock
+i3status
+polybar
+rofi
+compton
+dunst
+conky
+feh
+wmctrl
+numlockx
+alacritty
+xclip
+xclipboard
+
+# Package with potential issues
+vlc-codecs
+
+
+

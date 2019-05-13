@@ -2,11 +2,11 @@
 #
 # Delete package and clean the orphelines dependance
 
-. functions_install_TW.sh
+. 00_functions_install.sh
 
 
 # Liste des paquets inutiles
-pkg_list_remove=$(egrep -v '(^\#)|(^\s+$)' $CWD/../config/pkglists/package_remove.txt)
+pkg_list_remove=$(egrep -v '(^\#)|(^\s+$)' $CWD/../config/pkglists/package_remove_TW_Desktop.txt)
 
 # Supprimer les paquets inutiles 
 for pkg_remove in ${pkg_list_remove}; do

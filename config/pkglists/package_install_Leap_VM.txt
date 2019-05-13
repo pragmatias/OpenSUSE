@@ -1,0 +1,86 @@
+# Package to install
+
+# System Tools
+iperf
+lftp
+links
+man-pages
+man-pages-fr
+man-pages-fr-extra
+mlocate
+ncftp
+net-tools-deprecated
+nmap
+pinfo
+speedtest-cli
+tree
+unrar
+vim
+whois
+htop
+redshift
+python3-requests
+wxWidgets-lang
+lsb
+lsb-release
+
+
+# Internet
+filezilla
+filezilla-lang
+vivaldi
+chromium
+chromium-ffmpeg-extra
+
+# Developpement
+sublime-text
+
+# Multimedia
+libdvdcss2
+MPlayer
+normalize
+openshot-qt
+transcode
+vlc
+#vlc-codecs
+vlc-lang
+winff
+winff-lang
+
+
+# Tools
+keepassxc
+keepassxc-lang
+conky
+
+# Fonts
+ubuntu-fonts
+fontawesome-fonts
+adobe-sourcecodepro-fonts
+google-inconsolata-fonts
+google-roboto-mono-fonts
+google-opensans-fonts
+hack-fonts
+
+# Desktop customization
+neofetch
+papirus-icon-theme
+
+# Package with potential issues
+vlc-codecs
+
+# Desktop I3-gaps
+i3-gaps
+i3lock
+i3status
+polybar
+rofi
+compton
+dunst
+conky
+feh
+wmctrl
+numlockx
+alacritty
+xclip
+xclipboard
