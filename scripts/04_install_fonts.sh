@@ -102,7 +102,7 @@ do
   if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
   cd /usr/share/fonts/
   if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-  unzip -o ${fic_font}
+  unzip -o ${fic_font} >> $LOG 2>&1
   if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
   rm -f ${fic_font}
   if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
