@@ -2,7 +2,7 @@
 
 Add Leap VM configuration (Virtual Machine) with a minimal install & I3-gaps
 Modify Tumbleweed configuration with KDE default install & I3-gaps
-Modify Yast/Zypper conf with "no-recommend"
+Modify Yast/Zypper conf with "--no-recommend"
 
 <h1 align="center">OpenSUSE Tumbleweed</h1>
 

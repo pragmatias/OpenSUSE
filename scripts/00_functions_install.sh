@@ -18,7 +18,7 @@ LOG=/tmp/$(basename "$0" .sh).log
 echo > $LOG
 
 # Interrompre en cas d'erreur
-set -e
+#set -e
 
 
 # Couleurs

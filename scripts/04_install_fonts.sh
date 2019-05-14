@@ -95,7 +95,7 @@ fi
 
 
 # Installer les polices divers
-for fic_font in `ls -1 ../config/fonts/*.zip`
+for fic_font in `ls -1 ../config/fonts | grep "\.zip$"`
 do
   msg_log="Install of ${fic_font} fonts"
   cp ../config/fonts/${fic_font}  /usr/share/fonts/${fic_font}
