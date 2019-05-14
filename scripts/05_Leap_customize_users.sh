@@ -184,7 +184,7 @@ if [ ! -z "$(ls -A /home)" ]; then
         if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
         chown $UTILISATEUR:users /home/$UTILISATEUR/.config/compton
     fi
-    cp $CWD/../config/compton/* /home/$UTILISATEUR/.config/compton/.
+    cp $CWD/../config/compton/compton.conf_vbox /home/$UTILISATEUR/.config/compton/compton.conf
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/compton
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
