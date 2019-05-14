@@ -1,12 +1,27 @@
 # Package to install
 
+# System Core
+xorg-x11
+xorg-x11-server
+xorg-x11-essentials
+xorg-x11-fonts-core
+xorg-x11-libs
+xorg-x11-driver-input
+xorg-x11-driver-video
+xf86-input-mouse
+xf86-input-keyboard
+xf86-video-vesa
+xdg-user-dirs
+lightdm
+virtualbox-guest-tools
+virtualbox-guest-x11
+xrandr
+
 # System Tools
 iperf
 lftp
 links
 man-pages
-man-pages-fr
-man-pages-fr-extra
 mlocate
 ncftp
 net-tools-deprecated
@@ -20,7 +35,6 @@ whois
 htop
 redshift
 python3-requests
-wxWidgets-lang
 lsb
 lsb-release
 
@@ -35,39 +49,12 @@ chromium-ffmpeg-extra
 # Developpement
 sublime-text
 
-# Multimedia
-libdvdcss2
-MPlayer
-normalize
-openshot-qt
-transcode
-vlc
-#vlc-codecs
-vlc-lang
-winff
-winff-lang
-
-
 # Tools
-keepassxc
-keepassxc-lang
 conky
 
-# Fonts
-ubuntu-fonts
-fontawesome-fonts
-adobe-sourcecodepro-fonts
-google-inconsolata-fonts
-google-roboto-mono-fonts
-google-opensans-fonts
-hack-fonts
-
 # Desktop customization
-neofetch
+#neofetch
 papirus-icon-theme
-
-# Package with potential issues
-vlc-codecs
 
 # Desktop I3-gaps
 i3-gaps
@@ -84,3 +71,4 @@ numlockx
 alacritty
 xclip
 xclipboard
+ImageMagick

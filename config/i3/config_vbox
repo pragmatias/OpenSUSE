@@ -279,7 +279,7 @@ client.background       $bg
 #----------------------#
 
 # Wallpaper
-exec_always --no-startup-id feh --bg-fill ~/wallpapers/wallhaven-81839.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallhaven-81839.jpg
 
 # Compositor
 exec --no-startup-id compton --config ~/.config/compton/compton.conf
