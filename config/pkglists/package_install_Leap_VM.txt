@@ -9,7 +9,7 @@ xorg-x11-driver-video
 xorg-x11-essentials
 xorg-x11-fonts
 xorg-x11-fonts-core
-xorg-x11-libX11-cache
+xorg-x11-libX11-ccache
 xorg-x11-libs
 xorg-x11-server
 xorg-x11-server-extra
