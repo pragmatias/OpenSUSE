@@ -28,16 +28,11 @@ xdg-desktop-portal-lang
 xdg-menu
 xdg-user-dirs
 xdg-user-dirs-lang
-xdg-util
-
-
+xdg-utils
 virtualbox-guest-tools
 virtualbox-guest-x11
-
-
 lightdm
 xrandr
-
 
 
 # System Tools
