@@ -107,7 +107,7 @@ logMessage "${?}" "${msg_log}"
 
 
 # Mise à jour des paquets
-exec_cmd="zypper --non-interactive update --allow-vendor-change"
+exec_cmd="zypper --non-interactive update"
 msg_log="Package update"
 logMessage "-1" "${msg_log}... [${exec_cmd}]"
 ${exec_cmd} >> $LOG 2>&1

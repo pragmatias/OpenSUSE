@@ -2,20 +2,31 @@
 
 # System Core
 xorg-x11
-xorg-x11-server
+xorg-scripts
+xorg-x11-Xvnc
+xorg-x11-driver-{input,video}
 xorg-x11-essentials
-xorg-x11-fonts-core
+xorg-x11-{fonts,fonts-core}
+xorg-x11-libX11-cache
 xorg-x11-libs
-xorg-x11-driver-input
-xorg-x11-driver-video
-xf86-input-mouse
-xf86-input-keyboard
-xf86-video-vesa
-xdg-user-dirs
-lightdm
+xorg-x11-server
+xorg-x11-server-{extra,wayland}
+xf86-input-{evdev,joystick,keyboard,libinput,mouse,vmmouse,void}
+xf86-video-{fbdev,vesa}
+xdg-desktop-{portal,portal-lang}
+xdg-menu
+xdg-user-{dirs,dirs-lang}
+xdg-util
+
+
 virtualbox-guest-tools
 virtualbox-guest-x11
+
+
+lightdm
 xrandr
+
+
 
 # System Tools
 iperf
