@@ -5,7 +5,7 @@
 . 00_functions_install.sh
 
 # Liste des paquets supplémentaires
-pkg_list_add=$(egrep -v '(^\#)|(^\s+$)' $CWD/../config/pkglists/package_install_TW_Desktop.txt)
+pkg_list_add=$(egrep -v '(^\#)|(^\s+$)' $CWD/../config/pkglists/package_install_vm.txt)
 
 # Installer les paquets supplémentaires
 for pkg_add in ${pkg_list_add}; do

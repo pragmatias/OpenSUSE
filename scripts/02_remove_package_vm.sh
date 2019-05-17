@@ -6,7 +6,7 @@
 
 
 # Liste des paquets inutiles
-pkg_list_remove=$(egrep -v '(^\#)|(^\s+$)' $CWD/../config/pkglists/package_remove_TW_Desktop.txt)
+pkg_list_remove=$(egrep -v '(^\#)|(^\s+$)' $CWD/../config/pkglists/package_remove_vm.txt)
 
 # Supprimer les paquets inutiles 
 for pkg_remove in ${pkg_list_remove}; do
