@@ -47,6 +47,7 @@ chromium-ffmpeg-extra
 
 # Developpement
 sublime-text
+kate
 
 # Graphisme
 gimp
