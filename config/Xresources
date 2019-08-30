@@ -45,7 +45,7 @@ Xft.antialias: true
 Xft.rgba: rgb
 
 URxvt.font:  xft:SF Mono:size=9:antialias=true
-URxvt.letterSpace:         -1
+URxvt.letterSpace: -2
 
 !URxvt.transparent : 1 
 !URxvt.shading : 10
