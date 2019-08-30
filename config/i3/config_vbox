@@ -23,8 +23,8 @@ gaps inner 0
 gaps outer 0
 
 # Borders
-default_border pixel 5
-default_floating_border pixel 5
+default_border pixel 3
+default_floating_border pixel 3
 
 
 
@@ -240,40 +240,27 @@ bindsym $alt+c exec --no-startup-id chromium
 # COLORS #
 #--------#
 # Primary color
-set $black          #333333
-set $white          #E6E6E6
-set $cyan           #CBE6CB
+set $black          #272822
+set $white          #f8f8f2
+set $red            #f92672
+set $green          #a6e22e
+set $yellow         #f4bf75
+set $blue           #66d9ef
+set $magenta        #ae81ff
+set $cyan           #a1efe4
 set $grey           #626c7a
-set $red            #6e312f
-set $green          #6b7d43
-set $yellow         #f8df98
-set $blue           #4f7b8a
-set $magenta        #e38d83
-set $orange         #cf5d3a
-set $darkcyan       #798a79
-set $darkgrey       #444b55
-set $darkred        #4d2220
-set $darkgreen      #4a572e
-set $darkyellow     #ad9c6a
-set $darkblue       #375660
-set $darkmagenta    #9e625b
-set $darkorange     #a54a2e
-set $lightgray      #a8a19f
+set $border_active  #d1d1d1
 
 # Used Color
-set $bg             #000000
-set $fg             $white
-set $fg-alt         #B98563
-set $acolor         #E5BA89
 set $trans          #00000000
 
 # class                 border     backgr.    text    indicator     child_border
-client.focused          $red       $bg        $bg     $bg           $red
-client.focused_inactive $fg        $bg        $fg     $fg           $trans
-client.unfocused        $blue      $bg        $fg     $fg           $blue
-client.urgent           $red       $bg        $red    $red          $red
-client.placeholder      $fg        $bg        $fg     $fg           $trans
-client.background       $bg
+client.focused          $border_active     $black     $black     $black     $border_active
+client.focused_inactive $white     $black     $white     $white     $trans
+client.unfocused        $black      $black     $white     $white     $black
+client.urgent           $red       $black     $red       $red       $red
+client.placeholder      $white     $black     $white     $white     $trans
+client.background       $black
 
 
 #----------------------#

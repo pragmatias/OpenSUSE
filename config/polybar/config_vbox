@@ -14,10 +14,10 @@
 [color]
 bg = #000000
 bg-alt = #000000
-fg = #B98563
-fg-alt = #E5BA89
+fg = #d1d1d1
+fg-alt = #FFFFFF
 
-acolor = #E5BA89
+acolor = #FFFFFF
 curgent = #A44946
 coccupied = #2E89A5
 trans = #00000000

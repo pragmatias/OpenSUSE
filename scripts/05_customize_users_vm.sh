@@ -225,9 +225,9 @@ if [ ! -z "$(ls -A /home)" ]; then
 
     
     #Xresources
-    cp $CWD/../config/Xresources /home/$UTILISATEUR/.config/.Xresources
+    cp $CWD/../config/Xresources /home/$UTILISATEUR/.Xresources
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-    chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/.Xresources
+    chown -R $UTILISATEUR:users /home/$UTILISATEUR/.Xresources
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
 
   done
