@@ -223,6 +223,13 @@ if [ ! -z "$(ls -A /home)" ]; then
     chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/rofi
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
 
+    
+    #Xresources
+    cp $CWD/../config/Xresources /home/$UTILISATEUR/.config/.Xresources
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+    chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/.Xresources
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+
   done
 fi
 logMessage "0" "${msg_log}"
