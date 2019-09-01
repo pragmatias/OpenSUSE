@@ -12,13 +12,13 @@
 ;==========================================================
 
 [color]
-bg = #000000
-bg-alt = #000000
-fg = #d1d1d1
-fg-alt = #FFFFFF
+bg = #282828
+bg-alt = #282828
+fg = #ebdbb2
+fg-alt = #cc241d
 
-acolor = #FFFFFF
-curgent = #A44946
+acolor = #ffffff
+curgent = #b8bb26
 coccupied = #2E89A5
 trans = #00000000
 

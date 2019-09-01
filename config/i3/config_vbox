@@ -183,8 +183,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # Terminal
-bindsym $mod+Return exec urxvt
-#bindsym $mod+Return exec urxvt -e tmux -u
+bindsym $mod+Return exec --no-startup-id urxvtc 
 bindsym $alt+Return exec --no-startup-id alacritty
 
 # Menu
@@ -240,24 +239,24 @@ bindsym $alt+c exec --no-startup-id chromium
 # COLORS #
 #--------#
 # Primary color
-set $black          #272822
-set $white          #f8f8f2
-set $red            #f92672
-set $green          #a6e22e
+set $black          #282828
+set $white          #ebdbb2
+set $red            #98971a
+set $green          #d79921
 set $yellow         #f4bf75
-set $blue           #66d9ef
-set $magenta        #ae81ff
-set $cyan           #a1efe4
-set $grey           #626c7a
-set $border_active  #d1d1d1
+set $blue           #d79921
+set $magenta        #b16286
+set $cyan           #689d6a
+set $grey           #a89984
+set $b_active  #ebdbb2
 
 # Used Color
 set $trans          #00000000
 
 # class                 border     backgr.    text    indicator     child_border
-client.focused          $border_active     $black     $black     $black     $border_active
+client.focused          $b_active  $black     $black     $black     $b_active
 client.focused_inactive $white     $black     $white     $white     $trans
-client.unfocused        $black      $black     $white     $white     $black
+client.unfocused        $black     $black     $white     $white     $black
 client.urgent           $red       $black     $red       $red       $red
 client.placeholder      $white     $black     $white     $white     $trans
 client.background       $black
@@ -286,12 +285,18 @@ exec_always --no-startup-id numlockx on
 # Polybar
 exec_always ~/.config/i3/start_polybar.sh top &
 
+# Load notification daemon
+exec_always --no-startup-id dunst
 
 #exec_always --no-startup-id dunst -lf "$fg" -nf "$fg" -cf "$fg" -lb "$bg" -nb "$bg" -cb "$bg" -lfr "$lw" -nfr "$nr" -cfr "$red"
 
 
 #exec --no-startup-id udiskie
+# Load Xresources
 exec_always --no-startup-id xrdb ~/.Xresources
+# Load terminal daemon
+exec_always --no-startup-id urxvtd -q -o -f
+
 #exec --no-startup-id nextcloud
 #exec --no-startup-id pulseaudio --start
 

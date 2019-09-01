@@ -2,12 +2,27 @@
 " | File    : ~/.vimrc
 " | ---------------------------------------------------------------------------
 
+" PLUGIN :
+" -----------------------------------------------------------------------------
+call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'morhetz/gruvbox'
+Plug 'itchyny/lightline.vim'
+Plug 'flazz/vim-colorschemes'
+call plug#end()
+
+
+
 " GENERAL OPTIONS :
 " -----------------------------------------------------------------------------
 set nocompatible     " Ne pas assurer la compatibilité avec l'ancien Vi
 set encoding=utf8    " Encodage en utf-8
 set mouse=a          " Sélection à la souris
-set history=50       " Nombre de commandes dans l'historique
+set history=1000     " Nombre de commandes dans l'historique
 
 " Montrer les tabulations, espaces insécables et de fin (eol:¶)
 set list listchars=nbsp:¤,tab:··,trail:¤,extends:▶,precedes:◀
@@ -40,6 +55,15 @@ set autoread         " Auto lecture si le fichier a été modifié depuis l'ext�
 " UI :
 " -----------------------------------------------------------------------------
 syntax enable        " Active la coloration syntaxique
+color gruvbox
+syntax on
+filetype plugin indent on
+
+let g:gruvbox_italic=1
+colorscheme gruvbox
+set background=dark
+set cursorline
+
 " Contenu de la barre de status
 set statusline=%F\ Type=%y\ %=Pos=%l,%c\ (%p%%)\ SLOC=%L\ %P
 set laststatus=2     " Barre de status toujours visible
@@ -50,7 +74,7 @@ set showcmd          " Affiche les commandes dans la barre de status
 set showmatch        " Affiche la paire de parenthèses
 set number           " Afficher les numéros de ligne
 set splitright
-" set relativenumber   " Mode numérotation des lignes relative
+set relativenumber   " Mode numérotation des lignes relative
 
 
 " SCROLLING :
@@ -58,6 +82,15 @@ set splitright
 set scrolloff=8         " Conserver 8 lignes visibles en scrollant verticalement
 set sidescrolloff=15    " Conserver 15 colonnes visibles en scrollant horizontalement
 set sidescroll=1
+
+
+""""""""""""""""""""""""""""""""""""
+" Plugin settings
+""""""""""""""""""""""""""""""""""""
+" nerdtree
+map <C-n> :NERDTreeToggle<CR>
+
+
 
 " ASTUCES :
 " -----------------------------------------------------------------------------
