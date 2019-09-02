@@ -10,9 +10,9 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
-Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
-Plug 'flazz/vim-colorschemes'
+Plug 'davidhalter/jedi-vim'
+Plug 'vim-scripts/AutoComplPop'
 call plug#end()
 
 
@@ -29,9 +29,9 @@ set list listchars=nbsp:¤,tab:··,trail:¤,extends:▶,precedes:◀
 
 set viminfo='20,\"50 " Options du fichier ~/.viminfo
 set backspace=2      " Active la touche Backspace
-set wrap
+"set wrap
 " Wrappe et justifie à 79 caractères avec la touche '@'
-map @ {v}! par 79j
+"map @ {v}! par 79j
 " Autorise le passage d'une ligne à l'autre avec les flèches gauche et droite
 set whichwrap=<,>,[,]
 " Essaye de garder le curseur dans la même colonne quand on change de ligne
@@ -55,27 +55,21 @@ set autoread         " Auto lecture si le fichier a été modifié depuis l'ext�
 " UI :
 " -----------------------------------------------------------------------------
 syntax enable        " Active la coloration syntaxique
-color gruvbox
-syntax on
 filetype plugin indent on
-
-let g:gruvbox_italic=1
-colorscheme gruvbox
-set background=dark
-set cursorline
 
 " Contenu de la barre de status
 set statusline=%F\ Type=%y\ %=Pos=%l,%c\ (%p%%)\ SLOC=%L\ %P
 set laststatus=2     " Barre de status toujours visible
 set t_Co=256         " Utiliser 256 couleurs
-set textwidth=78     " Largeur maxi du texte inséré
+"set textwidth=78     " Largeur maxi du texte inséré
 " set colorcolumn=80   " Mise en couleur colonne n°80
 set showcmd          " Affiche les commandes dans la barre de status
 set showmatch        " Affiche la paire de parenthèses
+set noshowmode
 set number           " Afficher les numéros de ligne
 set splitright
 set relativenumber   " Mode numérotation des lignes relative
-
+set noswapfile
 
 " SCROLLING :
 " -----------------------------------------------------------------------------

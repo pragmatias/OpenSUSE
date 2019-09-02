@@ -1,53 +1,34 @@
-
-
 Xft.dpi: 96
-
 Xft.hinting: true
 Xft.hintstyle: hintslight
 Xft.antialias: true
 Xft.rgba: rgb
 
+
 URxvt.font:  xft:SF Mono:size=9:antialias=true
 URxvt.letterSpace: -2
-
 !URxvt.transparent : 1 
 !URxvt.shading : 10
 !URxvt*fading : 30
 URxvt.internalBorder:  5
 URxvt.externalBorder:  5
-
 URxvt.depth: 32
-
 URxvt.scrollBar:           false
-
-!
- URxvt.perl-ext-common:     matcher,resize-font,foo
-
-!
- URxvt.keysym.F11:          perl:fullscreen:switch
-!
- URxvt.Resize-font.smaller: esc
- URxvt.Resize-font.bigger:  S-Up
-!
- 
- URxvt.url-launcher:        /usr/bin/chromium
- URxvt.keysym.M-Delete:     perl:matcher:list
- URxvt.colorUL:             #006699
-
-
+URxvt.perl-ext-common:     matcher,resize-font,foo
+URxvt.keysym.F11:          perl:fullscreen:switch
+URxvt.Resize-font.smaller: esc
+URxvt.Resize-font.bigger:  S-Up
+URxvt.url-launcher:        /usr/bin/chromium
+URxvt.keysym.M-Delete:     perl:matcher:list
+!URxvt.colorUL:             #006699
 URxvt.cursorBlink : 1 
-
-URxvt.cursorUnderline : 1 
-
+!URxvt.cursorUnderline : 1 
 !URxvt.cursorColor : cyan 
-
 URxvt*saveLines: 60000
-
-
-
 !URxvt.foreground :white
 !!URxvt.tintColor : yellow 
 !urxvt*blurRadius: 10
+
 
 ! -----------------------------------------------------------------------------
 ! File: gruvbox-urxvt256.xresources
