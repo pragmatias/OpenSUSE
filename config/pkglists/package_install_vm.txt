@@ -63,6 +63,7 @@ lsb-release
 vivaldi
 chromium
 chromium-ffmpeg-extra
+MozillaFirefox
 
 # Developpement
 sublime-text
