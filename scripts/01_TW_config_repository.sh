@@ -14,6 +14,7 @@ logMessage "-1" "${msg_log}... [${exec_cmd}]"
 ${exec_cmd} >> $LOG 2>&1
 logMessage "${?}" "${msg_log}"
 
+
 # Configuration du dépôt [oss]
 exec_cmd="zypper addrepo $MIRROR/tumbleweed/repo/oss oss"
 msg_log="Repository configuration [oss]"
@@ -28,7 +29,6 @@ msg_log="Repository configuration [non-oss]"
 logMessage "-1" "${msg_log}... [${exec_cmd}]"
 ${exec_cmd} >> $LOG 2>&1
 logMessage "${?}" "${msg_log}"
-
 
 
 # Configuration du dépôt [oss-updates]

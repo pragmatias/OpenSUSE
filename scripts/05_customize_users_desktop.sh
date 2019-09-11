@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Customization of Bash, ZSH and VIM
+# Customization of Desktop
 
 . 00_functions_install.sh
 
@@ -22,7 +22,7 @@ if [ ! -z "$(ls -A /home)" ]; then
     cat $CWD/../config/bash/user-alias > /home/$UTILISATEUR/.alias
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     chown $UTILISATEUR:users /home/$UTILISATEUR/.alias
-	if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
   done
 fi
 logMessage "0" "${msg_log}"
@@ -53,7 +53,13 @@ if [ ! -z "$(ls -A /home)" ]; then
     cat $CWD/../config/vim/vimrc > /home/$UTILISATEUR/.vimrc
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     chown $UTILISATEUR:users /home/$UTILISATEUR/.vimrc
-	if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+  if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+    mkdir -p /home/$UTILISATEUR/.vim/autoload
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+    cat $CWD/../config/vim/autoload/plug.vim /home/$UTILISATEUR/.vim/autoload/plug.vim
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+    chown $UTILISATEUR:users /home/$UTILISATEUR/.vim/autoload/plug.vim
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
   done
 fi
 logMessage "0" "${msg_log}"
@@ -198,6 +204,126 @@ if [ ! -z "$(ls -A /home)" ]; then
   done
 fi
 logMessage "0" "${msg_log}"
+
+
+# Personnalisation d'alacritty
+msg_log="Customization of Alacritty"
+logMessage "-1" "${msg_log}..."
+if [ ! -z "$(ls -A /home)" ]; then
+  for UTILISATEUR in $(ls /home); do
+    if [ ! -e /home/$UTILISATEUR/.config/alacritty ]; then
+        mkdir /home/$UTILISATEUR/.config/alacritty
+        if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+        chown $UTILISATEUR:users /home/$UTILISATEUR/.config/alacritty
+    fi
+    cp $CWD/../config/alacritty/*.yml /home/$UTILISATEUR/.config/alacritty/.
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+    chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/alacritty
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+  done
+fi
+logMessage "0" "${msg_log}"
+
+
+# Personnalisation d'i3
+msg_log="Customization of I3"
+logMessage "-1" "${msg_log}..."
+if [ ! -z "$(ls -A /home)" ]; then
+  for UTILISATEUR in $(ls /home); do
+    if [ ! -e /home/$UTILISATEUR/.config/i3 ]; then
+        mkdir /home/$UTILISATEUR/.config/i3
+        if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+        chown $UTILISATEUR:users /home/$UTILISATEUR/.config/i3
+    fi
+    cp $CWD/../config/i3/config /home/$UTILISATEUR/.config/i3/config
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+    cp $CWD/../config/i3/*.sh /home/$UTILISATEUR/.config/i3/.
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+    chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/i3
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+
+
+    #polybar
+    if [ ! -e /home/$UTILISATEUR/.config/polybar ]; then
+        mkdir /home/$UTILISATEUR/.config/polybar
+        if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+        chown $UTILISATEUR:users /home/$UTILISATEUR/.config/polybar
+    fi
+    cp $CWD/../config/polybar/config /home/$UTILISATEUR/.config/polybar/config
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+    cp $CWD/../config/polybar/*.sh /home/$UTILISATEUR/.config/polybar/.
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+    chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/polybar
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+
+    #i3lock
+    if [ ! -e /home/$UTILISATEUR/.config/polybar/i3lock-fancy ]; then
+        mkdir /home/$UTILISATEUR/.config/polybar/i3lock-fancy
+        if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+        chown $UTILISATEUR:users /home/$UTILISATEUR/.config/polybar/i3lock-fancy
+    fi
+    cp $CWD/../config/polybar/i3lock-fancy/* /home/$UTILISATEUR/.config/polybar/i3lock-fancy/.
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+    chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/polybar/i3lock-fancy
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+
+
+    #compton
+    if [ ! -e /home/$UTILISATEUR/.config/compton ]; then
+        mkdir /home/$UTILISATEUR/.config/compton
+        if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+        chown $UTILISATEUR:users /home/$UTILISATEUR/.config/compton
+    fi
+    cp $CWD/../config/compton/compton.conf /home/$UTILISATEUR/.config/compton/compton.conf
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+    chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/compton
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+
+    #dunst
+    if [ ! -e /home/$UTILISATEUR/.config/dunst ]; then
+        mkdir /home/$UTILISATEUR/.config/dunst
+        if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+        chown $UTILISATEUR:users /home/$UTILISATEUR/.config/dunst
+    fi
+    cp $CWD/../config/dunst/* /home/$UTILISATEUR/.config/dunst/.
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+    chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/dunst
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+
+    #ranger
+    if [ ! -e /home/$UTILISATEUR/.config/ranger ]; then
+        mkdir /home/$UTILISATEUR/.config/ranger
+        if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+        chown $UTILISATEUR:users /home/$UTILISATEUR/.config/ranger
+    fi
+    cp $CWD/../config/ranger/* /home/$UTILISATEUR/.config/ranger/.
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+    chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/ranger
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+
+
+    #rofi
+    if [ ! -e /home/$UTILISATEUR/.config/rofi ]; then
+        mkdir /home/$UTILISATEUR/.config/rofi
+        if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+        chown $UTILISATEUR:users /home/$UTILISATEUR/.config/rofi
+    fi
+    cp $CWD/../config/rofi/* /home/$UTILISATEUR/.config/rofi/.
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+    chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/rofi
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+
+    
+    #Xresources
+    cp $CWD/../config/Xresources /home/$UTILISATEUR/.Xresources
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+    chown -R $UTILISATEUR:users /home/$UTILISATEUR/.Xresources
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+
+  done
+fi
+logMessage "0" "${msg_log}"
+
 
 
 exit 0

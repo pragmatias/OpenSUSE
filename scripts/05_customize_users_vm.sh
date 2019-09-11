@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Customization
+# Customization of VM
 
 . 00_functions_install.sh
 

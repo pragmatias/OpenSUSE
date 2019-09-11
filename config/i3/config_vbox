@@ -291,12 +291,13 @@ exec_always --no-startup-id dunst
 #exec_always --no-startup-id dunst -lf "$fg" -nf "$fg" -cf "$fg" -lb "$bg" -nb "$bg" -cb "$bg" -lfr "$lw" -nfr "$nr" -cfr "$red"
 
 
-#exec --no-startup-id udiskie
+
 # Load Xresources
 exec_always --no-startup-id xrdb ~/.Xresources
 # Load terminal daemon
 exec_always --no-startup-id urxvtd-256color -q -o -f
 
+#exec --no-startup-id udiskie
 #exec --no-startup-id nextcloud
 #exec --no-startup-id pulseaudio --start
 

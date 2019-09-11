@@ -58,6 +58,12 @@ python3-requests
 lsb
 lsb-release
 
+# Terminal
+rxvt-unicode
+urxvt-font-size
+urxvt-perls
+urxvt-tabbedex
+alacritty
 
 # Internet
 vivaldi
@@ -89,7 +95,6 @@ conky
 feh
 wmctrl
 numlockx
-alacritty
 xclip
 xclipboard
 ImageMagick

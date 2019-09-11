@@ -1,5 +1,5 @@
 # Leap version
-VERSION="15.0"
+VERSION="15.1"
 # Download mirror
 MIRROR="http://download.opensuse.org"
 NVIDIA="https://download.nvidia.com"

@@ -12,38 +12,13 @@
 ;==========================================================
 
 [color]
+bg = #282828
+bg-alt = #282828
+fg = #ebdbb2
+fg-alt = #cc241d
 
-## Material Colors
-
-;black   = #363636
-black   = #000000
-white   = #E6E6E6
-cyan    = #CBE6CB
-grey    = #626c7a
-red     = #6e312f
-green   = #6b7d43
-yellow  = #f8df98
-blue    = #4f7b8a
-magenta = #e38d83
-orange  = #cf5d3a
-
-darkcyan     = #798a79
-darkgrey     = #444b55
-darkred      = #4d2220
-darkgreen    = #4a572e
-darkyellow   = #ad9c6a
-darkblue     = #375660
-darkmagenta  = #9e625b
-darkorange   = #a54a2e
-lightgray    = #a8a19f
-
-bg = #000000
-bg-alt = #000000
-fg = #B98563
-fg-alt = #E5BA89
-
-acolor = #E5BA89
-curgent = #A44946
+acolor = #ffffff
+curgent = #b8bb26
 coccupied = #2E89A5
 trans = #00000000
 

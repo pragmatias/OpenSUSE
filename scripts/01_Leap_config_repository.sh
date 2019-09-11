@@ -5,11 +5,6 @@
 # Refresh repository and Update package
 
 . 00_functions_install.sh
-
-echo
-
-
-. 00_functions_install.sh
 . 00_Leap_environment.sh
 
 # Suppression des dépôts existants
