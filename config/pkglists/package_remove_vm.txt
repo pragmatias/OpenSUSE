@@ -1,1 +1,7 @@
 # Package to delete
+
+# update system (kde/...)
+PackageKit*
+
+# delete the boot screen
+plymouth*

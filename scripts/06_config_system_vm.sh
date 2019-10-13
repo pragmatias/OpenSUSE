@@ -12,3 +12,7 @@ sed -i 's@DISPLAYMANAGER=".*"@DISPLAYMANAGER="lightdm"@' /etc/sysconfig/displaym
 
 # Modify the graphical.targer
 systemctl set-default graphical.target
+
+# Test some tuning
+systemctl disable btrfsmaintenance-refresh
+systemctl disable chrony-wait
