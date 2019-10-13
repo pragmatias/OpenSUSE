@@ -262,7 +262,7 @@ exec_always --no-startup-id numlockx on
 #exec --no-startup-id clipit -d
 
 # Conky
-exec_always --no-startup-id ~/.config/conky/start_conky_vm.sh
+exec --no-startup-id ~/.config/conky/start_conky_vm.sh
 
 
 # Polybar
