@@ -1,0 +1,64 @@
+conky.config = {
+	alignment = 'top_right',
+	background = true,
+	color2 = 'fabd2f',
+	cpu_avg_samples = 2,
+	default_color = 'b8bb26',
+	double_buffer = true,
+	font = 'SF Mono:size=9',
+	gap_x = 25,
+	gap_y = 45,
+	minimum_width = 200,
+	no_buffers = true,
+	own_window = true,
+	own_window_type = 'override',
+	own_window_transparent = true,
+ 	own_window_colour = '282828',
+	update_interval = 0.5,
+	use_xft = false,
+}
+
+conky.text = [[
+# Date information
+${font Ubuntu:Light:size=24}$alignr${color0}${time %A}${color}, ${time %d} ${color0}${time %B} ${color}${time %Y}
+# System Detail
+${font Ubuntu:Regular:size=13}${color}System ${color0}${hr 1 }${color}
+${font Ubuntu:pixelsize=13} User ${alignr}${color0}${execi 5000 whoami}${color}
+${font Ubuntu:pixelsize=13} Machine ${alignr}${color0}${nodename}${color}
+${font Ubuntu:pixelsize=13} Distribution ${alignr}${color0}${exec lsb-release -d | sed "s/^Description:\s\+//g"}${color}
+${font Ubuntu:pixelsize=13} Architecture ${alignr}${color0}${machine}${color}
+${font Ubuntu:pixelsize=13} Kernel ${alignr}${color0}${kernel}${color}
+${font Ubuntu:pixelsize=13} Uptime ${alignr}${color0}$uptime${color}
+${font Ubuntu:pixelsize=13} Package(s) ${alignr} ${color0}${execi 12000 zypper se -si 2> /dev/null | tail -n +6 | wc -l}${color} Installed ${color}|${color} ${color0}${execi 12000 zypper lu 2> /dev/null | tail -n +5 | wc -l}${color} Update(s)
+
+# CPU Detail
+${font Ubuntu:Regular:size=13}${color}CPU ${color0}${hr 1 }${color}
+${font Ubuntu:pixelsize=13} CPU Model${alignr}${color0}${exec awk -F': ' '/model name/ {print $2}' /proc/cpuinfo | head -1}${color}
+${font Ubuntu:pixelsize=13} CPU Core(s)${alignr}${color0}${exec cat /proc/cpuinfo | grep "processor" | wc -l} ${color}
+${font Ubuntu:pixelsize=13} CPU Freq ${alignr}${color0}${freq_g cpu0} Ghz${color}
+${font Ubuntu:pixelsize=13} CPU Load ${alignr}${color0}${cpu cpu0}% 
+# Suppression du graph ?${font Ubuntu:pixelsize=13} CPU Load ${alignr}${color0}${cpu cpu0}% ${color}${alignr}${cpugraph 0 15,200 b58900 d33682}
+
+# Memory Detail
+${font Ubuntu:Regular:size=13}${color}Memory ${color0}${hr 1 }${color}
+${font Ubuntu:pixelsize=13} Usage ${alignr}${color0}$mem / $memmax${color}
+${font Ubuntu:pixelsize=13} Load ${alignr}${color0}${memperc}%${color}
+# Suppression du graph ? ${font Ubuntu:pixelsize=13} Load ${alignr}${color0}${memperc}%${color}${color}${memgraph 15,200 268bd2 859900}
+${font Ubuntu:pixelsize=13} Process ${alignr}${color0}${processes}${color} (${running_processes} Executing${color})
+
+# Disk Detail
+${font Ubuntu:Regular:size=13}${color}Disk Usage ${color0}${hr 1 }${color}
+${font Ubuntu:pixelsize=13} Swap ${alignr}${color0}${swap}${color} / ${color0}${swapmax}${color}  (${color0}${swapperc}%${color})
+#${font Ubuntu:pixelsize=13} ${alignr}${color}${swapbar 5,120}
+${font Ubuntu:pixelsize=13} / (Root) ${alignr}${color0}${fs_used /}${color} / ${color0}${fs_size /}${color}  (${color0}${fs_used_perc /}%${color})
+#${font Ubuntu:pixelsize=13} ${alignr}${color}${fs_bar 5,120 /}
+
+
+# Network
+${font Ubuntu:Regular:size=13}${color}Network ${color0}${hr 1 }${color}
+${font Ubuntu:pixelsize=13} Interface ${alignr}${color0}enp3s0${color}
+${font Ubuntu:pixelsize=13} IP ${alignr}${color0}${addr enp3s0}${color}
+${font Ubuntu:pixelsize=13} IP Public${alignr}${color0}${execi 12000 dig +short myip.opendns.com @resolver1.opendns.com}${color}
+${font Ubuntu:pixelsize=13} Inbound: ${color0}${tcp_portmon 1 32767 count} ${color}Outbound: ${color0}${tcp_portmon 32768 61000 count}${alignr}${color}Total: ${color0}${tcp_portmon 1 65535 count}${color}
+${font Ubuntu:pixelsize=13} Down: ${color0}${downspeed enp3s0}${color} (Total: ${color0}${totaldown enp3s0}${color}) ${alignr}Up: ${color0}${upspeed enp3s0}${color} (Total: ${color0}${totalup enp3s0}${color})
+]]
