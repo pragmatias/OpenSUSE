@@ -89,6 +89,7 @@ i3lock
 i3status
 polybar
 rofi
+dmenu
 compton
 dunst
 conky
