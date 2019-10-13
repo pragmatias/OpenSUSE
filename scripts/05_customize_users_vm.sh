@@ -41,7 +41,7 @@ if [ ! -z "$(ls -A /home)" ]; then
 	if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     mkdir -p /home/$UTILISATEUR/.vim/autoload
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-    cat $CWD/../config/vim/autoload/plug.vim /home/$UTILISATEUR/.vim/autoload/plug.vim
+    cat $CWD/../config/vim/autoload/plug.vim > /home/$UTILISATEUR/.vim/autoload/plug.vim
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     chown $UTILISATEUR:users /home/$UTILISATEUR/.vim/autoload/plug.vim
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
