@@ -1,3 +1,3 @@
 #!/bin/bash
 
-rofi -modi drun,run,window -show drun -theme ~/.config/rofi/gruvbox-dark.rasi -show-icons -font "FiraGO 11" -sidebar-mode
+rofi -modi drun,run,window -show drun -theme ~/.config/rofi/gruvbox-dark.rasi -show-icons -font "SF Compact Display, Ubuntu Nerd Font 9" -sidebar-mode
