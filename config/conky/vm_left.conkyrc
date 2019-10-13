@@ -5,17 +5,17 @@ conky.config = {
 	cpu_avg_samples = 2,
 	default_color = 'b8bb26',
 	double_buffer = true,
-	font = 'Hack:size=9',
+	font = 'Hack:size=10',
 	gap_x = 25,
 	gap_y = 45,
 	minimum_width = 200,
 	no_buffers = true,
 	own_window = true,
 	own_window_type = 'override',
-	own_window_transparent = true,
- 	own_window_colour = '282828',
+	own_window_transparent = false,
+  own_window_colour = '282828',
 	update_interval = 0.5,
-	use_xft = false,
+	use_xft = true,
 }
 
 conky.text = [[
@@ -28,20 +28,4 @@ ${color2}tabbed mode - ${color}mod+w
 ${color2}stacked mode - ${color}mod+s
 ${color2}blue light filter on - ${color}mod+b
 ${color2}blue light filter off - ${color}mod+n
-
-${color2}open new terminal - ${color}mod+Enter
-${color2}kill focused - ${color}mod+Shift+q
-${color2}split horizontally - ${color}mod+h
-${color2}split vertically - ${color}mod+v
-${color2}program menu - ${color}mod+d
-${color2}executable menu - ${color}mod+q
-${color2}switch to workspace 1-10 - ${color}mod+1-0
-${color2}send to workspace 1-10 - ${color}mod+Shift+1-0
-${color2}change among tiled windows - ${color}mod+arrowkeys
-${color2}change between floating/tiled - ${color}mod+space
-${color2}toggle floating - ${color}mod+Shift+Space
-${color2}exit - ${color}mod+Shift+e
-
-default mod=<Super (Windows Key)>
-
 ]]

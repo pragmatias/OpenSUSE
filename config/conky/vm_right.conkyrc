@@ -1,64 +1,68 @@
 conky.config = {
 	alignment = 'top_right',
 	background = true,
-	color2 = 'fabd2f',
+	use_spacer = 'none',
+	minimum_width = 350,
+	pad_percents = 3,
 	cpu_avg_samples = 2,
-	default_color = 'b8bb26',
 	double_buffer = true,
-	font = 'Hack:size=9',
+	font = 'SF Mono:size=9',
 	gap_x = 25,
 	gap_y = 45,
-	minimum_width = 200,
 	no_buffers = true,
 	own_window = true,
 	own_window_type = 'override',
 	own_window_transparent = true,
  	own_window_colour = '282828',
-	update_interval = 0.5,
-	use_xft = false,
+	update_interval = 1,
+	use_xft = true,
+    short_units = true,
+
+    draw_shades = true,
+    default_outline_color = 'fabd2f',
+    default_color = 'fabd2f',
+    
+    color0 = '#98971a',-- green
+    color1 = '#fabd2f',-- yellow
+    
 }
 
 conky.text = [[
 # Date information
-$alignr${color0}${time %A}${color}, ${time %d} ${color0}${time %B} ${color}${time %Y}
+${font SF Mono:Light:size=18}$alignr${color0}${time %A}${color}, ${time %d} ${color0}${time %B} ${color}${time %Y}
 # System Detail
-${color}System ${color0}${hr 1 }${color}
-User ${alignr}${color0}${execi 5000 whoami}${color}
-Machine ${alignr}${color0}${nodename}${color}
-Distribution ${alignr}${color0}${exec lsb-release -d | sed "s/^Description:\s\+//g"}${color}
-Architecture ${alignr}${color0}${machine}${color}
-Kernel ${alignr}${color0}${kernel}${color}
-Uptime ${alignr}${color0}$uptime${color}
-Package(s) ${alignr} ${color0}${execi 12000 zypper se -si 2> /dev/null | tail -n +6 | wc -l}${color} Installed ${color}|${color} ${color0}${execi 12000 zypper lu 2> /dev/null | tail -n +5 | wc -l}${color} Update(s)
+${font SF Mono:Regular:size=11}${color}System ${color0}${hr 1 }${color}
+${font SF Mono:pixelsize=11} User ${alignr}${color0}${execi 5000 whoami}${color}
+${font SF Mono:pixelsize=11} Machine ${alignr}${color0}${nodename}${color}
+${font SF Mono:pixelsize=11} Distribution ${alignr}${color0}${exec lsb-release -d | sed "s/^Description:\s\+//g"}${color}
+${font SF Mono:pixelsize=11} Architecture ${alignr}${color0}${machine}${color}
+${font SF Mono:pixelsize=11} Kernel ${alignr}${color0}${kernel}${color}
+${font SF Mono:pixelsize=11} Uptime ${alignr}${color0}$uptime${color}
+${font SF Mono:pixelsize=11} Package(s) ${alignr} ${color0}${execi 12000 zypper se -si 2> /dev/null | tail -n +6 | wc -l}${color} Installed ${color}|${color} ${color0}${execi 12000 zypper lu 2> /dev/null | tail -n +5 | wc -l}${color} Update(s)
 
 # CPU Detail
-${color}CPU ${color0}${hr 1 }${color}
-CPU Model${alignr}${color0}${exec awk -F': ' '/model name/ {print $2}' /proc/cpuinfo | head -1}${color}
-CPU Core(s)${alignr}${color0}${exec cat /proc/cpuinfo | grep "processor" | wc -l} ${color}
-CPU Freq ${alignr}${color0}${freq_g cpu0} Ghz${color}
-CPU Load ${alignr}${color0}${cpu cpu0}% 
-# Suppression du graph ? CPU Load ${alignr}${color0}${cpu cpu0}% ${color}${alignr}${cpugraph 0 15,200 b58900 d33682}
+${font SF Mono:Regular:size=11}${color}CPU ${color0}${hr 1 }${color}
+${font SF Mono:pixelsize=11} CPU Model${alignr}${color0}${exec awk -F': ' '/model name/ {print $2}' /proc/cpuinfo | head -1}${color}
+${font SF Mono:pixelsize=11} CPU Core(s)${alignr}${color0}${exec cat /proc/cpuinfo | grep "processor" | wc -l} ${color}
+${font SF Mono:pixelsize=11} CPU Freq ${alignr}${color0}${freq_g cpu0} Ghz${color}
+${font SF Mono:pixelsize=11} CPU Load ${alignr}${color0}${cpu cpu0}% 
 
 # Memory Detail
-${color}Memory ${color0}${hr 1 }${color}
-Usage ${alignr}${color0}$mem / $memmax${color}
-Load ${alignr}${color0}${memperc}%${color}
-# Suppression du graph ?  Load ${alignr}${color0}${memperc}%${color}${color}${memgraph 15,200 268bd2 859900}
- Process ${alignr}${color0}${processes}${color} (${running_processes} Executing${color})
+${font SF Mono:Regular:size=11}${color}Memory ${color0}${hr 1 }${color}
+${font SF Mono:pixelsize=11} Usage ${alignr}${color0}$mem / $memmax${color}
+${font SF Mono:pixelsize=11} Load ${alignr}${color0}${memperc}%${color}
+${font SF Mono:pixelsize=11} Process ${alignr}${color0}${processes}${color} (${running_processes} Executing${color})
 
 # Disk Detail
-${color}Disk Usage ${color0}${hr 1 }${color}
-Swap ${alignr}${color0}${swap}${color} / ${color0}${swapmax}${color}  (${color0}${swapperc}%${color})
-# ${alignr}${color}${swapbar 5,120}
-/ (Root) ${alignr}${color0}${fs_used /}${color} / ${color0}${fs_size /}${color}  (${color0}${fs_used_perc /}%${color})
-# ${alignr}${color}${fs_bar 5,120 /}
-
+${font SF Mono:Regular:size=11}${color}Disk Usage ${color0}${hr 1 }${color}
+${font SF Mono:pixelsize=11} Swap ${alignr}${color0}${swap}${color} / ${color0}${swapmax}${color}  (${color0}${swapperc}%${color})
+${font SF Mono:pixelsize=11} / (Root) ${alignr}${color0}${fs_used /}${color} / ${color0}${fs_size /}${color}  (${color0}${fs_used_perc /}%${color})
 
 # Network
-${color}Network ${color0}${hr 1 }${color}
-Interface ${alignr}${color0}enp0s3${color}
-IP ${alignr}${color0}${addr enp0s3}${color}
-IP Public${alignr}${color0}${execi 12000 dig +short myip.opendns.com @resolver1.opendns.com}${color}
-Inbound: ${color0}${tcp_portmon 1 32767 count} ${color}Outbound: ${color0}${tcp_portmon 32768 61000 count}${alignr}${color}Total: ${color0}${tcp_portmon 1 65535 count}${color}
-Down: ${color0}${downspeed enp0s3}${color} (Total: ${color0}${totaldown enp0s3}${color}) ${alignr}Up: ${color0}${upspeed enp0s3}${color} (Total: ${color0}${totalup enp0s3}${color})
+${font SF Mono:Regular:size=11}${color}Network ${color0}${hr 1 }${color}
+${font SF Mono:pixelsize=11} Interface ${alignr}${color0}enp0s3${color}
+${font SF Mono:pixelsize=11} IP ${alignr}${color0}${addr enp0s3}${color}
+${font SF Mono:pixelsize=11} IP Public${alignr}${color0}${execi 12000 dig +short myip.opendns.com @resolver1.opendns.com}${color}
+${font SF Mono:pixelsize=11} Inbound: ${color0}${tcp_portmon 1 32767 count} ${color}Outbound: ${color0}${tcp_portmon 32768 61000 count}${alignr}${color}Total: ${color0}${tcp_portmon 1 65535 count}${color}
+${font SF Mono:pixelsize=11} Down: ${color0}${downspeed enp0s3}${color} (Total: ${color0}${totaldown enp0s3}${color}) ${alignr}Up: ${color0}${upspeed enp0s3}${color} (Total: ${color0}${totalup enp0s3}${color})
 ]]
