@@ -100,21 +100,23 @@ if [ ! -z "$(ls -A /home)" ]; then
         if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
         chown $UTILISATEUR:users /home/$UTILISATEUR/.config/conky
     fi
-    cp $CWD/../config/conky/*.conkyrc /home/$UTILISATEUR/.config/conky/.
+    cp $CWD/../config/conky/* /home/$UTILISATEUR/.config/conky/.
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/conky
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-    if [ ! -e /home/$UTILISATEUR/.config/autostart-scripts ]; then
-      mkdir /home/$UTILISATEUR/.config/autostart-scripts
-      if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-      chown $UTILISATEUR:users /home/$UTILISATEUR/.config/autostart-scripts
-    fi
-    cp $CWD/../config/conky/start_conky.sh /home/$UTILISATEUR/.config/autostart-scripts/start_conky.sh
+    chmod +x /home/$UTILISATEUR/.config/conky/*
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-    chmod +x /home/$UTILISATEUR/.config/autostart-scripts/start_conky.sh
-    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-    chown $UTILISATEUR:users /home/$UTILISATEUR/.config/autostart-scripts/start_conky.sh
-    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+#    if [ ! -e /home/$UTILISATEUR/.config/autostart-scripts ]; then
+#      mkdir /home/$UTILISATEUR/.config/autostart-scripts
+#      if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+#      chown $UTILISATEUR:users /home/$UTILISATEUR/.config/autostart-scripts
+#    fi
+#    cp $CWD/../config/conky/start_conky.sh /home/$UTILISATEUR/.config/autostart-scripts/start_conky.sh
+#    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+#    chmod +x /home/$UTILISATEUR/.config/autostart-scripts/start_conky.sh
+#    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+#    chown $UTILISATEUR:users /home/$UTILISATEUR/.config/autostart-scripts/start_conky.sh
+#    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
   done
 fi
 logMessage "0" "${msg_log}"
