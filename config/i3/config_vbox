@@ -262,8 +262,13 @@ exec_always --no-startup-id numlockx on
 #exec --no-startup-id clipit -d
 
 # Conky
-#exec --no-startup-id conky -c ~/.config/.conkyrc
-exec_always ~/.config/conky/start_conky.sh
+exec_always --no-startup-id ~/.config/conky/start_conky_vm.sh
+
+#exec --no-startup-id "conky -c ~/.config/conky/time_and_date" 
+#exec --no-startup-id "conky -c ~/.config/conky/shortcuts_bottom_left"
+#exec --no-startup-id "conky -c ~/.config/conky/shortcuts_top_left"
+#exec --no-startup-id "conky -c ~/.config/conky/resource_usage_bottom_right"
+
 
 # Polybar
 exec_always ~/.config/i3/start_polybar.sh top &
