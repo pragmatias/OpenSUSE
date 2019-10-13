@@ -83,8 +83,8 @@ ranger
 neofetch
 papirus-icon-theme
 
-# Desktop i3-gaps
-i3-gaps
+# Desktop i3
+i3
 i3lock
 i3status
 polybar

@@ -18,9 +18,6 @@ font pango:SF Compact Display, Ubuntu 12
 #------#
 # GAPS #
 #------#
-smart_gaps on
-gaps inner 0
-gaps outer 0
 
 # Borders
 default_border pixel 3
