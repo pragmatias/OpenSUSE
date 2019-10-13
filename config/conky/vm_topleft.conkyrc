@@ -5,7 +5,7 @@ conky.config = {
 	cpu_avg_samples = 2,
 	default_color = 'b8bb26',
 	double_buffer = true,
-	font = 'Hack:size=10',
+	font = 'SF Compact Display:size=9',
 	gap_x = 25,
 	gap_y = 45,
 	minimum_width = 200,
