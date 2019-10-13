@@ -6,7 +6,7 @@ conky.config = {
 	pad_percents = 3,
 	cpu_avg_samples = 2,
 	double_buffer = true,
-	font = 'SF Mono:size=9',
+	font = 'SF Mono:Regular:size=11',
 	gap_x = 25,
 	gap_y = 45,
 	no_buffers = true,

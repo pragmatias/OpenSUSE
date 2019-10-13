@@ -1,31 +1,56 @@
 conky.config = {
 	alignment = 'top_left',
 	background = true,
-	color2 = 'fabd2f',
+	use_spacer = 'none',
+	pad_percents = 3,
 	cpu_avg_samples = 2,
-	default_color = 'b8bb26',
 	double_buffer = true,
-	font = 'Hack:size=10',
+	font = 'SF Mono:size=9',
 	gap_x = 25,
 	gap_y = 45,
-	minimum_width = 200,
 	no_buffers = true,
 	own_window = true,
 	own_window_type = 'override',
-	own_window_transparent = false,
-  own_window_colour = '282828',
-	update_interval = 0.5,
+	own_window_transparent = true,
+ 	own_window_colour = '282828',
+	update_interval = 1,
 	use_xft = true,
+    short_units = true,
+
+    draw_shades = true,
+    default_outline_color = 'fabd2f',
+    default_color = 'fabd2f',
+    
+    color0 = '#98971a',-- green
+    color1 = '#fabd2f',-- yellow
+    
 }
 
 conky.text = [[
-${voffset 7}
-${color2}resize floating window - ${color}mod+r+(arrowKeys)
-${color2}floating resize medium - ${color}mod+Shift+m
-${color2}floating resize large - ${color}mod+Shift+n
-${color2}tiling mode - ${color}mod+e
-${color2}tabbed mode - ${color}mod+w
-${color2}stacked mode - ${color}mod+s
-${color2}blue light filter on - ${color}mod+b
-${color2}blue light filter off - ${color}mod+n
+
+${color}open new terminal (urxvtc) - ${color0}mod+Return
+${color}open new terminal (alacritty) - ${color0}alt+Return
+${color}kill window - ${color0}mod+q
+${color}program menu - ${color0}mod+d
+
+${color}switch to workspace 1-10 - ${color0}mod+1-0
+${color}send to workspace 1-10 - ${color0}mod+Shift+1-0
+${color}change among tiled windows - ${color0}mod+arrowkeys
+${color}Modify order among tiled windows - ${color0}mod+Shift+arrowkeys
+${color}exit - ${color0}mod+Shift+e
+${color}restart i3 - ${color0}mod+Shift+r
+${color}reload i3 config - ${color0}mod+Shift+c
+
+${color}full screen - ${color0}mod+f
+${color}resize floating window - ${color0}mod+r+(arrowKeys)
+${color}floating resize medium - ${color0}mod+Shift+m
+${color}floating resize large - ${color0}mod+Shift+n
+${color}tiling mode - ${color0}mod+e
+${color}tabbed mode - ${color0}mod+w
+${color}stacked mode - ${color0}mod+s
+${color}change between floating/tiled - ${color0}mod+space
+${color}toggle tiling / floating - ${color0}mod+Shift+space
+${color}split horizontal orientation - ${color0}mod+h
+${color}split orientation - ${color0}mod+v
+
 ]]
