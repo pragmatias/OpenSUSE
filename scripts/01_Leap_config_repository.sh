@@ -86,7 +86,7 @@ logMessage "-1" "${msg_log}... [${exec_cmd}]"
 ${exec_cmd} >> $LOG 2>&1
 logMessage "${?}" "${msg_log}"
 
-exec_cmd="zypper addrepo -g -f $SUBLIMETEXT/rpm/dev/x86_64/sublime-text.repo"
+exec_cmd="zypper addrepo -g -f $SUBLIMETEXT/rpm/stable/x86_64/sublime-text.repo"
 msg_log="Repository configuration [SublimeText]"
 logMessage "-1" "${msg_log}... [${exec_cmd}]"
 ${exec_cmd} >> $LOG 2>&1
