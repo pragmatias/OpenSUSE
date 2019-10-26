@@ -56,7 +56,7 @@ if [ ! -z "$(ls -A /home)" ]; then
   if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     mkdir -p /home/$UTILISATEUR/.vim/autoload
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-    cat $CWD/../config/vim/autoload/plug.vim /home/$UTILISATEUR/.vim/autoload/plug.vim
+    cat $CWD/../config/vim/autoload/plug.vim > /home/$UTILISATEUR/.vim/autoload/plug.vim
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     chown $UTILISATEUR:users /home/$UTILISATEUR/.vim/autoload/plug.vim
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
@@ -205,24 +205,6 @@ if [ ! -z "$(ls -A /home)" ]; then
 fi
 logMessage "0" "${msg_log}"
 
-
-# Personnalisation d'alacritty
-msg_log="Customization of Alacritty"
-logMessage "-1" "${msg_log}..."
-if [ ! -z "$(ls -A /home)" ]; then
-  for UTILISATEUR in $(ls /home); do
-    if [ ! -e /home/$UTILISATEUR/.config/alacritty ]; then
-        mkdir /home/$UTILISATEUR/.config/alacritty
-        if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-        chown $UTILISATEUR:users /home/$UTILISATEUR/.config/alacritty
-    fi
-    cp $CWD/../config/alacritty/*.yml /home/$UTILISATEUR/.config/alacritty/.
-    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-    chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/alacritty
-    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-  done
-fi
-logMessage "0" "${msg_log}"
 
 
 # Personnalisation d'i3

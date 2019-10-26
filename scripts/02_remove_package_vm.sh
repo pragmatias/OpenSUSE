@@ -18,7 +18,7 @@ for pkg_remove in ${pkg_list_remove}; do
 	logMessage "${?}" "${msg_log}"
   fi
 
-  lock_exist=$(zypper ll | grep plymouth | wc -l)
+  lock_exist=$(zypper ll | grep ${pkg_remove} | wc -l)
   if [ ${lock_exist} -eq 0 ] ; then
 	exec_cmd="zypper --non-interactive addlock ${pkg_remove}"
 	msg_log="locking the package ${pkg_remove}"

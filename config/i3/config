@@ -23,9 +23,6 @@ set $monitorTwo DVI-I-1
 #------#
 # GAPS #
 #------#
-smart_gaps on
-gaps inner 0
-gaps outer 0
 
 # Borders
 default_border pixel 3
@@ -281,6 +278,7 @@ client.placeholder      $white     $black     $white     $white     $trans
 client.background       $black
 
 
+
 #----------------------#
 # STARTUP APPLICATIONS #
 #----------------------#
@@ -299,24 +297,23 @@ exec_always --no-startup-id numlockx on
 #exec --no-startup-id clipit -d
 
 # Conky
-#exec --no-startup-id conky -c ~/.config/.conkyrc
+exec --no-startup-id ~/.config/conky/start_conky_vm.sh
+
 
 # Polybar
-exec_always ~/.config/i3/start_polybar.sh &
+exec_always ~/.config/i3/start_polybar.sh top &
 
+# Load notification daemon
+exec_always --no-startup-id dunst
 
 #exec_always --no-startup-id dunst -lf "$fg" -nf "$fg" -cf "$fg" -lb "$bg" -nb "$bg" -cb "$bg" -lfr "$lw" -nfr "$nr" -cfr "$red"
+
 
 
 # Load Xresources
 exec_always --no-startup-id xrdb ~/.Xresources
 # Load terminal daemon
 exec_always --no-startup-id urxvtd-256color -q -o -f
-
-#exec --no-startup-id udiskie
-#exec --no-startup-id nextcloud
-#exec --no-startup-id pulseaudio --start
-
 
 
 #---------------#
