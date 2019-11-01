@@ -30,7 +30,6 @@ rxvt-unicode
 urxvt-font-size
 urxvt-perls
 urxvt-tabbedex
-alacritty
 
 # KDE
 fontforge
@@ -109,12 +108,11 @@ steam
 discord
 
 # Desktop customization
-latte-dock
 papirus-icon-theme
 neofetch
 
 # Desktop I3-gaps
-i3-gaps
+i3wm
 i3lock
 i3status
 polybar

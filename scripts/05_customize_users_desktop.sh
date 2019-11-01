@@ -66,38 +66,6 @@ logMessage "0" "${msg_log}"
 
 
 
-# Personnalisation de latte_dock
-msg_log="Customization of the latte-dock for users"
-logMessage "-1" "${msg_log}..."
-if [ ! -z "$(ls -A /home)" ]; then
-  for UTILISATEUR in $(ls /home); do
-    if [ ! -e /home/$UTILISATEUR/.config/latte ]; then
-        mkdir /home/$UTILISATEUR/.config/latte
-        if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-        chown $UTILISATEUR:users /home/$UTILISATEUR/.config/latte
-    fi
-    cp $CWD/../config/latte/* /home/$UTILISATEUR/.config/latte/.
-    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-    chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/latte
-	  if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-    cp $CWD/../config/lattedockrc /home/$UTILISATEUR/.config/lattedockrc
-    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-    chown $UTILISATEUR:users /home/$UTILISATEUR/.config/lattedockrc
-	  if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-	  if [ ! -e /home/$UTILISATEUR/.config/autostart ]; then
-      mkdir /home/$UTILISATEUR/.config/autostart
-      if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-      chown $UTILISATEUR:users /home/$UTILISATEUR/.config/autostart
-    fi
-    cp /usr/share/applications/org.kde.latte-dock.desktop /home/$UTILISATEUR/.config/autostart/org.kde.latte-dock.desktop
-    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-    chown $UTILISATEUR:users /home/$UTILISATEUR/.config/autostart/org.kde.latte-dock.desktop
-	  if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-  done
-fi
-logMessage "0" "${msg_log}"
-
-
 # Personnalisation de Konsole pour les utilisateurs (colorscheme)
 msg_log="Customization of Konsole for users"
 logMessage "-1" "${msg_log}..."

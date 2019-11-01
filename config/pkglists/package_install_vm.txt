@@ -63,7 +63,6 @@ rxvt-unicode
 urxvt-font-size
 urxvt-perls
 urxvt-tabbedex
-alacritty
 
 # Internet
 vivaldi
