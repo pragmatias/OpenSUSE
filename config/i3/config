@@ -37,6 +37,9 @@ default_floating_border pixel 3
 # drag floating key
 floating_modifier $alt
 
+# don't use mouse for focus
+focus_follows_mouse no
+
 # kill focused window
 bindsym $mod+q kill
 bindsym $alt+F4 kill
@@ -184,6 +187,32 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 
+#--------#
+# COLORS #
+#--------#
+# Primary color
+set $black          #282828
+set $white          #ebdbb2
+set $red            #98971a
+set $green          #d79921
+set $yellow         #f4bf75
+set $blue           #d79921
+set $magenta        #b16286
+set $cyan           #689d6a
+set $grey           #a89984
+set $b_active  #ebdbb2
+
+# Used Color
+set $trans          #00000000
+
+# class                 border     backgr.    text    indicator     child_border
+client.focused          $b_active  $black     $black     $black     $b_active
+client.focused_inactive $white     $black     $white     $white     $trans
+client.unfocused        $black     $black     $white     $white     $black
+client.urgent           $red       $black     $red       $red       $red
+client.placeholder      $white     $black     $white     $white     $trans
+client.background       $black
+
 
 
 #----------------------#
@@ -195,11 +224,11 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec ~/.config/i3/menu_logout.sh
 
 # Terminal
 bindsym $mod+Return exec --no-startup-id urxvtc 
-#bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $alt+Return exec --no-startup-id konsole
 
 # Menu
@@ -238,47 +267,6 @@ bindsym $alt+c exec --no-startup-id chromium
 
 
 
-
-
-# start dmenu (a program launcher)
-#bindsym $mod+d exec dmenu_run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-#bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
-
-
-
-
-
-#--------#
-# COLORS #
-#--------#
-# Primary color
-set $black          #282828
-set $white          #ebdbb2
-set $red            #98971a
-set $green          #d79921
-set $yellow         #f4bf75
-set $blue           #d79921
-set $magenta        #b16286
-set $cyan           #689d6a
-set $grey           #a89984
-set $b_active  #ebdbb2
-
-# Used Color
-set $trans          #00000000
-
-# class                 border     backgr.    text    indicator     child_border
-client.focused          $b_active  $black     $black     $black     $b_active
-client.focused_inactive $white     $black     $white     $white     $trans
-client.unfocused        $black     $black     $white     $white     $black
-client.urgent           $red       $black     $red       $red       $red
-client.placeholder      $white     $black     $white     $white     $trans
-client.background       $black
-
-
-
 #----------------------#
 # STARTUP APPLICATIONS #
 #----------------------#
@@ -292,9 +280,6 @@ exec --no-startup-id compton --config ~/.config/compton/compton.conf
 # NumlockX
 exec_always --no-startup-id numlockx on
 
-#test
-#exec --no-startup-id xsettingsd &
-#exec --no-startup-id clipit -d
 
 # Conky
 exec --no-startup-id ~/.config/conky/start_conky_vm.sh
@@ -306,14 +291,16 @@ exec_always ~/.config/i3/start_polybar.sh top &
 # Load notification daemon
 exec_always --no-startup-id dunst
 
-#exec_always --no-startup-id dunst -lf "$fg" -nf "$fg" -cf "$fg" -lb "$bg" -nb "$bg" -cb "$bg" -lfr "$lw" -nfr "$nr" -cfr "$red"
-
-
 
 # Load Xresources
 exec_always --no-startup-id xrdb ~/.Xresources
 # Load terminal daemon
 exec_always --no-startup-id urxvtd-256color -q -o -f
+
+
+#test
+#exec --no-startup-id xsettingsd &
+#exec --no-startup-id clipit -d
 
 
 #---------------#
@@ -335,7 +322,6 @@ for_window [class="(?i)dolphin" window_type="normal"]    floating enable, resize
 
 # libreoffice
 for_window [class="Soffice"]             resize set 1280 720,    move absolute position center
-
 
 
 #-------------#

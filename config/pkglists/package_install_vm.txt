@@ -98,3 +98,4 @@ numlockx
 xclip
 xclipboard
 ImageMagick
+libnotify-tools

@@ -126,6 +126,7 @@ numlockx
 xclip
 xclipboard
 ImageMagick
+libnotify-tools
 
 # Package with potential issues
 vlc-codecs
