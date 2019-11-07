@@ -112,7 +112,7 @@ papirus-icon-theme
 neofetch
 
 # Desktop I3-gaps
-i3wm
+i3
 i3lock
 i3status
 polybar

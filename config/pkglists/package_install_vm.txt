@@ -83,7 +83,7 @@ neofetch
 papirus-icon-theme
 
 # Desktop i3
-i3wm
+i3
 i3lock
 i3status
 polybar
