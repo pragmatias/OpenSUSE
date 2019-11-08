@@ -18,12 +18,11 @@ conky.config = {
 	use_xft = true,
     short_units = true,
 
-    draw_shades = true,
-    default_outline_color = 'fabd2f',
-    default_color = 'fabd2f',
+    draw_shades = false,
+    default_outline_color = '#000000',
+    default_color = '#000000',
     
-    color0 = '#98971a',-- green
-    color1 = '#fabd2f',-- yellow
+    color0 = '#EBDBB2',
     
 }
 
