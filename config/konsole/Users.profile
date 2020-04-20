@@ -1,6 +1,6 @@
 [Appearance]
-ColorScheme=FlatUI
-Font=Hack,10,-1,5,50,0,0,0,0,0,Regular
+ColorScheme=Gruvbox_dark
+Font=Hack,9,-1,5,50,0,0,0,0,0,Regular
 
 [General]
 Command=/bin/bash

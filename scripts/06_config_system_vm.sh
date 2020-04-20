@@ -5,6 +5,7 @@
 . 00_functions_install.sh
 
 # Force the OnlyRequires mode for Zypper
+sed -i 's@# solver.OnlyRequires = false@solver.OnlyRequires = true@' /etc/zypp/zypp.conf
 sed -i 's@solver.OnlyRequires = false@solver.OnlyRequires = true@' /etc/zypp/zypp.conf
 
 # Modify the display manager to LightDM
