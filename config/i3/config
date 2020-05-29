@@ -282,7 +282,7 @@ exec_always --no-startup-id numlockx on
 
 
 # Conky
-exec --no-startup-id ~/.config/conky/start_conky_vm.sh
+exec --no-startup-id ~/.config/conky/start_conky.sh
 
 
 # Polybar
@@ -302,6 +302,9 @@ exec_always --no-startup-id urxvtd-256color -q -o -f
 #exec --no-startup-id xsettingsd &
 #exec --no-startup-id clipit -d
 
+# Change mouse sensitivity
+exec_always --no-startup-id xinput set-prop 10 157 0.500000, 0.000000, 0.000000, 0.000000, 0.500000, 0.000000, 0.000000, 0.000000, 1.000000
+exec_always --no-startup-id xinput set-prop 10 157 0.500000, 0.000000, 0.000000, 0.000000, 0.500000, 0.000000, 0.000000, 0.000000, 1.000000
 
 #---------------#
 # SPECIAL CASES #
