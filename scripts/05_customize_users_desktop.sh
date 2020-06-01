@@ -169,6 +169,12 @@ if [ ! -z "$(ls -A /home)" ]; then
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     chown $UTILISATEUR:users /home/$UTILISATEUR/.config/autostart-scripts/start_conky.sh
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+    cp $CWD/../config/conky/start_conky.sh /home/$UTILISATEUR/.config/conky/start_conky.sh
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+    chmod +x /home/$UTILISATEUR/.config/conky/start_conky.sh
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+    chown $UTILISATEUR:users /home/$UTILISATEUR/.config/conky/start_conky.sh
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
   done
 fi
 logMessage "0" "${msg_log}"

@@ -28,7 +28,7 @@ fg-alt = #cc241d
 
 acolor = #98971a
 curgent = #cc241d
-coccupied = #b16286
+coccupied = #458588
 trans = #00000000
 
 ;==========================================================
@@ -53,7 +53,7 @@ border-color = ${color.bg}
 module-margin-left = 2
 module-margin-right = 2
 
-font-0 = "SF Compact Display:size=9;2"
+font-0 = "SF Compact Display:size=10;2"
 font-1 = "Ubuntu Nerd Font:size=12;2"
 font-2 = "Material Icons:size=12;4"
 font-3 = "FontAwesome:size=12;4"
@@ -114,48 +114,34 @@ click-right = ~/.config/polybar/menu_table.sh
 
 
 [module/workspaces]
-type = internal/xworkspaces
+type = internal/i3
 pin-workspaces = true
+strip-wsnumbers = true
+index-sort = false
 enable-click = true
 enable-scroll = true
-format-padding = 0
+wrapping-scroll = true
+reverse-scroll = true
 
-icon-0 = 1; 1 
-icon-1 = 2; 2 
-icon-2 = 3; 3 
-icon-3 = 4; 4 
-icon-4 = 5; 5 
-icon-5 = 6; 6 
-icon-6 = 7; 7 
-icon-7 = 8; 8 
-icon-8 = 9; 9 
-icon-default = 0 
+label-focused = %index%
+label-focused-foreground = ${color.bg}
+label-focused-background = ${color.acolor}
+label-focused-padding = 5
 
-format = <label-state>
-label-active = %icon%
-label-occupied = %icon%
-label-urgent = %icon%
-label-empty = %icon%
+label-unfocused = %index%
+label-unfocused-foreground = ${color.fg}
+label-unfocused-background = ${color.bg}
+label-unfocused-padding = 5
 
-label-occupied-padding = 2
-label-empty-padding = 2
-label-urgent-padding = 2
-label-active-padding = 2
+label-visible = %index%
+label-visible-foreground = ${color.bg}
+label-visible-background = ${color.coccupied}
+label-visible-padding = 5
 
-label-active-foreground = ${color.bg}
+label-urgent = %index%
 label-urgent-foreground = ${color.bg}
-label-empty-foreground = ${color.fg}
-label-occupied-foreground = ${color.bg}
-
-label-active-background = ${color.acolor}
 label-urgent-background = ${color.curgent}
-label-empty-background = ${color.bg}
-label-occupied-background = {color.coccupied}
-
-
-#label-active-underline = ${color.acolor}
-#label-urgent-underline = ${color.curgent}
-#label-occupied-underline = ${color.coccupied}
+label-urgent-padding = 5
 
 
 
