@@ -13,13 +13,22 @@
 
 [color]
 bg = #282828
+red = #cc241d
+green = #98971a
+yellow = #d79921
+blue = #458588
+purple = #b16286
+aqua = #689d68
+gray = #a89984
+darkgray = #1d2021
+
 bg-alt = #282828
 fg = #ebdbb2
 fg-alt = #cc241d
 
-acolor = #ffffff
-curgent = #b8bb26
-coccupied = #2E89A5
+acolor = #98971a
+curgent = #cc241d
+coccupied = #b16286
 trans = #00000000
 
 ;==========================================================
@@ -150,16 +159,16 @@ enable-click = true
 enable-scroll = true
 format-padding = 0
 
-icon-0 = 1; 
-icon-1 = 2;
-icon-2 = 3;
-icon-3 = 4;
-icon-4 = 5;
-icon-5 = 6;
-icon-6 = 7;
-icon-7 = 8;
-icon-8 = 9;
-icon-default = 
+icon-0 = 1; 1 
+icon-1 = 2; 2 
+icon-2 = 3; 3 
+icon-3 = 4; 4 
+icon-4 = 5; 5 
+icon-5 = 6; 6 
+icon-6 = 7; 7 
+icon-7 = 8; 8 
+icon-8 = 9; 9 
+icon-default = 0 
 
 format = <label-state>
 label-active = %icon%
@@ -172,20 +181,20 @@ label-empty-padding = 2
 label-urgent-padding = 2
 label-active-padding = 2
 
-label-active-foreground = ${color.acolor}
-label-urgent-foreground = ${color.curgent}
+label-active-foreground = ${color.bg}
+label-urgent-foreground = ${color.bg}
 label-empty-foreground = ${color.fg}
-label-occupied-foreground = ${color.coccupied}
+label-occupied-foreground = ${color.bg}
 
-label-active-background = ${color.bg}
-label-urgent-background = ${color.bg}
+label-active-background = ${color.acolor}
+label-urgent-background = ${color.curgent}
 label-empty-background = ${color.bg}
-label-occupied-background = ${color.bg}
+label-occupied-background = {color.coccupied}
 
 
-label-active-underline = ${color.acolor}
-label-urgent-underline = ${color.curgent}
-label-occupied-underline = ${color.coccupied}
+#label-active-underline = ${color.acolor}
+#label-urgent-underline = ${color.curgent}
+#label-occupied-underline = ${color.coccupied}
 
 
 

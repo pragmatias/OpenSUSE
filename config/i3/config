@@ -11,7 +11,8 @@ set $mod Mod4
 set $alt Mod1
 
 # Font for window titles.
-font pango:SF Compact Display, Ubuntu 12
+#font pango:SF Compact Display, Ubuntu 12
+font pango:Hack Nerd Font 8
 
 # Current Monitor (xrandr)
 exec --no-startup-id xrandr --ouput HDMI-0 --right-of DVI-I-1 --auto
@@ -190,28 +191,29 @@ bindsym $mod+r mode "resize"
 #--------#
 # COLORS #
 #--------#
-# Primary color
-set $black          #282828
-set $white          #ebdbb2
-set $red            #98971a
-set $green          #d79921
-set $yellow         #f4bf75
-set $blue           #d79921
-set $magenta        #b16286
-set $cyan           #689d6a
-set $grey           #a89984
-set $b_active  #ebdbb2
+# set primary gruvbox colorscheme colors
+#set $bg #282828
+#set $red #cc241d
+#set $green #98971a
+#set $yellow #d79921
+#set $blue #458588
+#set $purple #b16286
+#set $aqua #689d68
+#set $gray #a89984
+#set $darkgray #1d2021
+#set $white #ebdbb2
 
 # Used Color
-set $trans          #00000000
+#set $trans          #00000000
 
+# green gruvbox
 # class                 border     backgr.    text    indicator     child_border
-client.focused          $b_active  $black     $black     $black     $b_active
-client.focused_inactive $white     $black     $white     $white     $trans
-client.unfocused        $black     $black     $white     $white     $black
-client.urgent           $red       $black     $red       $red       $red
-client.placeholder      $white     $black     $white     $white     $trans
-client.background       $black
+client.focused          #98971a    #98971a    #1d2021 #98971a       #98971a
+client.focused_inactive #1d2021    #1d2021    #d79921 #b16286       #1d2021
+client.unfocused        #1d2021    #1d2021    #d79921 #b16286       #1d2021
+client.urgent           #cc241d    #cc241d    #ebdbb2 #cc241d       #cc241d
+client.placeholder      #1d2021    #1d2021    #d79921 #b16286       #1d2021
+client.background       #282828
 
 
 
