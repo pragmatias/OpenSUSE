@@ -27,7 +27,7 @@ fg = #ebdbb2
 fg-alt = #cc241d
 
 acolor = #98971a
-curgent = #cc241d
+curgent = #d79921
 coccupied = #458588
 trans = #00000000
 

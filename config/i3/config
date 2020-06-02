@@ -161,15 +161,15 @@ bindsym $mod+minus workspace $ws6
 bindsym $mod+egrave workspace $ws7
 bindsym $mod+underscore workspace $ws8
 bindsym $mod+ccedilla workspace $ws9
-bindsym $mod+KP_End workspace $ws11
-bindsym $mod+KP_Down workspace $ws12
-bindsym $mod+KP_Next workspace $ws13
-bindsym $mod+KP_Left workspace $ws14
-bindsym $mod+KP_Begin workspace $ws15
-bindsym $mod+KP_Right workspace $ws16
-bindsym $mod+KP_Home workspace $ws17
-bindsym $mod+KP_Up workspace $ws18
-bindsym $mod+KP_Prior workspace $ws19
+bindsym $alt+ampersand workspace $ws11
+bindsym $alt+eacute workspace $ws12
+bindsym $alt+quotedbl workspace $ws13
+bindsym $alt+apostrophe workspace $ws14
+bindsym $alt+parenleft workspace $ws15
+bindsym $alt+minus workspace $ws16
+bindsym $alt+egrave workspace $ws17
+bindsym $alt+underscore workspace $ws18
+bindsym $alt+ccedilla workspace $ws19
 
 
 # move focused container to workspace
@@ -182,15 +182,15 @@ bindsym $mod+Shift+minus move container to workspace $ws6
 bindsym $mod+Shift+egrave move container to workspace $ws7
 bindsym $mod+Shift+underscore move container to workspace $ws8
 bindsym $mod+Shift+ccedilla move container to workspace $ws9
-bindsym $mod+Ctrl+KP_End move container to workspace $ws11
-bindsym $mod+Ctrl+KP_Down move container to workspace $ws12
-bindsym $mod+Ctrl+KP_Next move container to workspace $ws13
-bindsym $mod+Ctrl+KP_Left move container to workspace $ws14
-bindsym $mod+Ctrl+KP_Begin move container to workspace $ws15
-bindsym $mod+Ctrl+KP_Right move container to workspace $ws16
-bindsym $mod+Ctrl+KP_Home move container to workspace $ws17
-bindsym $mod+Ctrl+KP_Up move container to workspace $ws18
-bindsym $mod+Ctrl+KP_Prior move container to workspace $ws19
+bindsym $alt+Shift+ampersand move container to workspace $ws11
+bindsym $alt+Shift+eacute move container to workspace $ws12
+bindsym $alt+Shift+quotedbl move container to workspace $ws13
+bindsym $alt+Shift+apostrophe move container to workspace $ws14
+bindsym $alt+Shift+parenleft move container to workspace $ws15
+bindsym $alt+Shift+minus move container to workspace $ws16
+bindsym $alt+Shift+egrave move container to workspace $ws17
+bindsym $alt+Shift+underscore move container to workspace $ws18
+bindsym $alt+Shift+ccedilla move container to workspace $ws19
 
 
 
@@ -242,13 +242,13 @@ bindsym $mod+r mode "resize"
 #set $trans          #00000000
 
 # green gruvbox
-# class                              border             backgr.      text          indicator     child_border
-client.focused                    #98971a        #98971a    #1d2021     #98971a       #98971a
-client.focused_inactive     #1d2021        #1d2021    #d79921     #458588       #458588
-client.unfocused                #1d2021        #1d2021    #d79921     #1d2021       #1d2021
-client.urgent                       #cc241d        #cc241d    #ebdbb2    #cc241d       #cc241d
-client.placeholder              #1d2021        #1d2021    #d79921     #1d2021       #1d2021
-client.background             #282828
+# class                          border         backgr.    text        indicator     child_border
+client.focused                   #98971a        #98971a    #1d2021     #98971a       #98971a
+client.focused_inactive          #1d2021        #1d2021    #d79921     #458588       #458588
+client.unfocused                 #1d2021        #1d2021    #d79921     #1d2021       #1d2021
+client.urgent                    #cc241d        #cc241d    #ebdbb2     #cc241d       #cc241d
+client.placeholder               #1d2021        #1d2021    #d79921     #1d2021       #1d2021
+client.background                #282828
 
 
 
@@ -373,7 +373,8 @@ for_window [class="Soffice"]             resize set 1280 720,    move absolute p
 #assign [class="Code"] $ws4
 #assign [class="Nautilus"] $ws3
 #assign [class="mpv"] $ws6
-#assign [class="discord"] $ws7
+assign [class="discord"] $ws8
+assign [class="Thunderbird"] $ws9
 
 
 
