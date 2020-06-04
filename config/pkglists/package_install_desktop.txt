@@ -54,6 +54,7 @@ chromium-ffmpeg-extra
 # Developpement
 sublime-text
 kate
+code
 
 # Graphisme
 gimp
@@ -127,6 +128,7 @@ xclip
 xclipboard
 ImageMagick
 libnotify-tools
+mutt
 
 # Package with potential issues
 vlc-codecs

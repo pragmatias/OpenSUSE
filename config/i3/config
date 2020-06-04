@@ -348,20 +348,20 @@ exec_always --no-startup-id sleep 2;xinput set-prop 10 157 0.500000, 0.000000, 0
 #---------------#
 
 # Media 
-for_window [title="Media viewer"]       resize set 1280 720, move absolute position center, border pixel 0
-for_window [title="VLC media player"]  floating enable, resize set 1280 720, move absolute position center, border pixel 0
+#for_window [title="Media viewer"]       resize set 1280 720, move absolute position center, border pixel 0
+#for_window [title="VLC media player"]  floating enable, resize set 1280 720, move absolute position center, border pixel 0
 
 # KeePassXC
-for_window [class="keepassxc"]          floating enable, resize set 1280 720, move absolute position center
+for_window [class="KeePassXC"]          floating enable, resize set 800 600, move position center
 
 # thunar
-for_window [class="(?i)thunar" window_type="normal"]     floating enable, resize set 1280 720, move absolute position center
+for_window [class="(?i)thunar" window_type="normal"]     floating enable, resize set 1280 720, move position center
 
 # dolphin
-for_window [class="(?i)dolphin" window_type="normal"]    floating enable, resize set 1280 720, move absolute position center
+for_window [class="(?i)dolphin" window_type="normal"]    floating enable, resize set 1280 720, move position center
 
 # libreoffice
-for_window [class="Soffice"]             resize set 1280 720,    move absolute position center
+#for_window [class="Soffice"]             resize set 1280 720,    move absolute position center
 
 
 #-------------#
