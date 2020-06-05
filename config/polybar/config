@@ -57,8 +57,8 @@ module-margin-right = 2
 
 font-0 = "SF Compact Display:size=10;2"
 font-1 = "Ubuntu Nerd Font:size=12;2"
-font-2 = "Material Icons:size=12;4"
-font-3 = "FontAwesome:size=12;4"
+#font-2 = "Material Icons:size=12;4"
+#font-3 = "FontAwesome:size=12;4"
 
 ;separator = |
 cursor-click = pointer
@@ -142,8 +142,7 @@ content = " "
 
 [module/menu]
 type = custom/text
-content = 
-;alt-icon = 
+content = ﰧ
 content-padding = 2
 ;content-background = ${color.acolor}
 ;content-foreground = ${color.fg}
@@ -162,22 +161,47 @@ enable-scroll = true
 wrapping-scroll = true
 reverse-scroll = true
 
-label-focused = %index%
+ws-icon-0 = 1; Term
+ws-icon-1 = 2; Code
+ws-icon-2 = 3; Code
+ws-icon-3 = 4; Web
+ws-icon-4 = 5; Web
+ws-icon-5 = 6;
+ws-icon-6 = 7; Games
+ws-icon-7 = 8; Chat
+ws-icon-8 = 9; Mail
+ws-icon-9 = 11;
+ws-icon-10 = 12; Web
+ws-icon-11 = 13; Web
+ws-icon-12 = 14; Doc
+ws-icon-13 = 15; Doc
+ws-icon-14 = 16; Divers
+ws-icon-15 = 17; Divers
+ws-icon-16 = 18; Stream
+ws-icon-17 = 19; Music
+ws-icon-default = 
+
+format = <label-state> <label-mode>
+
+label-mode = %mode%
+label-mode-padding = 2
+
+label-focused = %icon%
 label-focused-foreground = ${color.bg}
 label-focused-background = ${color.acolor}
 label-focused-padding = 5
 
-label-unfocused = %index%
+label-unfocused = %icon%
 label-unfocused-foreground = ${color.fg}
 label-unfocused-background = ${color.bg}
 label-unfocused-padding = 5
 
-label-visible = %index%
+label-visible = %icon%
 label-visible-foreground = ${color.bg}
 label-visible-background = ${color.coccupied}
 label-visible-padding = 5
 
-label-urgent = %index%
+label-urgent = %icon%
 label-urgent-foreground = ${color.bg}
 label-urgent-background = ${color.curgent}
 label-urgent-padding = 5
@@ -190,8 +214,8 @@ format = <label>
 format-background = ${color.bg}
 format-foreground = ${color.fg}
 format-padding = 4
-label = %title:0:50:...%
-label-maxlen = 60
+label = %title:0:140:...%
+label-maxlen = 150
 label-empty = ""
 label-empty-foreground = ${color.bg}
 
@@ -231,7 +255,7 @@ label = " RAM %percentage_used:3%% of %gb_total%"
 type = internal/cpu
 interval = 1
 format = <label>
-label = " CPU %percentage:3%% "
+label = "閭 CPU %percentage:3%% "
 
 [module/volume]
 type = internal/alsa
@@ -242,17 +266,17 @@ type = internal/alsa
 format-volume =  "<ramp-volume> <label-volume>"
 label-volume = "%percentage%%"
 
-format-muted-prefix = " "
-label-muted = "Off"
+format-muted-prefix = "婢"
+#label-muted = "Off"
 interval = 10
 
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-ramp-volume-3 = 
-ramp-volume-4 = 
-ramp-volume-5 = 
-ramp-volume-6 = 
+ramp-volume-0 = 奄
+ramp-volume-1 = 奔
+ramp-volume-2 = 奔
+ramp-volume-3 = 奔
+ramp-volume-4 = 墳
+ramp-volume-5 = 墳
+ramp-volume-6 = 墳
 
 
 [module/calend_top]
@@ -266,22 +290,18 @@ date =  %d/%m/%Y
 type = internal/date
 interval = 10
 label =  %time%
-time =  %H:%M
+time =  %H:%M
 
 
 
 [module/powermenu]
 type = custom/text
-content = 
+content = 襤
 content-padding = 2
 ;content-background = ${color.acolor}
 ;content-foreground = ${color.fg}
 click-left = ~/.config/polybar/power_menu.sh
 click-right = ~/.config/polybar/power_menu.sh
-
-
-
-
 
 
 
@@ -295,7 +315,7 @@ interval = 30
 fixed-values = false
 spacing = 4
 label-mounted = "¤   %mountpoint% : %percentage_used%% of %total%"
-label-unmounted = "¤   %mountpoint% : not mounted"
+label-unmounted = "¤  年 %mountpoint% : not mounted"
 
 
 

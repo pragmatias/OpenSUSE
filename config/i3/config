@@ -353,6 +353,8 @@ exec_always --no-startup-id sleep 2;xinput set-prop 10 157 0.500000, 0.000000, 0
 
 # KeePassXC
 for_window [class="KeePassXC"]          floating enable, resize set 800 600, move position center
+# Calculator
+for_window [title="Calculator"]          floating enable, resize set 800 600, move position center
 
 # thunar
 for_window [class="(?i)thunar" window_type="normal"]     floating enable, resize set 1280 720, move position center
@@ -373,6 +375,7 @@ for_window [class="(?i)dolphin" window_type="normal"]    floating enable, resize
 #assign [class="Code"] $ws4
 #assign [class="Nautilus"] $ws3
 #assign [class="mpv"] $ws6
+assign [class="Steam"] $ws7
 assign [class="discord"] $ws8
 assign [class="Thunderbird"] $ws9
 
