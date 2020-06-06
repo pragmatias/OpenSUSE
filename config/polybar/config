@@ -101,8 +101,8 @@ module-margin-right = 2
 
 font-0 = "SF Compact Display:size=10;2"
 font-1 = "Ubuntu Nerd Font:size=12;2"
-font-2 = "Material Icons:size=12;4"
-font-3 = "FontAwesome:size=12;4"
+#font-2 = "Material Icons:size=12;4"
+#font-3 = "FontAwesome:size=12;4"
 
 ;separator = |
 cursor-click = pointer
@@ -166,25 +166,27 @@ ws-icon-1 = 2; Code
 ws-icon-2 = 3; Code
 ws-icon-3 = 4; Web
 ws-icon-4 = 5; Web
-ws-icon-5 = 6;
-ws-icon-6 = 7; Games
-ws-icon-7 = 8; Chat
-ws-icon-8 = 9; Mail
-ws-icon-9 = 11;
+ws-icon-5 = 6; ...
+ws-icon-6 = 7; ...
+ws-icon-7 = 8; Note
+ws-icon-8 = 9; Games
+ws-icon-9 = 11; Web
 ws-icon-10 = 12; Web
 ws-icon-11 = 13; Web
 ws-icon-12 = 14; Doc
 ws-icon-13 = 15; Doc
-ws-icon-14 = 16; Divers
-ws-icon-15 = 17; Divers
-ws-icon-16 = 18; Stream
-ws-icon-17 = 19; Music
+ws-icon-14 = 16; Netflix
+ws-icon-15 = 17; Music
+ws-icon-16 = 18; Chat
+ws-icon-17 = 19; Mail
 ws-icon-default = 
 
 format = <label-state> <label-mode>
 
 label-mode = %mode%
-label-mode-padding = 2
+label-mode-foreground = ${color.bg}
+label-mode-background = ${color.purple}
+label-mode-padding = 5
 
 label-focused = %icon%
 label-focused-foreground = ${color.bg}

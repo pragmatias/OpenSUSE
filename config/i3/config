@@ -47,10 +47,10 @@ bindsym $alt+F4 kill
 
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+m focus right
+#bindsym $mod+j focus left
+#bindsym $mod+k focus down
+#bindsym $mod+l focus up
+#bindsym $mod+m focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -59,10 +59,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+m move right
+#bindsym $mod+Shift+j move left
+#bindsym $mod+Shift+k move down
+#bindsym $mod+Shift+l move up
+#bindsym $mod+Shift+m move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -195,7 +195,7 @@ bindsym $alt+Shift+ccedilla move container to workspace $ws19
 
 
 # resize window (you can also use the mouse for that)
-mode "resize" {
+mode "Resize" {
         # These bindings trigger as soon as you enter the resize mode
 
         # Pressing left will shrink the window’s width.
@@ -220,7 +220,7 @@ mode "resize" {
 }
 
 
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode "Resize"
 
 
 #--------#
@@ -299,8 +299,32 @@ bindsym $alt+d exec --no-startup-id dmenu_run
 #bindsym Print exec --no-startup-id  ~/bin/rofi.sh -s
 
 # Firefox
-#bindsym $mod+a exec --no-startup-id firefox-nightly
-bindsym $alt+c exec --no-startup-id chromium
+bindsym $mod+i exec --no-startup-id firefox
+bindsym $alt+i exec --no-startup-id chromium
+
+
+
+# resize window (you can also use the mouse for that)
+mode "Application" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        bindsym m exec --no-startup-id i3-msg 'workspace $ws17 exec chromium --new-window http://www.deezer.com'
+        bindsym n exec --no-startup-id i3-msg 'workspace $ws16 exec google-chrome --user-data-dir=/tmp --new-window http://www.netflix.com'
+        bindsym d exec --no-startup-id discord
+        bindsym t exec --no-startup-id thunderbird
+        bindsym s exec --no-startup-id steam
+        bindsym e exec --no-startup-id nixnote2
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+a mode "default"
+}
+
+
+bindsym $mod+a mode "Application"
+
+
 
 
 
@@ -347,17 +371,18 @@ exec_always --no-startup-id sleep 2;xinput set-prop 10 157 0.500000, 0.000000, 0
 # SPECIAL CASES #
 #---------------#
 
-# Media 
-#for_window [title="Media viewer"]       resize set 1280 720, move absolute position center, border pixel 0
-#for_window [title="VLC media player"]  floating enable, resize set 1280 720, move absolute position center, border pixel 0
 
 # KeePassXC
 for_window [class="KeePassXC"]          floating enable, resize set 800 600, move position center
+
 # Calculator
 for_window [title="Calculator"]          floating enable, resize set 800 600, move position center
 
 # thunar
 for_window [class="(?i)thunar" window_type="normal"]     floating enable, resize set 1280 720, move position center
+
+# Steam
+for_window [class="Steam"]     floating enable, resize set 1280 720, move position center
 
 # dolphin
 for_window [class="(?i)dolphin" window_type="normal"]    floating enable, resize set 1280 720, move position center
@@ -370,14 +395,10 @@ for_window [class="(?i)dolphin" window_type="normal"]    floating enable, resize
 # ASSIGNMENTS #
 #-------------#
 
-#assign [class="^(Firefox)|(Nightly)$" window_type="normal"] $ws2
-#assign [class="Gedit"] $ws3
-#assign [class="Code"] $ws4
-#assign [class="Nautilus"] $ws3
-#assign [class="mpv"] $ws6
-assign [class="Steam"] $ws7
-assign [class="discord"] $ws8
-assign [class="Thunderbird"] $ws9
+assign [class="nixnote2"] $ws8
+assign [class="Steam"] $ws9
+assign [class="discord"] $ws18
+assign [class="Thunderbird"] $ws19
 
 
 
