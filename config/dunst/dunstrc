@@ -2,7 +2,7 @@
     frame_width = 0
     frame_color = "#ebdbb2"
     
-    font = "SF Compact Display 9"
+    font = "Hack Nerd Font 10"
     
     # Allow a small subset of html markup:
     #   <b>bold</b>
@@ -24,7 +24,7 @@
     #   %I  iconname (without its path)
     #   %p  progress value if set ([  0%] to [100%]) or nothing
     # Markup is allowed
-    format = "%s %p\n%b"
+    format = "%a\n%s %p\n%b"
     
     # Sort messages by urgency.
     sort = yes
@@ -134,18 +134,18 @@
     #  * foreground: use the same color as the foreground;
     #  * frame: use the same color as the frame;
     #  * anything else will be interpreted as a X color.
-    separator_color = "#ebdbb2"
+    separator_color = "#282828"
     
     # Print a notification on startup.
     # This is mainly for error detection, since dbus (re-)starts dunst
     # automatically after a crash.
-    startup_notification = false
+    startup_notification = true
     
     # dmenu path.
-    dmenu = /usr/bin/dmenu -p dunst:
+    dmenu = /usr/bin/dmenu -p dunst
     
     # Browser for opening urls in context menu.
-    browser = chromium
+    browser = firefox --new-tab
 
     # Align icons left/right/off
     icon_position = left
@@ -181,19 +181,19 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#ebdbb2"
-    foreground = "#282828"
+    background = "#1d2021"
+    foreground = "#ebdbb2"
     timeout = 10
 
 [urgency_normal]
-    background = "#ebdbb2"
-    foreground = "#282828"
+    background = "#1d2021"
+    foreground = "#ebdbb2"
     timeout = 10
 
 [urgency_critical]
-    background = "#cc241d"
-    foreground = "#282828"
-    timeout = 0
+    background = "#1d2021"
+    foreground = "#cc241d"
+    timeout = 20
 
 
 # Every section that isn't one of the above is interpreted as a rules to
