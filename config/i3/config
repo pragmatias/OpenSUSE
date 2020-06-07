@@ -40,6 +40,7 @@ floating_modifier $alt
 
 # don't use mouse for focus
 focus_follows_mouse no
+mouse_warping none
 
 # kill focused window
 bindsym $mod+q kill
@@ -273,8 +274,8 @@ bindsym $mod+d exec --no-startup-id ~/.config/i3/menu_rofi.sh
 bindsym $alt+d exec --no-startup-id dmenu_run
 
 # Shortchut
+bindsym F1 exec --no-startup-id ~/.config/conky/start_conky_shortcut_alt.sh
 bindsym $mod+F1 exec --no-startup-id ~/.config/conky/start_conky_shortcut.sh
-bindsym F1 exec --no-startup-id ~/.config/conky/start_conky_shortcut.sh
 
 # drun
 #bindsym $mod+d exec --no-startup-id ~/bin/rofi.sh -d
@@ -318,8 +319,8 @@ mode "Application" {
         bindsym t exec --no-startup-id thunderbird
         bindsym s exec --no-startup-id steam
         bindsym e exec --no-startup-id nixnote2
-        bindsym c exec --no-startup-id sublime-text
-        bindsym alt+c exec --no-startup-id code
+        bindsym c exec --no-startup-id /opt/sublime_text/sublime_text
+        bindsym $alt+c exec --no-startup-id code
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -373,12 +374,14 @@ exec_always --no-startup-id sleep 2;xinput set-prop 10 157 0.500000, 0.000000, 0
 # SPECIAL CASES #
 #---------------#
 
+for_window [class="conky"]      floating enable
+
 
 # KeePassXC
 for_window [class="KeePassXC"]          floating enable, resize set 800 600, move position center
 
 # Calculator
-for_window [title="Calculator"]          floating enable, resize set 800 600, move position center
+for_window [title="^Calculator$"]          floating enable, resize set 800 600, move position center
 
 # thunar
 for_window [class="(?i)thunar" window_type="normal"]     floating enable, resize set 1280 720, move position center
@@ -391,6 +394,7 @@ for_window [class="(?i)dolphin" window_type="normal"]    floating enable, resize
 
 # libreoffice
 #for_window [class="Soffice"]             resize set 1280 720,    move absolute position center
+
 
 
 #-------------#

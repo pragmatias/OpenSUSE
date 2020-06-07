@@ -8,12 +8,15 @@ conky.config = {
 	no_buffers = true,
 	border_inner_margin = 25,
 
- 	own_window_colour = '#282828',
+ 	
 	own_window = true,
 	own_window_transparent = false,                                
-	own_window_type = normal,
-	own_window_title = 'shortcut',
-	own_window_hints = 'undecorated,behind',
+	own_window_type = 'normal',
+	own_window_title = 'Shortcut_i3',
+	own_window_hints = 'undecorate,behind,skip_taskbar,skip_pager',
+	own_window_colour = '#282828',
+	xinerama_head = 0,
+	
 	
 	--minimum_width = 550,
 	--maximum_width = 550,
@@ -88,4 +91,5 @@ ${font2}${color0}Toggle tiling / floating${font1}${goto 300}${color4}mod + Shift
 ${font2}${color0}Resize window${font1}${goto 300}${color4}mod + r + (ArrowKeys)
 ${font2}${color0}Split horizontal orientation${font1}${goto 300}${color4}mod + h
 ${font2}${color0}Split orientation${font1}${goto 300}${color4}mod + v
+
 ]]
