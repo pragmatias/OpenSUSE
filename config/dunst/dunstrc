@@ -142,7 +142,7 @@
     startup_notification = true
     
     # dmenu path.
-    dmenu = /usr/bin/dmenu -p dunst
+    dmenu = /usr/bin/dmenu -p dunst:
     
     # Browser for opening urls in context menu.
     browser = firefox --new-tab
