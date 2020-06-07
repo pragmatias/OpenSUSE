@@ -1,0 +1,91 @@
+conky.config = {
+	alignment = 'middle_middle',
+	background = true,
+	--use_spacer = 'none',
+	double_buffer = true,
+	--gap_x = 25,
+	--gap_y = 45,
+	no_buffers = true,
+	border_inner_margin = 25,
+
+ 	own_window_colour = '#282828',
+	own_window = true,
+	own_window_transparent = false,                                
+	own_window_type = normal,
+	own_window_title = 'shortcut',
+	own_window_hints = 'undecorated,behind',
+	
+	--minimum_width = 550,
+	--maximum_width = 550,
+	--minimum_height = 600,
+	--maximum_height = 600,
+
+	--update_interval = 1,
+	use_xft = true,
+    --short_units = true,
+
+	
+	font = 'Ubuntu Nerd Font:size=14',
+	font1 = 'Ubuntu Nerd Font:size=12',
+	font2 = 'Ubuntu Nerd Font:size=12',
+
+    draw_shades = false,
+    --default_outline_color = '#000000',
+    default_color = '#ebdbb2',
+    
+    --black 
+    color1= '#282828',
+    --red
+	color2 = '#cc241d',
+	--green
+	color3 = '#98971a',
+	--yellow
+	color4 = '#d79921',
+	--blue
+	color5 = '#458588',
+	--purple
+	color6 = '#b16286',
+	--aqua
+	color7 = '#689d68',
+	--gray
+	color8 = '#a89984',
+	--darkgray
+	color9 = '#1d2021',
+	--white
+	color0 = '#ebdbb2',
+
+    
+}
+
+
+
+
+
+conky.text = [[
+${font}${color2}System                                                                   ${goto 550}${color5}Application
+
+${font2}${color0}Shortcut i3 (Conky) ${font}${font1}${goto 300}${color4}F1 or mod + F1   ${goto 550}${font2}${color0}Terminal : Urxvtc ${font1}${goto 800}${color4}mod + Return
+${font2}${color0}Kill window ${font}${font1}${goto 300}${color4}mod + q                  ${goto 550}${font2}${color0}Terminal : Konsole ${font1}${goto 800}${color4}alt + Return
+${font2}${color0}Program menu (rofi) ${font1}${goto 300}${color4}mod + d                 ${goto 550}${font2}${color0}File : Thunar ${font1}${goto 800}${color4}mod + t
+${font2}${color0}Program menu (dmenu) ${font1}${goto 300}${color4}alt + d                ${goto 550}${font2}${color0}File : Ranger ${font1}${goto 800}${color4}alt + t
+${font2}${color0}Exit i3${font1}${goto 300}${color4}mod + Shift + e                      ${goto 550}${font2}${color0}Web : Firefox ${font1}${goto 800}${color4}mod + i
+${font2}${color0}Restart i3 ${font1}${goto 300}${color4}mod + Shift + r                  ${goto 550}${font2}${color0}Web : Chromium ${font1}${goto 800}${color4}alt + i
+${font2}${color0}Reload i3 config ${font1}${goto 300}${color4}mod + Shift + c            
+
+${font2}${color0}Switch to workspace 1-9${font1}${goto 300}${color4}mod + [1-9]
+${font2}${color0}Switch to workspace 11-19${font1}${goto 300}${color4}alt + [1-9]
+${font2}${color0}Send to workspace 1-10${font1}${goto 300}${color4}mod + Shift + [1-9]   ${goto 550}${font2}${color5}Mode Application ${font1}${goto 800}${color4}mod + a
+${font2}${color0}Send to workspace 11-19${font1}${goto 300}${color4}alt + Shift + [1-9]  ${goto 550}${font2}${color0}Deezer (Chromium) ${font1}${goto 800}${color4}m
+${font2}${color0}Change among tiled windows${font1}${goto 300}${color4}mod + Arrowkeys   ${goto 550}${font2}${color0}Netflix (Google Chrome) ${font1}${goto 800}${color4}n
+${font2}${color0}Modify order among tiled windows${font1}${goto 300}${color4}mod + Shift + Arrowkeys ${goto 550}${font2}${color0}Discord ${font1}${goto 800}${color4}d
+                                                                                         ${goto 550}${font2}${color0}Thunderbird ${font1}${goto 800}${color4}t
+${font2}${color0}Full screen${font1}${goto 300}${color4}mod + f                          ${goto 550}${font2}${color0}Steam ${font1}${goto 800}${color4}s
+${font2}${color0}Tiling mode${font1}${goto 300}${color4}mod + e                          ${goto 550}${font2}${color0}Nixnote2 ${font1}${goto 800}${color4}e
+${font2}${color0}Tabbed mode${font1}${goto 300}${color4}mod + w                          ${goto 550}${font2}${color0}Sublime Text ${font1}${goto 800}${color4}c
+${font2}${color0}Stacked mode${font1}${goto 300}${color4}mod + s                         ${goto 550}${font2}${color0}Visual Studio Code ${font1}${goto 800}${color4}alt + c
+${font2}${color0}Change between floating/tiled${font1}${goto 300}${color4}mod + Space
+${font2}${color0}Toggle tiling / floating${font1}${goto 300}${color4}mod + Shift + Space
+${font2}${color0}Resize window${font1}${goto 300}${color4}mod + r + (ArrowKeys)
+${font2}${color0}Split horizontal orientation${font1}${goto 300}${color4}mod + h
+${font2}${color0}Split orientation${font1}${goto 300}${color4}mod + v
+]]

@@ -202,10 +202,10 @@ mode "Resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+        #bindsym h resize shrink width 10 px or 10 ppt
+        #bindsym j resize grow height 10 px or 10 ppt
+        #bindsym k resize shrink height 10 px or 10 ppt
+        #bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -272,6 +272,9 @@ bindsym $alt+Return exec --no-startup-id konsole
 bindsym $mod+d exec --no-startup-id ~/.config/i3/menu_rofi.sh
 bindsym $alt+d exec --no-startup-id dmenu_run
 
+# Shortchut
+bindsym $mod+F1 exec --no-startup-id ~/.config/conky/start_conky_shortcut.sh
+bindsym F1 exec --no-startup-id ~/.config/conky/start_conky_shortcut.sh
 
 # drun
 #bindsym $mod+d exec --no-startup-id ~/bin/rofi.sh -d
@@ -290,7 +293,8 @@ bindsym $alt+d exec --no-startup-id dmenu_run
 
 
 # Thunar
-#bindsym $mod+Tab exec --no-startup-id thunar 
+bindsym $mod+t exec --no-startup-id thunar
+bindsym $alt+t exec --no-startup-id urxvtc -e ranger
 
 # restart i3 in place
 #bindsym $mod+Shift+r restart
@@ -314,6 +318,8 @@ mode "Application" {
         bindsym t exec --no-startup-id thunderbird
         bindsym s exec --no-startup-id steam
         bindsym e exec --no-startup-id nixnote2
+        bindsym c exec --no-startup-id sublime-text
+        bindsym alt+c exec --no-startup-id code
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -340,10 +346,6 @@ exec_always --no-startup-id feh --bg-fill ~/Pictures/wallhaven-81839.jpg
 
 # NumlockX
 exec_always --no-startup-id numlockx on
-
-
-# Conky
-#exec --no-startup-id ~/.config/conky/start_conky.sh
 
 
 # Polybar

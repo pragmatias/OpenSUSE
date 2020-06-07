@@ -94,6 +94,7 @@ kwrite
 keepassxc
 keepassxc-lang
 conky
+thunar
 
 # Fonts
 ubuntu-fonts
