@@ -305,6 +305,7 @@ bindsym $alt+t exec --no-startup-id urxvtc -e ranger
 
 # Firefox
 bindsym $mod+i exec --no-startup-id firefox
+bindsym $mod+$alt+i exec --no-startup-id firefox --private-window
 bindsym $alt+i exec --no-startup-id chromium
 
 
@@ -374,7 +375,8 @@ exec_always --no-startup-id sleep 2;xinput set-prop 10 157 0.500000, 0.000000, 0
 # SPECIAL CASES #
 #---------------#
 
-for_window [class="conky"]      floating enable
+# Conky (Shortcut)
+for_window [class="conky"]      floating enable, border pixel 0
 
 
 # KeePassXC
