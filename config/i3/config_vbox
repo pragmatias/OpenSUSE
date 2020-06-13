@@ -35,6 +35,7 @@ floating_modifier $alt
 
 # don't use mouse for focus
 focus_follows_mouse no
+mouse_warping none
 
 # kill focused window
 bindsym $mod+q kill
@@ -42,10 +43,10 @@ bindsym $alt+F4 kill
 
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+m focus right
+#bindsym $mod+j focus left
+#bindsym $mod+k focus down
+#bindsym $mod+l focus up
+#bindsym $mod+m focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -54,10 +55,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+m move right
+#bindsym $mod+Shift+j move left
+#bindsym $mod+Shift+k move down
+#bindsym $mod+Shift+l move up
+#bindsym $mod+Shift+m move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -142,17 +143,17 @@ bindsym $mod+Shift+agrave move container to workspace $ws10
 
 
 # resize window (you can also use the mouse for that)
-mode "resize" {
+mode "Resize" {
         # These bindings trigger as soon as you enter the resize mode
 
         # Pressing left will shrink the window’s width.
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+        #bindsym h resize shrink width 10 px or 10 ppt
+        #bindsym j resize grow height 10 px or 10 ppt
+        #bindsym k resize shrink height 10 px or 10 ppt
+        #bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -166,8 +167,7 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode "Resize"
 
 
 #--------#
@@ -189,14 +189,13 @@ bindsym $mod+r mode "resize"
 #set $trans          #00000000
 
 # green gruvbox
-# class                 border     backgr.    text    indicator     child_border
-client.focused          #98971a    #98971a    #1d2021 #98971a       #98971a
-client.focused_inactive #1d2021    #1d2021    #d79921 #b16286       #1d2021
-client.unfocused        #1d2021    #1d2021    #d79921 #b16286       #1d2021
-client.urgent           #cc241d    #cc241d    #ebdbb2 #cc241d       #cc241d
-client.placeholder      #1d2021    #1d2021    #d79921 #b16286       #1d2021
-client.background       #282828
-
+# class                          border         backgr.    text        indicator     child_border
+client.focused                   #98971a        #98971a    #1d2021     #98971a       #98971a
+client.focused_inactive          #1d2021        #1d2021    #d79921     #458588       #458588
+client.unfocused                 #1d2021        #1d2021    #d79921     #1d2021       #1d2021
+client.urgent                    #cc241d        #cc241d    #ebdbb2     #cc241d       #cc241d
+client.placeholder               #1d2021        #1d2021    #d79921     #1d2021       #1d2021
+client.background                #282828
 
 
 #----------------------#
