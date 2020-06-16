@@ -20,6 +20,7 @@ blue = #458588
 purple = #b16286
 aqua = #689d68
 gray = #a89984
+orange = #d65d0e
 darkgray = #1d2021
 
 bg-alt = #282828
@@ -216,8 +217,8 @@ format = <label>
 format-background = ${color.bg}
 format-foreground = ${color.fg}
 format-padding = 4
-label = %title:0:140:...%
-label-maxlen = 150
+label = %title:0:75:...%
+label-maxlen = 80
 label-empty = ""
 label-empty-foreground = ${color.bg}
 

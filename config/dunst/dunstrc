@@ -2,7 +2,7 @@
     frame_width = 0
     frame_color = "#ebdbb2"
     
-    font = "Hack Nerd Font 10"
+    font = "Hack Nerd Font 9"
     
     # Allow a small subset of html markup:
     #   <b>bold</b>
@@ -139,7 +139,7 @@
     # Print a notification on startup.
     # This is mainly for error detection, since dbus (re-)starts dunst
     # automatically after a crash.
-    startup_notification = true
+    startup_notification = false
     
     # dmenu path.
     dmenu = /usr/bin/dmenu -p dunst:

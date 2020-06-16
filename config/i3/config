@@ -7,8 +7,8 @@
 #--------#
 
 # mod
-set $mod Mod4
-set $alt Mod1
+set $supL Mod4
+set $supR Mod3
 
 # Font for window titles.
 #font pango:SF Compact Display, Ubuntu 12
@@ -36,76 +36,76 @@ default_floating_border pixel 3
 #-----------------------------#
 
 # drag floating key
-floating_modifier $alt
+floating_modifier $supR
 
 # don't use mouse for focus
 focus_follows_mouse no
 mouse_warping none
 
 # kill focused window
-bindsym $mod+q kill
-bindsym $alt+F4 kill
+bindsym $supL+q kill
+bindsym $supR+F4 kill
 
 
 # change focus
-#bindsym $mod+j focus left
-#bindsym $mod+k focus down
-#bindsym $mod+l focus up
-#bindsym $mod+m focus right
+#bindsym $supL+j focus left
+#bindsym $supL+k focus down
+#bindsym $supL+l focus up
+#bindsym $supL+m focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+bindsym $supL+Left focus left
+bindsym $supL+Down focus down
+bindsym $supL+Up focus up
+bindsym $supL+Right focus right
 
 # move focused window
-#bindsym $mod+Shift+j move left
-#bindsym $mod+Shift+k move down
-#bindsym $mod+Shift+l move up
-#bindsym $mod+Shift+m move right
+#bindsym $supL+Shift+j move left
+#bindsym $supL+Shift+k move down
+#bindsym $supL+Shift+l move up
+#bindsym $supL+Shift+m move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $supL+Shift+Left move left
+bindsym $supL+Shift+Down move down
+bindsym $supL+Shift+Up move up
+bindsym $supL+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $supL+h split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $supL+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $supL+f fullscreen toggle
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle, resize set 1280 720, move position center
+bindsym $supL+Shift+space floating toggle, resize set 1280 720, move position center
 
 
 workspace_auto_back_and_forth yes
 
 
 # Make the currently focused window a scratchpad
-bindsym $mod+Shift+z move scratchpad
+bindsym $supL+Shift+z move scratchpad
 
 # Show the first scratchpad window
-bindsym $mod+z scratchpad show
+bindsym $supL+z scratchpad show
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $supL+s layout stacking
+bindsym $supL+w layout tabbed
+bindsym $supL+e layout toggle split
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $supL+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+p focus parent
+bindsym $supL+p focus parent
 
 # focus the child container
-bindsym $mod+c focus child
+bindsym $supL+c focus child
 
 
 # Define names for default workspaces for which we configure key bindings later on.
@@ -153,45 +153,45 @@ workspace 19 output $monitorTwo
 
 
 # switch to workspace
-bindsym $mod+ampersand workspace $ws1
-bindsym $mod+eacute workspace $ws2
-bindsym $mod+quotedbl workspace $ws3
-bindsym $mod+apostrophe workspace $ws4
-bindsym $mod+parenleft workspace $ws5
-bindsym $mod+minus workspace $ws6
-bindsym $mod+egrave workspace $ws7
-bindsym $mod+underscore workspace $ws8
-bindsym $mod+ccedilla workspace $ws9
-bindsym $alt+ampersand workspace $ws11
-bindsym $alt+eacute workspace $ws12
-bindsym $alt+quotedbl workspace $ws13
-bindsym $alt+apostrophe workspace $ws14
-bindsym $alt+parenleft workspace $ws15
-bindsym $alt+minus workspace $ws16
-bindsym $alt+egrave workspace $ws17
-bindsym $alt+underscore workspace $ws18
-bindsym $alt+ccedilla workspace $ws19
+bindsym $supL+ampersand workspace $ws1
+bindsym $supL+eacute workspace $ws2
+bindsym $supL+quotedbl workspace $ws3
+bindsym $supL+apostrophe workspace $ws4
+bindsym $supL+parenleft workspace $ws5
+bindsym $supL+minus workspace $ws6
+bindsym $supL+egrave workspace $ws7
+bindsym $supL+underscore workspace $ws8
+bindsym $supL+ccedilla workspace $ws9
+bindsym $supR+ampersand workspace $ws11
+bindsym $supR+eacute workspace $ws12
+bindsym $supR+quotedbl workspace $ws13
+bindsym $supR+apostrophe workspace $ws14
+bindsym $supR+parenleft workspace $ws15
+bindsym $supR+minus workspace $ws16
+bindsym $supR+egrave workspace $ws17
+bindsym $supR+underscore workspace $ws18
+bindsym $supR+ccedilla workspace $ws19
 
 
 # move focused container to workspace
-bindsym $mod+Shift+ampersand move container to workspace $ws1
-bindsym $mod+Shift+eacute move container to workspace $ws2
-bindsym $mod+Shift+quotedbl move container to workspace $ws3
-bindsym $mod+Shift+apostrophe move container to workspace $ws4
-bindsym $mod+Shift+parenleft move container to workspace $ws5
-bindsym $mod+Shift+minus move container to workspace $ws6
-bindsym $mod+Shift+egrave move container to workspace $ws7
-bindsym $mod+Shift+underscore move container to workspace $ws8
-bindsym $mod+Shift+ccedilla move container to workspace $ws9
-bindsym $alt+Shift+ampersand move container to workspace $ws11
-bindsym $alt+Shift+eacute move container to workspace $ws12
-bindsym $alt+Shift+quotedbl move container to workspace $ws13
-bindsym $alt+Shift+apostrophe move container to workspace $ws14
-bindsym $alt+Shift+parenleft move container to workspace $ws15
-bindsym $alt+Shift+minus move container to workspace $ws16
-bindsym $alt+Shift+egrave move container to workspace $ws17
-bindsym $alt+Shift+underscore move container to workspace $ws18
-bindsym $alt+Shift+ccedilla move container to workspace $ws19
+bindsym $supL+Shift+ampersand move container to workspace $ws1
+bindsym $supL+Shift+eacute move container to workspace $ws2
+bindsym $supL+Shift+quotedbl move container to workspace $ws3
+bindsym $supL+Shift+apostrophe move container to workspace $ws4
+bindsym $supL+Shift+parenleft move container to workspace $ws5
+bindsym $supL+Shift+minus move container to workspace $ws6
+bindsym $supL+Shift+egrave move container to workspace $ws7
+bindsym $supL+Shift+underscore move container to workspace $ws8
+bindsym $supL+Shift+ccedilla move container to workspace $ws9
+bindsym $supR+Shift+ampersand move container to workspace $ws11
+bindsym $supR+Shift+eacute move container to workspace $ws12
+bindsym $supR+Shift+quotedbl move container to workspace $ws13
+bindsym $supR+Shift+apostrophe move container to workspace $ws14
+bindsym $supR+Shift+parenleft move container to workspace $ws15
+bindsym $supR+Shift+minus move container to workspace $ws16
+bindsym $supR+Shift+egrave move container to workspace $ws17
+bindsym $supR+Shift+underscore move container to workspace $ws18
+bindsym $supR+Shift+ccedilla move container to workspace $ws19
 
 
 
@@ -214,14 +214,14 @@ mode "Resize" {
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape or $mod+r
+        # back to normal: Enter or Escape or $supL+r
         bindsym Return mode "default"
         bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+        bindsym $supL+r mode "default"
 }
 
 
-bindsym $mod+r mode "Resize"
+bindsym $supL+r mode "Resize"
 
 
 #--------#
@@ -235,6 +235,7 @@ bindsym $mod+r mode "Resize"
 #set $blue #458588
 #set $purple #b16286
 #set $aqua #689d68
+#set $orange #d65d0e
 #set $gray #a89984
 #set $darkgray #1d2021
 #set $white #ebdbb2
@@ -244,11 +245,11 @@ bindsym $mod+r mode "Resize"
 
 # green gruvbox
 # class                          border         backgr.    text        indicator     child_border
-client.focused                   #98971a        #98971a    #1d2021     #98971a       #98971a
-client.focused_inactive          #1d2021        #1d2021    #d79921     #458588       #458588
-client.unfocused                 #1d2021        #1d2021    #d79921     #1d2021       #1d2021
+client.focused                   #ebdbb2        #ebdbb2    #1d2021     #ebdbb2       #ebdbb2
+client.focused_inactive          #458588        #458588    #1d2021     #458588       #458588
+client.unfocused                 #282828        #282828    #ebdbb2     #282828       #282828
 client.urgent                    #cc241d        #cc241d    #ebdbb2     #cc241d       #cc241d
-client.placeholder               #1d2021        #1d2021    #d79921     #1d2021       #1d2021
+client.placeholder               #282828        #282828    #ebdbb2     #282828       #282828
 client.background                #282828
 
 
@@ -258,55 +259,55 @@ client.background                #282828
 #----------------------#
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $supL+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $supL+Shift+r restart
 # exit i3 (logs you out of your X session)
-#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-bindsym $mod+Shift+e exec ~/.config/i3/menu_logout.sh
+#bindsym $supL+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $supL+Shift+e exec ~/.config/i3/menu_logout.sh
 
 # Terminal
-bindsym $mod+Return exec --no-startup-id urxvtc 
-bindsym $alt+Return exec --no-startup-id konsole
+bindsym $supL+Return exec --no-startup-id urxvtc 
+bindsym $supR+Return exec --no-startup-id konsole
 
 # Menu
-bindsym $mod+d exec --no-startup-id ~/.config/i3/menu_rofi.sh
-bindsym $alt+d exec --no-startup-id dmenu_run
+bindsym $supL+d exec --no-startup-id ~/.config/i3/menu_rofi.sh
+bindsym $supR+d exec --no-startup-id dmenu_run
 
 # Shortchut
 bindsym F1 exec --no-startup-id ~/.config/conky/start_conky_shortcut_alt.sh
-bindsym $mod+F1 exec --no-startup-id ~/.config/conky/start_conky_shortcut.sh
+bindsym $supL+F1 exec --no-startup-id ~/.config/conky/start_conky_shortcut.sh
 
 # drun
-#bindsym $mod+d exec --no-startup-id ~/bin/rofi.sh -d
+#bindsym $supL+d exec --no-startup-id ~/bin/rofi.sh -d
 
 # clipmenu
-#bindsym $alt+v exec --no-startup-id ~/bin/rofi.sh -l
+#bindsym $supR+v exec --no-startup-id ~/bin/rofi.sh -l
 
 # calc
-#bindsym $mod+c exec --no-startup-id ~/bin/rofi.sh -c
+#bindsym $supL+c exec --no-startup-id ~/bin/rofi.sh -c
 
 # NetworkManager
-#bindsym $mod+n exec --no-startup-id ~/bin/rofi.sh -n
+#bindsym $supL+n exec --no-startup-id ~/bin/rofi.sh -n
 
 # Power-menu
-#bindsym $mod+e exec --no-startup-id ~/bin/rofi.sh -p
+#bindsym $supL+e exec --no-startup-id ~/bin/rofi.sh -p
 
 
 # Thunar
-bindsym $mod+t exec --no-startup-id thunar
-bindsym $alt+t exec --no-startup-id urxvtc -e ranger
+bindsym $supL+t exec --no-startup-id thunar
+bindsym $supR+t exec --no-startup-id urxvtc -e ranger
 
 # restart i3 in place
-#bindsym $mod+Shift+r restart
+#bindsym $supL+Shift+r restart
 
 # print screen
 #bindsym Print exec --no-startup-id  ~/bin/rofi.sh -s
 
 # Firefox
-bindsym $mod+i exec --no-startup-id firefox
-bindsym $mod+$alt+i exec --no-startup-id firefox --private-window
-bindsym $alt+i exec --no-startup-id chromium
+bindsym $supL+i exec --no-startup-id firefox
+bindsym $supL+$supR+i exec --no-startup-id firefox --private-window
+bindsym $supR+i exec --no-startup-id chromium
 
 
 
@@ -321,16 +322,16 @@ mode "Application" {
         bindsym s exec --no-startup-id steam
         bindsym e exec --no-startup-id nixnote2
         bindsym c exec --no-startup-id /opt/sublime_text/sublime_text
-        bindsym $alt+c exec --no-startup-id code
+        bindsym $supR+c exec --no-startup-id code
 
-        # back to normal: Enter or Escape or $mod+r
+        # back to normal: Enter or Escape or $supL+r
         bindsym Return mode "default"
         bindsym Escape mode "default"
-        bindsym $mod+a mode "default"
+        bindsym $supL+a mode "default"
 }
 
 
-bindsym $mod+a mode "Application"
+bindsym $supL+a mode "Application"
 
 
 
@@ -366,6 +367,9 @@ exec_always --no-startup-id urxvtd-256color -q -o -f
 #test
 #exec --no-startup-id xsettingsd &
 #exec --no-startup-id clipit -d
+
+# Change keymap (xmodmap)
+exec_always --no-startup-id sleep 1;xmodmap ~/.Xmodmap
 
 # Change mouse sensitivity
 exec_always --no-startup-id sleep 2;xinput set-prop 8 157 0.500000, 0.000000, 0.000000, 0.000000, 0.500000, 0.000000, 0.000000, 0.000000, 1.000000

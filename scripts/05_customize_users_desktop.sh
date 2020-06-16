@@ -279,6 +279,12 @@ if [ ! -z "$(ls -A /home)" ]; then
     chown -R $UTILISATEUR:users /home/$UTILISATEUR/.Xresources
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
 
+    #Xmodmap
+    cp $CWD/../config/Xmodmap /home/$UTILISATEUR/.Xmodmap
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+    chown -R $UTILISATEUR:users /home/$UTILISATEUR/.Xmodmap
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+
   done
 fi
 logMessage "0" "${msg_log}"
