@@ -2,13 +2,15 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+exec_always --no-startup-id rm ~/.config/i3/i3log
+
 #--------#
 # BASICS #
 #--------#
 
 # mod
 set $supL Mod4
-set $supR Mod3
+set $ctrl Control
 
 # Font for window titles.
 #font pango:SF Compact Display, Ubuntu 12
@@ -36,7 +38,7 @@ default_floating_border pixel 3
 #-----------------------------#
 
 # drag floating key
-floating_modifier $supR
+floating_modifier $ctrl
 
 # don't use mouse for focus
 focus_follows_mouse no
@@ -44,7 +46,7 @@ mouse_warping none
 
 # kill focused window
 bindsym $supL+q kill
-bindsym $supR+F4 kill
+#bindsym $ctrl+F4 kill
 
 
 # change focus
@@ -162,15 +164,15 @@ bindsym $supL+minus workspace $ws6
 bindsym $supL+egrave workspace $ws7
 bindsym $supL+underscore workspace $ws8
 bindsym $supL+ccedilla workspace $ws9
-bindsym $supR+ampersand workspace $ws11
-bindsym $supR+eacute workspace $ws12
-bindsym $supR+quotedbl workspace $ws13
-bindsym $supR+apostrophe workspace $ws14
-bindsym $supR+parenleft workspace $ws15
-bindsym $supR+minus workspace $ws16
-bindsym $supR+egrave workspace $ws17
-bindsym $supR+underscore workspace $ws18
-bindsym $supR+ccedilla workspace $ws19
+bindsym $ctrl+ampersand workspace $ws11
+bindsym $ctrl+eacute workspace $ws12
+bindsym $ctrl+quotedbl workspace $ws13
+bindsym $ctrl+apostrophe workspace $ws14
+bindsym $ctrl+parenleft workspace $ws15
+bindsym $ctrl+minus workspace $ws16
+bindsym $ctrl+egrave workspace $ws17
+bindsym $ctrl+underscore workspace $ws18
+bindsym $ctrl+ccedilla workspace $ws19
 
 
 # move focused container to workspace
@@ -183,15 +185,15 @@ bindsym $supL+Shift+minus move container to workspace $ws6
 bindsym $supL+Shift+egrave move container to workspace $ws7
 bindsym $supL+Shift+underscore move container to workspace $ws8
 bindsym $supL+Shift+ccedilla move container to workspace $ws9
-bindsym $supR+Shift+ampersand move container to workspace $ws11
-bindsym $supR+Shift+eacute move container to workspace $ws12
-bindsym $supR+Shift+quotedbl move container to workspace $ws13
-bindsym $supR+Shift+apostrophe move container to workspace $ws14
-bindsym $supR+Shift+parenleft move container to workspace $ws15
-bindsym $supR+Shift+minus move container to workspace $ws16
-bindsym $supR+Shift+egrave move container to workspace $ws17
-bindsym $supR+Shift+underscore move container to workspace $ws18
-bindsym $supR+Shift+ccedilla move container to workspace $ws19
+bindsym $ctrl+Shift+ampersand move container to workspace $ws11
+bindsym $ctrl+Shift+eacute move container to workspace $ws12
+bindsym $ctrl+Shift+quotedbl move container to workspace $ws13
+bindsym $ctrl+Shift+apostrophe move container to workspace $ws14
+bindsym $ctrl+Shift+parenleft move container to workspace $ws15
+bindsym $ctrl+Shift+minus move container to workspace $ws16
+bindsym $ctrl+Shift+egrave move container to workspace $ws17
+bindsym $ctrl+Shift+underscore move container to workspace $ws18
+bindsym $ctrl+Shift+ccedilla move container to workspace $ws19
 
 
 
@@ -268,11 +270,11 @@ bindsym $supL+Shift+e exec ~/.config/i3/menu_logout.sh
 
 # Terminal
 bindsym $supL+Return exec --no-startup-id urxvtc 
-bindsym $supR+Return exec --no-startup-id konsole
+bindsym $ctrl+Return exec --no-startup-id konsole
 
 # Menu
 bindsym $supL+d exec --no-startup-id ~/.config/i3/menu_rofi.sh
-bindsym $supR+d exec --no-startup-id dmenu_run
+bindsym $ctrl+d exec --no-startup-id dmenu_run
 
 # Shortchut
 bindsym F1 exec --no-startup-id ~/.config/conky/start_conky_shortcut_alt.sh
@@ -282,7 +284,7 @@ bindsym $supL+F1 exec --no-startup-id ~/.config/conky/start_conky_shortcut.sh
 #bindsym $supL+d exec --no-startup-id ~/bin/rofi.sh -d
 
 # clipmenu
-#bindsym $supR+v exec --no-startup-id ~/bin/rofi.sh -l
+#bindsym $ctrl+v exec --no-startup-id ~/bin/rofi.sh -l
 
 # calc
 #bindsym $supL+c exec --no-startup-id ~/bin/rofi.sh -c
@@ -296,7 +298,7 @@ bindsym $supL+F1 exec --no-startup-id ~/.config/conky/start_conky_shortcut.sh
 
 # Thunar
 bindsym $supL+t exec --no-startup-id thunar
-bindsym $supR+t exec --no-startup-id urxvtc -e ranger
+bindsym $ctrl+t exec --no-startup-id urxvtc -e ranger
 
 # restart i3 in place
 #bindsym $supL+Shift+r restart
@@ -306,8 +308,8 @@ bindsym $supR+t exec --no-startup-id urxvtc -e ranger
 
 # Firefox
 bindsym $supL+i exec --no-startup-id firefox
-bindsym $supL+$supR+i exec --no-startup-id firefox --private-window
-bindsym $supR+i exec --no-startup-id chromium
+bindsym $supL+$ctrl+i exec --no-startup-id firefox --private-window
+bindsym $ctrl+i exec --no-startup-id chromium
 
 
 
@@ -322,7 +324,7 @@ mode "Application" {
         bindsym s exec --no-startup-id steam
         bindsym e exec --no-startup-id nixnote2
         bindsym c exec --no-startup-id /opt/sublime_text/sublime_text
-        bindsym $supR+c exec --no-startup-id code
+        bindsym $ctrl+c exec --no-startup-id code
 
         # back to normal: Enter or Escape or $supL+r
         bindsym Return mode "default"
@@ -342,38 +344,43 @@ bindsym $supL+a mode "Application"
 #----------------------#
 
 # Wallpaper
-exec_always --no-startup-id feh --bg-fill ~/Pictures/wallhaven-81839.jpg
+exec_always --no-startup-id echo "i3-wm -> Wallpaper" >> ~/.config/i3/i3log 2>&1
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallhaven-81839.jpg >> ~/.config/i3/i3log 2>&1
 
 # Compositor
 #exec --no-startup-id compton --config ~/.config/compton/compton.conf
 
 # NumlockX
-exec_always --no-startup-id numlockx on
+exec_always --no-startup-id echo "i3-wm -> NumlockX" >> ~/.config/i3/i3log 2>&1
+exec_always --no-startup-id numlockx on >> ~/.config/i3/i3log 2>&1
 
 
 # Polybar
-exec_always ~/.config/i3/start_polybar.sh &
+exec_always --no-startup-id echo "i3-wm -> Polybar" >> ~/.config/i3/i3log 2>&1
+exec_always ~/.config/i3/start_polybar.sh >> ~/.config/i3/i3log 2>&1 &
 
 # Load notification daemon
-exec_always --no-startup-id dunst
+exec_always --no-startup-id dunst >> ~/.config/i3/i3log 2>&1
 
 
 # Load Xresources
-exec_always --no-startup-id xrdb ~/.Xresources
+exec_always --no-startup-id echo "i3-wm -> xrdb" >> ~/.config/i3/i3log 2>&1
+exec_always --no-startup-id xrdb ~/.Xresources >> ~/.config/i3/i3log 2>&1
+
 # Load terminal daemon
-exec_always --no-startup-id urxvtd-256color -q -o -f
+exec_always --no-startup-id echo "i3-wm -> urxvtd" >> ~/.config/i3/i3log 2>&1
+exec_always --no-startup-id urxvtd-256color -q -o -f >> ~/.config/i3/i3log 2>&1
 
 
 #test
 #exec --no-startup-id xsettingsd &
 #exec --no-startup-id clipit -d
 
-# Change keymap (xmodmap)
-exec_always --no-startup-id sleep 1;xmodmap ~/.Xmodmap
 
 # Change mouse sensitivity
-exec_always --no-startup-id sleep 2;xinput set-prop 8 157 0.500000, 0.000000, 0.000000, 0.000000, 0.500000, 0.000000, 0.000000, 0.000000, 1.000000
-exec_always --no-startup-id sleep 2;xinput set-prop 10 157 0.500000, 0.000000, 0.000000, 0.000000, 0.500000, 0.000000, 0.000000, 0.000000, 1.000000
+exec_always --no-startup-id echo "i3-wm -> Mouse Sensitivity" >> ~/.config/i3/i3log 2>&1
+exec_always --no-startup-id sleep 2;xinput set-prop 8 157 0.500000, 0.000000, 0.000000, 0.000000, 0.500000, 0.000000, 0.000000, 0.000000, 1.000000 >> ~/.config/i3/i3log 2>&1
+exec_always --no-startup-id sleep 2;xinput set-prop 10 157 0.500000, 0.000000, 0.000000, 0.000000, 0.500000, 0.000000, 0.000000, 0.000000, 1.000000 >> ~/.config/i3/i3log 2>&1
 
 #---------------#
 # SPECIAL CASES #

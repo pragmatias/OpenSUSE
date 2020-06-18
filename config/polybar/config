@@ -74,7 +74,7 @@ scroll-down = i3wm-wsprev
 
 modules-left = menu sep_1 workspaces sep_1 window
 ;modules-center = window
-modules-right = network_bot sep_1 network_top sep_1 ram_top sep_1 cpu_top sep_1 volume sep_1 calend_top sep_1 hour_top sep_1 powermenu
+modules-right = network_bot sep_1 network_top sep_1 swap_top sep_1 ram_top sep_1 cpu_top sep_1 volume sep_1 calend_top sep_1 hour_top sep_1 powermenu
 
 
 ;==========================================================
@@ -247,6 +247,12 @@ type = internal/network
 interface = enp3s0
 interval = 300
 label-connected = " %ifname% - %local_ip%"
+
+[module/swap_top]
+type = internal/memory
+interval = 1
+format = <label>
+label =  Swap %percentage_swap_used:3%% of %gb_swap_total%
 
 [module/ram_top]
 type = internal/memory
