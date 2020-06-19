@@ -74,7 +74,7 @@ scroll-down = i3wm-wsprev
 
 modules-left = menu sep_1 workspaces sep_1 window
 ;modules-center = window
-modules-right = network_bot sep_1 network_top sep_1 swap_top sep_1 ram_top sep_1 cpu_top sep_1 volume sep_1 calend_top sep_1 hour_top sep_1 powermenu
+modules-right = network_top sep_1 swap_top sep_1 ram_top sep_1 cpu_top sep_1 volume sep_1 calend_top sep_1 hour_top sep_1 powermenu
 
 
 ;==========================================================
@@ -118,7 +118,7 @@ scroll-down = i3wm-wsprev
 
 modules-left = menu sep_1 workspaces 
 ;modules-center = 
-modules-right = pkg_bot fs_bot sep_1 powermenu
+modules-right = pkg_bot sep_1 network_bot fs_bot sep_1 powermenu
 
 
 
@@ -252,13 +252,13 @@ label-connected = " %ifname% - %local_ip%"
 type = internal/memory
 interval = 1
 format = <label>
-label =  Swap %percentage_swap_used:3%% of %gb_swap_total%
+label =  Swap %percentage_swap_used:3%%
 
 [module/ram_top]
 type = internal/memory
 interval = 1
 format = <label>
-label = " RAM %percentage_used:3%% of %gb_total%"
+label = " RAM %percentage_used:3%%"
 
 [module/cpu_top]
 type = internal/cpu
@@ -317,9 +317,7 @@ click-right = ~/.config/polybar/power_menu.sh
 [module/fs_bot]
 type = internal/fs
 mount-0 = /
-mount-1 = /mnt/Bittorent
-mount-2 = /mnt/Work
-mount-3 = /mnt/Share
+mount-1 = /mnt/Share
 interval = 30
 fixed-values = false
 spacing = 4
