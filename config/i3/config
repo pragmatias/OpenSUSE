@@ -396,6 +396,9 @@ for_window [class="KeePassXC"]          floating enable, resize set 800 600, mov
 # Calculator
 for_window [title="^Calculator$"]          floating enable, resize set 800 600, move position center
 
+# Polybar calendar_popup
+for_window [title="^calendar_popup$"]          floating enable
+
 # thunar
 for_window [class="(?i)thunar" window_type="normal"]     floating enable, resize set 1280 720, move position center
 

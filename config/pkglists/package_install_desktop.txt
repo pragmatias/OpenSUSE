@@ -129,7 +129,7 @@ xclip
 xclipboard
 ImageMagick
 libnotify-tools
-mutt
+xdotool
 
 # Package with potential issues
 vlc-codecs

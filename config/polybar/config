@@ -81,7 +81,7 @@ scroll-down = i3wm-wsprev
 
 modules-left = menu sep_1 workspaces sep_1 window
 ;modules-center = window
-modules-right = network_top sep_1 swap_top sep_1 ram_top sep_1 cpu_top sep_1 volume sep_1 calend_top sep_1 hour_top sep_1 powermenu
+modules-right = network_top sep_1 swap_top sep_1 ram_top sep_1 cpu_top sep_1 volume sep_1 date_date sep_1 powermenu
 
 
 ;==========================================================
@@ -241,6 +241,19 @@ tail = false
 ;format-background = ${color.bg}
 format-foreground = ${color.fg}
 
+
+
+;Package Module
+[module/date_date]
+type = custom/script
+exec = ~/.config/polybar/open_calendar.sh
+interval = 10
+tail = false
+;format-background = ${color.bg}
+format-foreground = ${color.fg}
+click-left = ~/.config/polybar/open_calendar.sh --popup
+
+
 ;Network Module
 [module/network_top]
 type = internal/network
@@ -307,6 +320,7 @@ type = internal/date
 interval = 10
 label =  %time%
 time =  %H:%M
+
 
 
 

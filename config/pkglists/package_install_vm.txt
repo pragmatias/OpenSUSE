@@ -99,3 +99,4 @@ xclip
 xclipboard
 ImageMagick
 libnotify-tools
+xdotool
