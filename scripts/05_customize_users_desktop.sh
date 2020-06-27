@@ -212,6 +212,8 @@ if [ ! -z "$(ls -A /home)" ]; then
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     cp $CWD/../config/polybar/*.sh /home/$UTILISATEUR/.config/polybar/.
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+    cp $CWD/../config/polybar/*.env /home/$UTILISATEUR/.config/polybar/.
+    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/polybar
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
 

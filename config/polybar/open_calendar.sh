@@ -8,6 +8,7 @@ DATE="$(date +"  %A, %d/%m/%Y   %H:%M ")"
 case "$1" in
     --popup)
         eval "$(xdotool getmouselocation --shell)"
+        DATE="$(date +"%H:%M")"
 
         if [ $BOTTOM = true ]; then
             : $(( pos_y = Y - HEIGHT - 20 ))
@@ -17,7 +18,7 @@ case "$1" in
             : $(( pos_x = X - (WIDTH / 2) ))
         fi
 
-        urxvt -geometry 38x18+$pos_x+$pos_y --title calendar_popup -e dialog --no-shadow --no-lines --no-cancel --week-start 1 --clear --calendar "" 1 40
+        urxvt -geometry 40x20+$pos_x+$pos_y -fn "xft:Hack Nerd Font:size=8" --title calendar_popup -e dialog --no-shadow --no-cancel --week-start 1 --clear --calendar "Time : $DATE" 2 40
 
         ;;
     *)

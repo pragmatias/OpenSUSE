@@ -81,7 +81,7 @@ scroll-down = i3wm-wsprev
 
 modules-left = menu sep_1 workspaces sep_1 window
 ;modules-center = window
-modules-right = network_top sep_1 swap_top sep_1 ram_top sep_1 cpu_top sep_1 volume sep_1 date_date sep_1 powermenu
+modules-right = pkg_bot sep_1 ram_top sep_1 cpu_top sep_1 redshift sep_1 volume sep_1 date_date sep_1 powermenu
 
 
 ;==========================================================
@@ -125,7 +125,7 @@ scroll-down = i3wm-wsprev
 
 modules-left = menu sep_1 workspaces 
 ;modules-center = 
-modules-right = pkg_bot sep_1 network_bot fs_bot sep_1 powermenu
+modules-right = network_bot sep_1 network_top sep_1 swap_top fs_bot sep_1 powermenu
 
 
 
@@ -169,52 +169,52 @@ enable-scroll = true
 wrapping-scroll = true
 reverse-scroll = true
 
-ws-icon-0 = 1; Term
-ws-icon-1 = 2; Code
-ws-icon-2 = 3; Code
-ws-icon-3 = 4; Web
-ws-icon-4 = 5; Web
-ws-icon-5 = 6; ...
-ws-icon-6 = 7; ...
-ws-icon-7 = 8; Note
-ws-icon-8 = 9; Games
-ws-icon-9 = 11; Web
-ws-icon-10 = 12; Web
-ws-icon-11 = 13; Web
-ws-icon-12 = 14; Doc
-ws-icon-13 = 15; Doc
-ws-icon-14 = 16; Netflix
-ws-icon-15 = 17; Music
-ws-icon-16 = 18; Chat
-ws-icon-17 = 19; Mail
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8; 
+ws-icon-8 = 9; 戮
+ws-icon-9 = 11;
+ws-icon-10 = 12;
+ws-icon-11 = 13;
+ws-icon-12 = 14;
+ws-icon-13 = 15;
+ws-icon-14 = 16; 磊
+ws-icon-15 = 17; 蓼
+ws-icon-16 = 18; 
+ws-icon-17 = 19; 
 ws-icon-default = 
-
+; other : ﱘ    ﮼     
 format = <label-state> <label-mode>
 
 label-mode = %mode%
 label-mode-foreground = ${color.bg}
 label-mode-background = ${color.purple}
-label-mode-padding = 5
+label-mode-padding = 3
 
 label-focused = %icon%
 label-focused-foreground = ${color.bg}
 label-focused-background = ${color.acolor}
-label-focused-padding = 5
+label-focused-padding = 3
 
 label-unfocused = %icon%
 label-unfocused-foreground = ${color.fg}
 label-unfocused-background = ${color.bg}
-label-unfocused-padding = 5
+label-unfocused-padding = 3
 
 label-visible = %icon%
 label-visible-foreground = ${color.bg}
 label-visible-background = ${color.coccupied}
-label-visible-padding = 5
+label-visible-padding = 3
 
 label-urgent = %icon%
 label-urgent-foreground = ${color.bg}
 label-urgent-background = ${color.curgent}
-label-urgent-padding = 5
+label-urgent-padding = 3
 
 
 
@@ -259,7 +259,7 @@ click-left = ~/.config/polybar/open_calendar.sh --popup
 type = internal/network
 interface = enp3s0
 interval = 3
-label-connected = " %downspeed:8%    %upspeed:8%"
+label-connected = " %downspeed:3%   %upspeed:3%"
 
 
 [module/network_bot]
@@ -284,7 +284,7 @@ label = " RAM %percentage_used:3%%"
 type = internal/cpu
 interval = 1
 format = <label>
-label = "閭 CPU %percentage:3%% "
+label = " CPU %percentage:3%% "
 
 [module/volume]
 type = internal/alsa
@@ -296,7 +296,7 @@ format-volume =  "<ramp-volume> <label-volume>"
 label-volume = "%percentage%%"
 
 format-muted-prefix = "婢"
-#label-muted = "Off"
+label-muted = " "
 interval = 10
 
 ramp-volume-0 = 奄
@@ -347,7 +347,14 @@ label-unmounted = "¤  年 %mountpoint% : not mounted"
 
 
 
-
+[module/redshift]
+type = custom/script
+;format-prefix = " "  
+exec = source ~/.config/polybar/redshift.env && ~/.config/polybar/redshift.sh temperature 
+click-left = source ~/.config/polybar/redshift.env && ~/.config/polybar/redshift.sh toggle 
+scroll-up = source ~/.config/polybar/redshift.env && ~/.config/polybar/redshift.sh increase
+scroll-down = source ~/.config/polybar/redshift.env && ~/.config/polybar/redshift.sh decrease
+interval=0.5
 
 
 
