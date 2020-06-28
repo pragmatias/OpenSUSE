@@ -4,16 +4,72 @@
 
 " PLUGIN :
 " -----------------------------------------------------------------------------
-call plug#begin('~/.vim/plugged')
-Plug 'tpope/vim-fugitive'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
-Plug 'itchyny/lightline.vim'
-Plug 'davidhalter/jedi-vim'
-Plug 'vim-scripts/AutoComplPop'
-call plug#end()
+" Plugin cmd : git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+" Gruvbox theme
+Plugin 'morhetz/gruvbox'
+" A light and configurable statusline/tabline plugin for Vim
+Plugin 'itchyny/lightline.vim'
+"Plugin 'shinchu/lightline-gruvbox.vim'
+" Adds icons to your plugins
+Plugin 'ryanoasis/vim-devicons'
+" help you read complex code by showing diff level of parentheses in diff color
+Plugin 'luochen1990/rainbow'
+" a code-completion engine for Vim
+"Plugin 'valloric/youcompleteme'
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plugin 'junegunn/fzf.vim'
+" A Vim plugin to colorize all text in the form #rgb, #rgba, #rrggbb, #rrgbbaa, rgb(...), rgba(...).
+Plugin 'lilydjwg/colorizer'
+" The NERDTree is a file system explorer for the Vim editor
+Plugin 'scrooloose/nerdtree'
+" Syntastic is a syntax checking plugin for Vim
+"Plugin 'scrooloose/syntastic'
+" Comment functions so powerful
+Plugin 'scrooloose/nerdcommenter'
+" The matchit.vim script allows you to configure % to match more than just single characters
+Plugin 'tmhedberg/matchit'
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+
+
+" call plug#begin('~/.vim/plugged')
+" Plug 'tpope/vim-fugitive'
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Plug 'junegunn/fzf.vim'
+" Plug 'scrooloose/nerdtree'
+" Plug 'scrooloose/syntastic'
+" Plug 'itchyny/lightline.vim'
+" Plug 'davidhalter/jedi-vim'
+" Plug 'vim-scripts/AutoComplPop'
+" call plug#end()
 
 
 
@@ -55,7 +111,6 @@ set autoread         " Auto lecture si le fichier a été modifié depuis l'ext�
 " UI :
 " -----------------------------------------------------------------------------
 syntax enable        " Active la coloration syntaxique
-filetype plugin indent on
 
 " Contenu de la barre de status
 set statusline=%F\ Type=%y\ %=Pos=%l,%c\ (%p%%)\ SLOC=%L\ %P
