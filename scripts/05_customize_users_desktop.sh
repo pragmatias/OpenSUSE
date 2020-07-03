@@ -53,13 +53,13 @@ if [ ! -z "$(ls -A /home)" ]; then
     cat $CWD/../config/vim/vimrc > /home/$UTILISATEUR/.vimrc
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     chown $UTILISATEUR:users /home/$UTILISATEUR/.vimrc
-  if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-    mkdir -p /home/$UTILISATEUR/.vim/autoload
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-    cat $CWD/../config/vim/autoload/plug.vim > /home/$UTILISATEUR/.vim/autoload/plug.vim
-    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-    chown $UTILISATEUR:users /home/$UTILISATEUR/.vim/autoload/plug.vim
-    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+#    mkdir -p /home/$UTILISATEUR/.vim/autoload
+#    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+#    cat $CWD/../config/vim/autoload/plug.vim > /home/$UTILISATEUR/.vim/autoload/plug.vim
+#    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+#    chown $UTILISATEUR:users /home/$UTILISATEUR/.vim/autoload/plug.vim
+#    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
   done
 fi
 logMessage "0" "${msg_log}"
@@ -230,15 +230,15 @@ if [ ! -z "$(ls -A /home)" ]; then
 
 
     #compton
-    if [ ! -e /home/$UTILISATEUR/.config/compton ]; then
-        mkdir /home/$UTILISATEUR/.config/compton
-        if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-        chown $UTILISATEUR:users /home/$UTILISATEUR/.config/compton
-    fi
-    cp $CWD/../config/compton/compton.conf /home/$UTILISATEUR/.config/compton/compton.conf
-    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-    chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/compton
-    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+#    if [ ! -e /home/$UTILISATEUR/.config/compton ]; then
+#        mkdir /home/$UTILISATEUR/.config/compton
+#        if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+#        chown $UTILISATEUR:users /home/$UTILISATEUR/.config/compton
+#    fi
+#    cp $CWD/../config/compton/compton.conf /home/$UTILISATEUR/.config/compton/compton.conf
+#    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
+#    chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/compton
+#    if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
 
     #dunst
     if [ ! -e /home/$UTILISATEUR/.config/dunst ]; then
