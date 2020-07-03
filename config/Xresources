@@ -14,10 +14,10 @@ URxvt.internalBorder:  5
 URxvt.externalBorder:  5
 URxvt.depth: 32
 URxvt.scrollBar:           false
-URxvt.perl-ext-common:     matcher,resize-font,foo
+!URxvt.perl-ext-common:     matcher,resize-font,foo
 URxvt.keysym.F11:          perl:fullscreen:switch
-URxvt.Resize-font.smaller: esc
-URxvt.Resize-font.bigger:  S-Up
+!URxvt.Resize-font.smaller: esc
+!URxvt.Resize-font.bigger:  S-Up
 URxvt.url-launcher:        /usr/bin/chromium
 URxvt.keysym.M-Delete:     perl:matcher:list
 !URxvt.colorUL:             #006699

@@ -119,7 +119,6 @@ i3lock
 i3status
 polybar
 rofi
-compton
 dunst
 conky
 feh

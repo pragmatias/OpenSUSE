@@ -67,7 +67,7 @@ scroll-down = i3wm-wsprev
 
 modules-left = menu sep_1 workspaces sep_1 window
 ;modules-center = 
-modules-right = ram_top sep_1 cpu_top sep_1 network_bot sep_1 network_top sep_1 swap_top sep_1 fs_bot sep_1 calend_top sep_1 hour_top sep_1 powermenu
+modules-right = ram_top sep_1 cpu_top sep_1 swap_top sep_1 fs_bot sep_1 volume sep_1 date_date sep_1 powermenu
 
 
 ;==========================================================
@@ -103,8 +103,7 @@ content = " "
 
 [module/menu]
 type = custom/text
-content = 
-;alt-icon = 
+content = ﰧ
 content-padding = 2
 ;content-background = ${color.acolor}
 ;content-foreground = ${color.fg}
@@ -139,27 +138,27 @@ format = <label-state> <label-mode>
 label-mode = %mode%
 label-mode-foreground = ${color.bg}
 label-mode-background = ${color.purple}
-label-mode-padding = 5
+label-mode-padding = 3
 
 label-focused = %icon%
 label-focused-foreground = ${color.bg}
 label-focused-background = ${color.acolor}
-label-focused-padding = 5
+label-focused-padding = 3
 
 label-unfocused = %icon%
 label-unfocused-foreground = ${color.fg}
 label-unfocused-background = ${color.bg}
-label-unfocused-padding = 5
+label-unfocused-padding = 3
 
 label-visible = %icon%
 label-visible-foreground = ${color.bg}
 label-visible-background = ${color.coccupied}
-label-visible-padding = 5
+label-visible-padding = 3
 
 label-urgent = %icon%
 label-urgent-foreground = ${color.bg}
 label-urgent-background = ${color.curgent}
-label-urgent-padding = 5
+label-urgent-padding = 3
 
 
 
@@ -177,14 +176,15 @@ label-empty-foreground = ${color.bg}
 
 
 
-;Package Module
-[module/pkg_bot]
+[module/date_date]
 type = custom/script
-exec = ~/.config/polybar/check_updates.sh
-interval = 300
+exec = ~/.config/polybar/open_calendar.sh
+interval = 10
 tail = false
 ;format-background = ${color.bg}
-format-foreground = ${color.acolor}
+format-foreground = ${color.fg}
+click-left = ~/.config/polybar/open_calendar.sh --popup
+
 
 ;Network Module
 [module/network_top]
@@ -228,7 +228,7 @@ format-volume =  "<ramp-volume> <label-volume>"
 label-volume = "%percentage%%"
 
 format-muted-prefix = "婢"
-#label-muted = "Off"
+label-muted = " "
 interval = 10
 
 ramp-volume-0 = 奄
@@ -240,21 +240,6 @@ ramp-volume-5 = 墳
 ramp-volume-6 = 墳
 
 
-[module/calend_top]
-type = internal/date
-interval = 30
-label =  %date%
-date =  %d/%m/%Y
-
-
-[module/hour_top]
-type = internal/date
-interval = 10
-label =  %time%
-time =  %H:%M
-
-
-
 [module/powermenu]
 type = custom/text
 content = 襤
@@ -263,10 +248,6 @@ content-padding = 2
 ;content-foreground = ${color.fg}
 click-left = ~/.config/polybar/power_menu.sh
 click-right = ~/.config/polybar/power_menu.sh
-
-
-
-
 
 
 

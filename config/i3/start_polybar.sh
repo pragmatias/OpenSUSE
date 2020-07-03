@@ -18,6 +18,11 @@ while pgrep -u $UID -x polybar > /dev/null; do sleep 1; done
 # 	polybar --reload top -c ~/.config/polybar/config &
 # fi
 
-polybar --reload top1 -c ~/.config/polybar/config &
-polybar --reload top2 -c ~/.config/polybar/config &
+if [ "${1}" == "top" ]
+then
+	polybar --reload top1 -c ~/.config/polybar/config &
+else
+	polybar --reload top1 -c ~/.config/polybar/config &
+	polybar --reload top2 -c ~/.config/polybar/config &
+fi
 

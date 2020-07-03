@@ -89,7 +89,6 @@ i3status
 polybar
 rofi
 dmenu
-compton
 dunst
 conky
 feh
