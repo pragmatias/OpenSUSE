@@ -72,7 +72,7 @@ MozillaFirefox
 
 # Developpement
 sublime-text
-kate
+#kate
 
 # Tools
 conky
@@ -86,7 +86,7 @@ papirus-icon-theme
 i3
 i3lock
 i3status
-polybar
+i3blocks
 rofi
 dmenu
 dunst

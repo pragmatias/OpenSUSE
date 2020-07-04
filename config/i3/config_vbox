@@ -181,6 +181,7 @@ bindsym $mod+r mode "Resize"
 #set $blue #458588
 #set $purple #b16286
 #set $aqua #689d68
+#set $orange #d65d0e
 #set $gray #a89984
 #set $darkgray #1d2021
 #set $white #ebdbb2
@@ -190,11 +191,12 @@ bindsym $mod+r mode "Resize"
 
 # green gruvbox
 # class                          border         backgr.    text        indicator     child_border
-client.focused                   #98971a        #98971a    #1d2021     #98971a       #98971a
-client.focused_inactive          #1d2021        #1d2021    #d79921     #458588       #458588
-client.unfocused                 #1d2021        #1d2021    #d79921     #1d2021       #1d2021
+client.focused                   #ebdbb2        #ebdbb2    #1d2021     #ebdbb2       #ebdbb2
+client.focused_inactive          #458588        #458588    #1d2021     #458588       #458588
+client.unfocused                 #282828        #282828    #ebdbb2     #282828       #282828
 client.urgent                    #cc241d        #cc241d    #ebdbb2     #cc241d       #cc241d
-client.placeholder               #1d2021        #1d2021    #d79921     #1d2021       #1d2021
+client.placeholder               #282828        #282828    #ebdbb2     #282828       #282828
+client.background                #282828
 client.background                #282828
 
 
@@ -212,7 +214,7 @@ bindsym $mod+Shift+e exec ~/.config/i3/menu_logout.sh
 
 # Terminal
 bindsym $mod+Return exec --no-startup-id urxvtc 
-bindsym $alt+Return exec --no-startup-id alacritty
+
 
 # Menu
 bindsym $mod+d exec --no-startup-id ~/.config/i3/menu_rofi.sh
