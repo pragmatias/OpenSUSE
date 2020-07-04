@@ -84,8 +84,6 @@ papirus-icon-theme
 # Desktop i3
 i3
 i3lock
-i3status
-i3blocks
 rofi
 dmenu
 dunst
@@ -98,3 +96,4 @@ xclipboard
 ImageMagick
 libnotify-tools
 xdotool
+polybar
