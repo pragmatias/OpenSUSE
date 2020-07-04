@@ -242,10 +242,10 @@ bindsym $alt+c exec --no-startup-id chromium
 #----------------------#
 
 # Wallpaper
-exec_always --no-startup-id feh --bg-fill ~/Pictures/wallhaven-81839.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/fond_ecran_rep_fr_2.jpg
 
 # Compositor
-exec --no-startup-id compton --config ~/.config/compton/compton.conf
+#exec --no-startup-id compton --config ~/.config/compton/compton.conf
 
 # NumlockX
 exec_always --no-startup-id numlockx on
@@ -258,6 +258,10 @@ exec_always ~/.config/i3/start_polybar.sh top &
 
 # Load notification daemon
 exec_always --no-startup-id dunst
+
+# Thunar
+bindsym $mod+t exec --no-startup-id thunar
+#bindsym $alt+t exec --no-startup-id urxvtc -e ranger
 
 # Load Xresources
 exec_always --no-startup-id xrdb ~/.Xresources
@@ -275,22 +279,14 @@ exec_always --no-startup-id urxvtd-256color -q -o -f
 #---------------#
 # SPECIAL CASES #
 #---------------#
-
-# Media 
-#for_window [title="Media viewer"]       resize set 1280 720, move absolute position center, border pixel 0
-#for_window [title="VLC media player"]  floating enable, resize set 1280 720, move absolute position center, border pixel 0
+# Polybar calendar_popup
+for_window [title="^calendar_popup$"]          floating enable
 
 # KeePassXC
-#for_window [class="keepassxc"]          floating enable, resize set 1280 720, move absolute position center
+for_window [class="keepassxc"]          floating enable, resize set 1280 720, move absolute position center
 
 # thunar
-#for_window [class="(?i)thunar" window_type="normal"]     floating enable, resize set 1280 720, move absolute position center
-
-# dolphin
-#for_window [class="(?i)dolphin" window_type="normal"]    floating enable, resize set 1280 720, move absolute position center
-
-# libreoffice
-#for_window [class="Soffice"]             resize set 1280 720,    move absolute position center
+for_window [class="(?i)thunar" window_type="normal"]     floating enable, resize set 1280 720, move absolute position center
 
 
 
@@ -301,9 +297,6 @@ exec_always --no-startup-id urxvtd-256color -q -o -f
 #assign [class="^(Firefox)|(Nightly)$" window_type="normal"] $ws2
 #assign [class="Gedit"] $ws3
 #assign [class="Code"] $ws4
-#assign [class="Nautilus"] $ws3
-#assign [class="mpv"] $ws6
-#assign [class="discord"] $ws7
 
 
 

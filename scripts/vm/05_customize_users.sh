@@ -133,7 +133,7 @@ if [ ! -z "$(ls -A /home)" ]; then
         if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
         chown $UTILISATEUR:users /home/$UTILISATEUR/.config/i3
     fi
-    cp $CWD/../../config/i3/config_vbox /home/$UTILISATEUR/.config/i3/config
+    cp $CWD/../../config/i3/vm/config /home/$UTILISATEUR/.config/i3/config
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     cp $CWD/../../config/i3/*.sh /home/$UTILISATEUR/.config/i3/.
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
@@ -147,7 +147,7 @@ if [ ! -z "$(ls -A /home)" ]; then
         if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
         chown $UTILISATEUR:users /home/$UTILISATEUR/.config/polybar
     fi
-    cp $CWD/../../config/polybar/config_vbox /home/$UTILISATEUR/.config/polybar/config
+    cp $CWD/../../config/polybar/vm/config /home/$UTILISATEUR/.config/polybar/config
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     cp $CWD/../../config/polybar/*.sh /home/$UTILISATEUR/.config/polybar/.
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
