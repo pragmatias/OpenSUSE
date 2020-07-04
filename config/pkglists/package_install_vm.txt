@@ -65,18 +65,17 @@ urxvt-perls
 urxvt-tabbedex
 
 # Internet
-vivaldi
 chromium
 chromium-ffmpeg-extra
 MozillaFirefox
 
 # Developpement
 sublime-text
-#kate
 
 # Tools
 conky
 ranger
+thunar
 
 # Desktop customization
 neofetch
