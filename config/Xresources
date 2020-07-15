@@ -7,27 +7,55 @@ Xft.rgba: rgb
 
 URxvt.font:  xft:Hack Nerd Font:size=9:antialias=true
 URxvt.letterSpace: -1
-!URxvt.transparent : 1 
-!URxvt.shading : 10
-!URxvt*fading : 30
 URxvt.internalBorder:  5
 URxvt.externalBorder:  5
 URxvt.depth: 32
-URxvt.scrollBar:           false
-!URxvt.perl-ext-common:     matcher,resize-font,foo
-URxvt.keysym.F11:          perl:fullscreen:switch
-!URxvt.Resize-font.smaller: esc
-!URxvt.Resize-font.bigger:  S-Up
-URxvt.url-launcher:        /usr/bin/chromium
+URxvt.scrollBar:           true
+URxvt.scrollBar_right: true
+URxvt.scrollstyle: plain
+!URxvt.keysym.F11:          perl:fullscreen:switch
+URxvt.url-launcher:       /usr/bin/firefox
+URxvt.matcher.button: M1
 URxvt.keysym.M-Delete:     perl:matcher:list
 !URxvt.colorUL:             #006699
 URxvt.cursorBlink : 1 
 !URxvt.cursorUnderline : 1 
 !URxvt.cursorColor : cyan 
 URxvt*saveLines: 60000
-!URxvt.foreground :white
-!!URxvt.tintColor : yellow 
-!urxvt*blurRadius: 10
+
+URxvt.modifier: alt
+
+
+!! Common Keybinds for Navigations
+URxvt.keysym.Shift-Up: command:\033]720;5\007
+URxvt.keysym.Shift-Down: command:\033]721;5\007
+!URxvt.keysym.M-Up: \033[1;5A
+!URxvt.keysym.M-Down: \033[1;5B
+!URxvt.keysym.M-Right: \033[1;5C
+!URxvt.keysym.M-Left: \033[1;5D
+
+!! Copy Paste & Other Extensions
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,matcher,font-size
+!,resize-font,foo
+URxvt.copyCommand: xclip -i -selection clipboard
+URxvt.pasteCommand: xclip -o -selection clipboard
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.autocopy: true
+URvxt.url-select.button: 1
+URvxt.url-select.launcher: mimeo
+URxvt.url-select.underline: true
+URxvt.underlineURLs: true
+URxvt.urlButton: 1
+
+!! Change font size on Control-Plus/Minus
+URxvt.keysym.M-0xffab: perl:font-size:increase
+URxvt.keysym.M-0xffad: perl:font-size:decrease
+
 
 
 ! -----------------------------------------------------------------------------
@@ -38,36 +66,36 @@ URxvt*saveLines: 60000
 ! Last Modified: 13 Dec 2013
 ! -----------------------------------------------------------------------------
 
-URxvt.color24:  #076678
-URxvt.color66:  #427b58
-URxvt.color88:  #9d0006
-URxvt.color96:  #8f3f71
-URxvt.color100: #79740e
-URxvt.color108: #8ec07c
-URxvt.color109: #83a598
-URxvt.color130: #af3a03
-URxvt.color136: #b57614
-URxvt.color142: #b8bb26
-URxvt.color167: #fb4934
-URxvt.color175: #d3869b
-URxvt.color208: #fe8019
-URxvt.color214: #fabd2f
-URxvt.color223: #ebdbb2
-URxvt.color228: #f2e5bc
-URxvt.color229: #fbf1c7
-URxvt.color230: #f9f5d7
-URxvt.color234: #1d2021
-URxvt.color235: #282828
-URxvt.color236: #32302f
-URxvt.color237: #3c3836
-URxvt.color239: #504945
-URxvt.color241: #665c54
-URxvt.color243: #7c6f64
-URxvt.color244: #928374
-URxvt.color245: #928374
-URxvt.color246: #a89984
-URxvt.color248: #bdae93
-URxvt.color250: #d5c4a1
+!URxvt.color24:  #076678
+!URxvt.color66:  #427b58
+!URxvt.color88:  #9d0006
+!URxvt.color96:  #8f3f71
+!URxvt.color100: #79740e
+!URxvt.color108: #8ec07c
+!URxvt.color109: #83a598
+!URxvt.color130: #af3a03
+!URxvt.color136: #b57614
+!URxvt.color142: #b8bb26
+!URxvt.color167: #fb4934
+!URxvt.color175: #d3869b
+!URxvt.color208: #fe8019
+!URxvt.color214: #fabd2f
+!URxvt.color223: #ebdbb2
+!URxvt.color228: #f2e5bc
+!URxvt.color229: #fbf1c7
+!URxvt.color230: #f9f5d7
+!URxvt.color234: #1d2021
+!URxvt.color235: #282828
+!URxvt.color236: #32302f
+!URxvt.color237: #3c3836
+!URxvt.color239: #504945
+!URxvt.color241: #665c54
+!URxvt.color243: #7c6f64
+!URxvt.color244: #928374
+!URxvt.color245: #928374
+!URxvt.color246: #a89984
+!URxvt.color248: #bdae93
+!URxvt.color250: #d5c4a1
 
 ! -----------------------------------------------------------------------------
 ! File: gruvbox-dark.xresources
