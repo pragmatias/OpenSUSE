@@ -39,7 +39,7 @@ mouse_warping none
 
 # kill focused window
 bindsym $mod+q kill
-bindsym $alt+F4 kill
+bindsym $mod+$alt+F4 kill
 
 
 # change focus
@@ -218,7 +218,7 @@ bindsym $mod+Return exec --no-startup-id urxvtc
 
 # Menu
 bindsym $mod+d exec --no-startup-id ~/.config/i3/menu_rofi.sh
-bindsym $alt+d exec --no-startup-id dmenu_run
+bindsym $mod+$alt+d exec --no-startup-id dmenu_run
 
 
 # Thunar
@@ -232,7 +232,7 @@ bindsym $alt+d exec --no-startup-id dmenu_run
 
 # Firefox
 #bindsym $mod+a exec --no-startup-id firefox-nightly
-bindsym $alt+c exec --no-startup-id chromium
+bindsym $mod+$alt+c exec --no-startup-id chromium
 
 
 
@@ -261,7 +261,7 @@ exec_always --no-startup-id dunst
 
 # Thunar
 bindsym $mod+t exec --no-startup-id thunar
-#bindsym $alt+t exec --no-startup-id urxvtc -e ranger
+#bindsym $mod+$alt+t exec --no-startup-id urxvtc -e ranger
 
 # Load Xresources
 exec_always --no-startup-id xrdb ~/.Xresources
