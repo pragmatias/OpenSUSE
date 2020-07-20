@@ -10,9 +10,9 @@ URxvt.letterSpace: -1
 URxvt.internalBorder:  5
 URxvt.externalBorder:  5
 URxvt.depth: 32
-URxvt.scrollBar:           true
-URxvt.scrollBar_right: true
-URxvt.scrollstyle: plain
+URxvt.scrollBar:           false
+!URxvt.scrollBar_right: true
+!URxvt.scrollstyle: plain
 !URxvt.keysym.F11:          perl:fullscreen:switch
 URxvt.url-launcher:       /usr/bin/firefox
 URxvt.matcher.button: M1

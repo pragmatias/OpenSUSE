@@ -389,7 +389,6 @@ exec_always --no-startup-id sleep 2;xinput set-prop 10 157 0.500000, 0.000000, 0
 # Conky (Shortcut)
 for_window [class="conky"]      floating enable, border pixel 0
 
-
 # KeePassXC
 for_window [class="KeePassXC"]          floating enable, resize set 800 600, move position center
 
@@ -399,14 +398,14 @@ for_window [title="^Calculator$"]          floating enable, resize set 800 600, 
 # Polybar calendar_popup
 for_window [title="^calendar_popup$"]          floating enable
 
-# thunar
-for_window [class="(?i)thunar" window_type="normal"]     floating enable, resize set 1280 720, move position center
-
 # Steam
 for_window [class="Steam"]     floating enable, resize set 1280 720, move position center
 
 # dolphin
-for_window [class="(?i)dolphin" window_type="normal"]    floating enable, resize set 1280 720, move position center
+#for_window [class="(?i)dolphin" window_type="normal"]    floating enable, resize set 1280 720, move position center
+
+# thunar
+#for_window [class="(?i)thunar" window_type="normal"]     floating enable, resize set 1280 720, move position center
 
 # libreoffice
 #for_window [class="Soffice"]             resize set 1280 720,    move absolute position center

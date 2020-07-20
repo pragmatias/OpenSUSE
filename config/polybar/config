@@ -272,13 +272,13 @@ label-connected = " %ifname% - %local_ip%"
 type = internal/memory
 interval = 1
 format = <label>
-label =  Swap %percentage_swap_used:3%%
+label =  Swap %percentage_swap_used:3%% of %gb_swap_total%
 
 [module/ram_top]
 type = internal/memory
 interval = 1
 format = <label>
-label = " RAM %percentage_used:3%%"
+label = " RAM %percentage_used:3%%" of %gb_total%
 
 [module/cpu_top]
 type = internal/cpu
@@ -326,7 +326,7 @@ time =  %H:%M
 
 [module/powermenu]
 type = custom/text
-content = 襤
+content = "襤"
 content-padding = 2
 ;content-background = ${color.acolor}
 ;content-foreground = ${color.fg}
