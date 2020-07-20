@@ -278,7 +278,7 @@ label =  Swap %percentage_swap_used:3%% of %gb_swap_total%
 type = internal/memory
 interval = 1
 format = <label>
-label = " RAM %percentage_used:3%%" of %gb_total%
+label = " RAM %percentage_used:3%% of %gb_total%"
 
 [module/cpu_top]
 type = internal/cpu
