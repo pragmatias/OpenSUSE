@@ -236,6 +236,19 @@ Install VirtualBox package :
  2. modify the line `q /tmp 1777 root root -` by `q /tmp 1777 root root 1d -`
  3. modify the line `q /var/tmp 1777 root root -` by `q /var/tmp 1777 root root 7d -`
 
+
+### Install Notion
+
+ 1. `sudo zypper addrepo --refresh https://download.opensuse.org/repositories/system:/snappy/openSUSE_Tumbleweed snappy`
+ 2. `sudo zypper --gpg-auto-import-keys refresh`
+ 3. `sudo zypper dup --from snappy`
+ 4. `sudo zypper install snapd`
+ 5. `sudo systemctl enable snapd`
+ 6. `sudo systemctl start snapd`
+ 7. `sudo systemctl enable snapd.apparmor`
+ 8. `sudo systemctl start snapd.apparmor`
+ 9. `sudo snap install notion-snap`
+
 </div>
 
 

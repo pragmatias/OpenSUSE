@@ -17,10 +17,10 @@ set $ctrl Control
 font pango:Hack Nerd Font 8
 
 # Current Monitor (xrandr)
-exec --no-startup-id xrandr --ouput HDMI-0 --right-of DVI-I-1 --auto
+exec --no-startup-id xrandr --output DP-0 --right-of HDMI-0 --auto
 
-set $monitorOne HDMI-0
-set $monitorTwo DVI-I-1
+set $monitorOne DP-0
+set $monitorTwo HDMI-0
 
 
 #------#
@@ -379,8 +379,8 @@ exec_always --no-startup-id urxvtd-256color -q -o -f >> ~/.config/i3/i3log 2>&1
 
 # Change mouse sensitivity
 exec_always --no-startup-id echo "i3-wm -> Mouse Sensitivity" >> ~/.config/i3/i3log 2>&1
-exec_always --no-startup-id sleep 2;xinput set-prop 8 157 0.500000, 0.000000, 0.000000, 0.000000, 0.500000, 0.000000, 0.000000, 0.000000, 1.000000 >> ~/.config/i3/i3log 2>&1
-exec_always --no-startup-id sleep 2;xinput set-prop 10 157 0.500000, 0.000000, 0.000000, 0.000000, 0.500000, 0.000000, 0.000000, 0.000000, 1.000000 >> ~/.config/i3/i3log 2>&1
+exec_always --no-startup-id sleep 2;xinput set-prop 8 158 0.500000, 0.000000, 0.000000, 0.000000, 0.500000, 0.000000, 0.000000, 0.000000, 1.000000 >> ~/.config/i3/i3log 2>&1
+exec_always --no-startup-id sleep 2;xinput set-prop 10 158 0.500000, 0.000000, 0.000000, 0.000000, 0.500000, 0.000000, 0.000000, 0.000000, 1.000000 >> ~/.config/i3/i3log 2>&1
 
 #---------------#
 # SPECIAL CASES #
