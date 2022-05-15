@@ -87,7 +87,7 @@ modules-right = pkg_bot sep_1 ram_top sep_1 cpu_top sep_1 redshift sep_1 volume 
 ;==========================================================
 
 [bar/top2]
-monitor = HDMI-0
+monitor = DP-2
 width = 100%
 height = 20
 offset-x = 5%
