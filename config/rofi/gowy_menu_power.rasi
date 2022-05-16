@@ -1,0 +1,35 @@
+/*
+ * ROFI theme
+ *
+ */
+
+configuration {
+  font: "SF Compact Display, Hack Nerd Font Medium 11";
+  location: 3;
+  yoffset: 22;
+
+  timeout {
+    delay: 10;
+    action: "kb-cancel";
+  }
+}
+
+@import "gruvbox-dark-color.rasi"
+@import "gowy_common_element.rasi"
+
+window {
+    width:120px;
+}
+
+listview {
+    padding:      2px 0 0;
+    spacing:      2px;
+    scrollbar : false;
+    lines: 4;
+}
+
+
+inputbar {
+    children:   [ prompt, entry ];
+}
+

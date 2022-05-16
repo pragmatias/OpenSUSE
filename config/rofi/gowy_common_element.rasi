@@ -1,0 +1,96 @@
+/*
+ * ROFI color theme
+ *
+ * Based on Something Found in the Internet
+ *
+ * User: Contributors
+ * Copyright: *!
+ */
+
+configuration {
+  font: "SF Compact Display, Hack Nerd Font Medium 10";
+}
+
+window {
+    background-color: @background;
+    border:           2;
+    padding:          2;
+}
+
+mainbox {
+    border:  0;
+    padding: 0;
+}
+
+element {
+    border:  0;
+    padding: 5px 2px;
+}
+
+element-icon {
+  padding: 0 5px;
+}
+
+element.normal.normal,
+element-icon.normal.normal,
+element-text.normal.normal {
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
+}
+
+element.selected.normal,
+element-icon.selected.normal,
+element-text.selected.normal {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+
+element.alternate.normal,
+element-icon.alternate.normal,
+element-text.alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @alternate-normal-foreground;
+}
+
+
+scrollbar {
+    border:       0;
+    handle-color: @scrollbar-handle;
+    handle-width: 4px;
+    padding:      0;
+}
+
+sidebar {
+    border:       2px 0 0;
+    border-color: @separatorcolor;
+}
+
+inputbar {
+    spacing:    0;
+    text-color: @normal-foreground;
+    padding:    5px 2px;
+    border: 0 0 2px 0;
+}
+
+prompt {
+    padding:0 10px 0 0;
+    text-color: @normal-foreground;
+}
+
+entry {
+    padding:0 20px 0 0;
+    text-color: @normal-foreground;
+    background-color: @alternate-normal-background;
+}
+
+
+case-indicator,
+button {
+    spacing:    0;
+    text-color: @normal-foreground;
+}
+
+button.selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}

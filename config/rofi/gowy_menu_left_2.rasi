@@ -1,0 +1,48 @@
+/*
+ * ROFI theme
+ *
+ */
+
+configuration {
+	sidebar-mode: true;
+  modi: "drun,run,window";
+  location: 1;
+  yoffset: 22;
+
+  drun {
+    display-name: "";
+  }
+
+  run {
+    display-name: "";
+  }
+
+  window {
+    display-name: "";
+  }
+
+  timeout {
+    delay: 10;
+    action: "kb-cancel";
+  }
+}
+
+@import "gruvbox-dark-color.rasi"
+@import "gowy_common_element.rasi"
+
+window {
+  width: 40%;
+}
+
+listview {
+    padding:      2px 0 0;
+    spacing:      2px;
+    scrollbar:    @scrollbar;
+    lines: 15;
+    columns: 3;
+}
+
+inputbar {
+    children:   [ prompt, entry ];
+}
+
