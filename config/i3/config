@@ -269,7 +269,7 @@ bindsym $supL+Shift+c reload
 bindsym $supL+Shift+r restart
 # exit i3 (logs you out of your X session)
 #bindsym $supL+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-bindsym $supL+Shift+e exec ~/.config/i3/menu_logout.sh
+bindsym $supL+Shift+e exec ~/.config/polybar/power_menu.sh
 
 # Terminal
 bindsym $supL+Return exec --no-startup-id urxvtc 
