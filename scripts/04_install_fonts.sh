@@ -94,7 +94,7 @@ else
 fi
 
 
-# Installer les polices divers
+# Installer les fonts divers
 for fic_font in `ls -1 ../config/fonts | grep "\.zip$"`
 do
   msg_log="Install of ${fic_font} fonts"
