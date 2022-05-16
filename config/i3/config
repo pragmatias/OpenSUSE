@@ -283,28 +283,10 @@ bindsym $ctrl+d exec --no-startup-id dmenu_run
 bindsym F1 exec --no-startup-id ~/.config/conky/start_conky_shortcut_alt.sh
 bindsym $supL+F1 exec --no-startup-id ~/.config/conky/start_conky_shortcut.sh
 
-# drun
-#bindsym $supL+d exec --no-startup-id ~/bin/rofi.sh -d
-
-# clipmenu
-#bindsym $ctrl+v exec --no-startup-id ~/bin/rofi.sh -l
-
-# calc
-#bindsym $supL+c exec --no-startup-id ~/bin/rofi.sh -c
-
-# NetworkManager
-#bindsym $supL+n exec --no-startup-id ~/bin/rofi.sh -n
-
-# Power-menu
-#bindsym $supL+e exec --no-startup-id ~/bin/rofi.sh -p
-
 
 # Thunar
 bindsym $supL+t exec --no-startup-id thunar
 bindsym $ctrl+t exec --no-startup-id urxvtc -e ranger
-
-# restart i3 in place
-#bindsym $supL+Shift+r restart
 
 # print screen
 #bindsym Print exec --no-startup-id  ~/bin/rofi.sh -s
@@ -320,14 +302,15 @@ bindsym $ctrl+i exec --no-startup-id chromium
 mode "Application" {
         # These bindings trigger as soon as you enter the resize mode
 
-        bindsym m exec --no-startup-id i3-msg 'workspace $ws17 exec chromium --new-window http://www.deezer.com'
-        bindsym n exec --no-startup-id i3-msg 'workspace $ws16 exec google-chrome --user-data-dir=/tmp --new-window http://www.netflix.com'
+        bindsym m exec --no-startup-id i3-msg 'workspace $ws17 exec chromium --new-window https://www.deezer.com'
+        bindsym n exec --no-startup-id i3-msg 'workspace $ws16 exec google-chrome --user-data-dir=/tmp --new-window https://www.netflix.com'
+        bindsym w exec --no-startup-id i3-msg 'workspace $ws16 exec chromium --new-window https://www.twitch.com'
         bindsym d exec --no-startup-id discord
         bindsym t exec --no-startup-id thunderbird
         bindsym s exec --no-startup-id steam
-        bindsym e exec --no-startup-id nixnote2
-        bindsym c exec --no-startup-id /opt/sublime_text/sublime_text
-        bindsym $ctrl+c exec --no-startup-id code
+        bindsym e exec --no-startup-id notion-snap
+        bindsym c exec --no-startup-id code
+        bindsym $ctrl+c exec --no-startup-id /opt/sublime_text/sublime_text
 
         # back to normal: Enter or Escape or $supL+r
         bindsym Return mode "default"

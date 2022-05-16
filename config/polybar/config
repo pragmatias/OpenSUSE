@@ -58,8 +58,6 @@ module-margin-right = 2
 
 font-0 = "SF Compact Display:size=10;2"
 font-1 = "Ubuntu Nerd Font:size=12;2"
-#font-2 = "Material Icons:size=12;4"
-#font-3 = "FontAwesome:size=12;4"
 
 ;separator = |
 cursor-click = pointer
@@ -109,8 +107,6 @@ module-margin-right = 2
 
 font-0 = "SF Compact Display:size=10;2"
 font-1 = "Ubuntu Nerd Font:size=12;2"
-#font-2 = "Material Icons:size=12;4"
-#font-3 = "FontAwesome:size=12;4"
 
 ;separator = |
 cursor-click = pointer
@@ -257,14 +253,14 @@ click-left = ~/.config/polybar/open_calendar.sh --popup
 ;Network Module
 [module/network_top]
 type = internal/network
-interface = enp3s0
+interface = eno1
 interval = 3
 label-connected = " %downspeed:3%   %upspeed:3%"
 
 
 [module/network_bot]
 type = internal/network
-interface = enp3s0
+interface = eno1
 interval = 300
 label-connected = " %ifname% - %local_ip%"
 
@@ -357,73 +353,6 @@ scroll-down = source ~/.config/polybar/redshift.env && ~/.config/polybar/redshif
 interval=0.5
 
 
-
-
-
-
-;==========================================================
-
-
-[module/term]
-type = custom/text
-content = ""
-click-left = alacritty &
-click-right = konsole &
-click-middle = xterm &
-content-foreground = ${color.acolor}
-
-[module/files]
-type = custom/text
-content = ""
-content-padding = 0
-click-left = dolphin &
-click-right = ranger &
-content-foreground = ${color.acolor}
-
-
-[module/browser]
-type = custom/text
-content = ""
-content-padding = 0
-click-left = firefox &
-click-right = chromium &
-click-middle = vivaldi &
-content-foreground = ${color.acolor}
-
-
-[module/settings]
-type = custom/text
-content = ""
-content-padding = 0
-click-left = xdg-su -c yast &
-click-right = lxappearance &
-content-foreground = ${color.acolor}
-
-
-
-;==========================================================
-
-[module/mpd]
-type = internal/mpd
-;format-online = <toggle> <label-song> 
-format-online =  <label-song> 
-
-icon-play = 
-icon-pause = 
-
-label-song-maxlen = 25
-label-song-ellipsis = true
-
-;==========================================================
-
-
-
-
-
-
-
-
-;==========================================================
 
 
 ;== EOF ========================================================

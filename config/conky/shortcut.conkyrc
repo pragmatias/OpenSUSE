@@ -1,5 +1,5 @@
 conky.config = {
-	alignment = 'middle_middle',
+	alignment = 'top_middle',
 	background = true,
 	--use_spacer = 'none',
 	double_buffer = true,
@@ -80,13 +80,13 @@ ${font2}${color0}Switch to workspace 11-19${font1}${goto 300}${color4}גּ + [1-9
 ${font2}${color0}Send to workspace 1-10${font1}${goto 300}${color4} + וּ + [1-9]   ${goto 550}${font2}${color6}Mode Application ${font1}${goto 800}${color4} + a
 ${font2}${color0}Send to workspace 11-19${font1}${goto 300}${color4}גּ + וּ + [1-9]  ${goto 550}${font2}${color0}Deezer (Chromium) ${font1}${goto 800}${color4}m
 ${font2}${color0}Change among tiled windows${font1}${goto 300}${color4} +    ${goto 550}${font2}${color0}Netflix (Google Chrome) ${font1}${goto 800}${color4}n
-${font2}${color0}modify order among tiled windows${font1}${goto 300}${color4} + וּ +  ${goto 550}${font2}${color0}Discord ${font1}${goto 800}${color4}d
-                                                                                         ${goto 550}${font2}${color0}Thunderbird ${font1}${goto 800}${color4}t
-${font2}${color0}Full screen${font1}${goto 300}${color4} + f                          ${goto 550}${font2}${color0}Steam ${font1}${goto 800}${color4}s
-${font2}${color0}Tiling mode${font1}${goto 300}${color4} + e                          ${goto 550}${font2}${color0}Nixnote2 ${font1}${goto 800}${color4}e
-${font2}${color0}Tabbed mode${font1}${goto 300}${color4} + w                          ${goto 550}${font2}${color0}Sublime Text ${font1}${goto 800}${color4}c
-${font2}${color0}Stacked mode${font1}${goto 300}${color4} + s                         ${goto 550}${font2}${color0}Visual Studio Code ${font1}${goto 800}${color4}גּ + c
-${font2}${color0}Change between floating/tiled${font1}${goto 300}${color4} + 
+${font2}${color0}modify order among tiled windows${font1}${goto 300}${color4} + וּ +  ${goto 550}${font2}${color0}Twitch (Chromium) ${font1}${goto 800}${color4}w
+                                                                                         ${goto 550}${font2}${color0}Discord ${font1}${goto 800}${color4}d
+${font2}${color0}Full screen${font1}${goto 300}${color4} + f                          ${goto 550}${font2}${color0}Thunderbird ${font1}${goto 800}${color4}t
+${font2}${color0}Tiling mode${font1}${goto 300}${color4} + e                          ${goto 550}${font2}${color0}Steam ${font1}${goto 800}${color4}s
+${font2}${color0}Tabbed mode${font1}${goto 300}${color4} + w                          ${goto 550}${font2}${color0}Nixnote2 ${font1}${goto 800}${color4}e
+${font2}${color0}Stacked mode${font1}${goto 300}${color4} + s                         ${goto 550}${font2}${color0}Visual Studio Code ${font1}${goto 800}${color4}c
+${font2}${color0}Change between floating/tiled${font1}${goto 300}${color4} +         ${goto 550}${font2}${color0}Sublime Text ${font1}${goto 800}${color4}גּ + c
 ${font2}${color0}Toggle tiling / floating${font1}${goto 300}${color4} + וּ + 
 ${font2}${color0}Resize window${font1}${goto 300}${color4} + r + ()
 ${font2}${color0}Split horizontal orientation${font1}${goto 300}${color4} + h
