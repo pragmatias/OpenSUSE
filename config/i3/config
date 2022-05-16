@@ -18,6 +18,9 @@ font pango:Hack Nerd Font 8
 
 # Current Monitor (xrandr)
 exec --no-startup-id xrandr --output DP-0 --right-of DP-2 --auto
+exec --no-startup-id xrandr --output DP-0 --mode 2560x1440 --rate 144
+exec --no-startup-id xrandr --output DP-2 --mode 2560x1440 --rate 144
+
 
 set $monitorOne DP-0
 set $monitorTwo DP-2
