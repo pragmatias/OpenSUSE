@@ -85,18 +85,18 @@ ${font Ubuntu:pixelsize=13} Swap ${alignr}${color0}${swap}${color} / ${color0}${
 ${font Ubuntu:pixelsize=13} / (Root) ${alignr}${color0}${fs_used /}${color} / ${color0}${fs_size /}${color}  (${color0}${fs_used_perc /}%${color})
 #${font Ubuntu:pixelsize=13} ${alignr}${color}${fs_bar 5,120 /}
 ${font Ubuntu:pixelsize=13} /mnt/Win10 ${alignr}${color0}${fs_used /mnt/Win10}${color} / ${color0}${fs_size /mnt/Win10}${color}  (${color0}${fs_used_perc //mnt/Win10}%${color})
-${font Ubuntu:pixelsize=13} /mnt/Bittorent ${alignr}${color0}${fs_used /mnt/Bittorent}${color} / ${color0}${fs_size /mnt/Bittorent}${color}  (${color0}${fs_used_perc //mnt/Bittorent}%${color})
-${font Ubuntu:pixelsize=13} /mnt/Games ${alignr}${color0}${fs_used /mnt/Games}${color} / ${color0}${fs_size /mnt/Games}${color}  (${color0}${fs_used_perc //mnt/Games}%${color})
 ${font Ubuntu:pixelsize=13} /mnt/Work ${alignr}${color0}${fs_used /mnt/Work}${color} / ${color0}${fs_size /mnt/Work}${color}  (${color0}${fs_used_perc //mnt/Work}%${color})
+${font Ubuntu:pixelsize=13} /mnt/Media ${alignr}${color0}${fs_used /mnt/Media}${color} / ${color0}${fs_size /mnt/Media}${color}  (${color0}${fs_used_perc //mnt/Media}%${color})
+${font Ubuntu:pixelsize=13} /mnt/Divers ${alignr}${color0}${fs_used /mnt/Divers}${color} / ${color0}${fs_size /mnt/Divers}${color}  (${color0}${fs_used_perc //mnt/Divers}%${color})
 ${font Ubuntu:pixelsize=13} /mnt/Share (NAS) ${alignr}${color0}${fs_used /mnt/Share}${color} / ${color0}${fs_size /mnt/Share}${color}  (${color0}${fs_used_perc /mnt/Share}%${color})
 
 # Network
 ${font Ubuntu:Regular:size=13}${color}Network ${color0}${hr 1 }${color}
-${font Ubuntu:pixelsize=13} Interface ${alignr}${color0}enp3s0${color}
-${font Ubuntu:pixelsize=13} IP ${alignr}${color0}${addr enp3s0}${color}
+${font Ubuntu:pixelsize=13} Interface ${alignr}${color0}eno1${color}
+${font Ubuntu:pixelsize=13} IP ${alignr}${color0}${addr eno1}${color}
 ${font Ubuntu:pixelsize=13} IP Public${alignr}${color0}${execi 12000 dig +short myip.opendns.com @resolver1.opendns.com}${color}
 ${font Ubuntu:pixelsize=13} Inbound: ${color0}${tcp_portmon 1 32767 count} ${color}Outbound: ${color0}${tcp_portmon 32768 61000 count}${alignr}${color}Total: ${color0}${tcp_portmon 1 65535 count}${color}
-${font Ubuntu:pixelsize=13} Down: ${color0}${downspeed enp3s0}${color} (Total: ${color0}${totaldown enp3s0}${color}) ${alignr}Up: ${color0}${upspeed enp3s0}${color} (Total: ${color0}${totalup enp3s0}${color})
+${font Ubuntu:pixelsize=13} Down: ${color0}${downspeed eno1}${color} (Total: ${color0}${totaldown eno1}${color}) ${alignr}Up: ${color0}${upspeed eno1}${color} (Total: ${color0}${totalup eno1}${color})
 
 # Detail
 ${font Ubuntu:Regular:size=13}${color}Detail ${color0}${hr 1 }${color}

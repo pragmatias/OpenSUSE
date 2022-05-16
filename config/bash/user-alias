@@ -14,8 +14,9 @@ alias ...='cd ../..'
 alias vi='vim'
 
 # Zypper Alias
-alias zypin='sudo zypper in --no-recommend'
+alias zypin='sudo zypper in --no-recommends'
 alias zyprm='sudo zypper rm --clean-deps'
+alias zypdup='sudo zypper ref; sudo zypper dup'
 
 # PS1
 ROUGE='\[\033[0;31m\]'
