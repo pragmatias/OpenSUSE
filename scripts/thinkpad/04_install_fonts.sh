@@ -3,7 +3,7 @@
 # Install of fonts
 
 . ../00_functions_install.sh
-
+. 00_env.sh
 
 # Installer les polices Microsoft
 msg_log="Install of Microsoft TrueType fonts"

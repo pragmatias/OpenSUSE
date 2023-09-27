@@ -3,7 +3,7 @@
 # Customization of Desktop
 
 . 00_functions_install.sh
-
+. 00_env.sh
 
 # Personnalisation du shell Bash pour root
 msg_log="Customization of the shell Bash for root"

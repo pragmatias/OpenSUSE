@@ -3,7 +3,7 @@
 # Delete package and clean the orphelines dependance
 
 . ../00_functions_install.sh
-
+. 00_env.sh
 
 # Liste des paquets inutiles
 pkg_list_remove=$(egrep -v '(^\#)|(^\s+$)' $CWD/../../config/pkglists/$CONFIG_FILE_REMOVE_PKGLIST)

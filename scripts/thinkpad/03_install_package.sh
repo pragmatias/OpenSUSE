@@ -3,6 +3,7 @@
 # Install package
 
 . ../00_functions_install.sh
+. 00_env.sh
 
 # Liste des paquets supplémentaires
 pkg_list_add=$(egrep -v '(^\#)|(^\s+$)' $CWD/../../config/pkglists/$CONFIG_FILE_INSTALL_PKGLIST)
