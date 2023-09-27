@@ -2,24 +2,24 @@
 #
 # Customization of Desktop
 
-. 00_functions_install.sh
+. ../00_functions_install.sh
 . 00_env.sh
 
 # Personnalisation du shell Bash pour root
 msg_log="Customization of the shell Bash for root"
 logMessage "-1" "${msg_log}..."
-cat $CWD/../config/bash/root-bashrc > /root/.bashrc
+cat $CWD/../../config/bash/root-bashrc > /root/.bashrc
 logMessage "${?}" "${msg_log}"
 
 
 # Personnalisation du shell Bash pour les utilisateurs
 msg_log="Customization of the shell Bash for users"
 logMessage "-1" "${msg_log}..."
-cat $CWD/../config/bash/user-alias > /etc/skel/.alias
+cat $CWD/../../config/bash/user-alias > /etc/skel/.alias
 if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
 if [ ! -z "$(ls -A /home)" ]; then
   for UTILISATEUR in $(ls /home); do
-    cat $CWD/../config/bash/user-alias > /home/$UTILISATEUR/.alias
+    cat $CWD/../../config/bash/user-alias > /home/$UTILISATEUR/.alias
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     chown $UTILISATEUR:users /home/$UTILISATEUR/.alias
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
@@ -46,11 +46,11 @@ logMessage "0" "${msg_log}"
 # Personnalisation de l'editeur VIM pour les utilisateurs
 msg_log="Customization of the editor VIM for users"
 logMessage "-1" "${msg_log}..."
-cat $CWD/../config/vim/vimrc > /etc/skel/.vimrc
+cat $CWD/../../config/vim/vimrc > /etc/skel/.vimrc
 if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
 if [ ! -z "$(ls -A /home)" ]; then
   for UTILISATEUR in $(ls /home); do
-    cat $CWD/../config/vim/vimrc > /home/$UTILISATEUR/.vimrc
+    cat $CWD/../../config/vim/vimrc > /home/$UTILISATEUR/.vimrc
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     chown $UTILISATEUR:users /home/$UTILISATEUR/.vimrc
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
@@ -76,11 +76,11 @@ if [ ! -z "$(ls -A /home)" ]; then
       if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
       chown $UTILISATEUR:users /home/$UTILISATEUR/.local/share/konsole
     fi
-    cp $CWD/../config/konsole/* /home/$UTILISATEUR/.local/share/konsole/.
+    cp $CWD/../../config/konsole/* /home/$UTILISATEUR/.local/share/konsole/.
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     chown -R $UTILISATEUR:users /home/$UTILISATEUR/.local/share/konsole
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-    cp $CWD/../config/konsolerc /home/$UTILISATEUR/.config/.
+    cp $CWD/../../config/konsolerc /home/$UTILISATEUR/.config/.
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/konsolerc
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
@@ -95,7 +95,7 @@ msg_log="Deactivate Kwallet subsystem for users"
 logMessage "-1" "${msg_log}..."
 if [ ! -z "$(ls -A /home)" ]; then
   for UTILISATEUR in $(ls /home); do
-    cp $CWD/../config/kwalletrc /home/$UTILISATEUR/.config/.
+    cp $CWD/../../config/kwalletrc /home/$UTILISATEUR/.config/.
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/kwalletrc
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
@@ -114,7 +114,7 @@ if [ ! -z "$(ls -A /home)" ]; then
       if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
       chown $UTILISATEUR:users /home/$UTILISATEUR/.config/neofetch
     fi
-    cp $CWD/../config/neofetch/* /home/$UTILISATEUR/.config/neofetch/.
+    cp $CWD/../../config/neofetch/* /home/$UTILISATEUR/.config/neofetch/.
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/neofetch
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
@@ -134,7 +134,7 @@ if [ ! -z "$(ls -A /home)" ]; then
       if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
       chown $UTILISATEUR:users /home/$UTILISATEUR/Pictures
     fi
-    cp $CWD/../wallpapers/* /home/$UTILISATEUR/Pictures/.
+    cp $CWD/../../wallpapers/* /home/$UTILISATEUR/Pictures/.
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     chown -R $UTILISATEUR:users /home/$UTILISATEUR/Pictures
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
@@ -154,7 +154,7 @@ if [ ! -z "$(ls -A /home)" ]; then
         if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
         chown $UTILISATEUR:users /home/$UTILISATEUR/.config/conky
     fi
-    cp $CWD/../config/conky/*.conkyrc /home/$UTILISATEUR/.config/conky/.
+    cp $CWD/../../config/conky/*.conkyrc /home/$UTILISATEUR/.config/conky/.
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/conky
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
@@ -163,16 +163,16 @@ if [ ! -z "$(ls -A /home)" ]; then
       if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
       chown $UTILISATEUR:users /home/$UTILISATEUR/.config/autostart-scripts
     fi
-    cp $CWD/../config/conky/start_conky.sh /home/$UTILISATEUR/.config/autostart-scripts/start_conky.sh
+    cp $CWD/../../config/conky/start_conky.sh /home/$UTILISATEUR/.config/autostart-scripts/start_conky.sh
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     chmod +x /home/$UTILISATEUR/.config/autostart-scripts/start_conky.sh
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     chown $UTILISATEUR:users /home/$UTILISATEUR/.config/autostart-scripts/start_conky.sh
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
 
-    cp $CWD/../config/conky/start_conky_shortcut.sh /home/$UTILISATEUR/.config/conky/start_conky_shortcut.sh
+    cp $CWD/../../config/conky/start_conky_shortcut.sh /home/$UTILISATEUR/.config/conky/start_conky_shortcut.sh
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-    cp $CWD/../config/conky/start_conky_shortcut_alt.sh /home/$UTILISATEUR/.config/conky/start_conky_shortcut_alt.sh
+    cp $CWD/../../config/conky/start_conky_shortcut_alt.sh /home/$UTILISATEUR/.config/conky/start_conky_shortcut_alt.sh
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     chmod +x /home/$UTILISATEUR/.config/conky/start_conky_shortcut*.sh
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
@@ -194,9 +194,9 @@ if [ ! -z "$(ls -A /home)" ]; then
         if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
         chown $UTILISATEUR:users /home/$UTILISATEUR/.config/i3
     fi
-    cp $CWD/../config/i3/vm/config /home/$UTILISATEUR/.config/i3/config
+    cp $CWD/../../config/i3/vm/config /home/$UTILISATEUR/.config/i3/config
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-    cp $CWD/../config/i3/*.sh /home/$UTILISATEUR/.config/i3/.
+    cp $CWD/../../config/i3/*.sh /home/$UTILISATEUR/.config/i3/.
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/i3
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
@@ -208,11 +208,11 @@ if [ ! -z "$(ls -A /home)" ]; then
         if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
         chown $UTILISATEUR:users /home/$UTILISATEUR/.config/polybar
     fi
-    cp $CWD/../config/polybar/vm/config /home/$UTILISATEUR/.config/polybar/config
+    cp $CWD/../../config/polybar/vm/config /home/$UTILISATEUR/.config/polybar/config
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-    cp $CWD/../config/polybar/*.sh /home/$UTILISATEUR/.config/polybar/.
+    cp $CWD/../../config/polybar/*.sh /home/$UTILISATEUR/.config/polybar/.
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
-    cp $CWD/../config/polybar/*.env /home/$UTILISATEUR/.config/polybar/.
+    cp $CWD/../../config/polybar/*.env /home/$UTILISATEUR/.config/polybar/.
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/polybar
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
@@ -223,7 +223,7 @@ if [ ! -z "$(ls -A /home)" ]; then
         if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
         chown $UTILISATEUR:users /home/$UTILISATEUR/.config/polybar/i3lock-fancy
     fi
-    cp $CWD/../config/polybar/i3lock-fancy/* /home/$UTILISATEUR/.config/polybar/i3lock-fancy/.
+    cp $CWD/../../config/polybar/i3lock-fancy/* /home/$UTILISATEUR/.config/polybar/i3lock-fancy/.
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/polybar/i3lock-fancy
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
@@ -246,7 +246,7 @@ if [ ! -z "$(ls -A /home)" ]; then
         if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
         chown $UTILISATEUR:users /home/$UTILISATEUR/.config/dunst
     fi
-    cp $CWD/../config/dunst/* /home/$UTILISATEUR/.config/dunst/.
+    cp $CWD/../../config/dunst/* /home/$UTILISATEUR/.config/dunst/.
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/dunst
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
@@ -257,7 +257,7 @@ if [ ! -z "$(ls -A /home)" ]; then
         if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
         chown $UTILISATEUR:users /home/$UTILISATEUR/.config/ranger
     fi
-    cp $CWD/../config/ranger/* /home/$UTILISATEUR/.config/ranger/.
+    cp $CWD/../../config/ranger/* /home/$UTILISATEUR/.config/ranger/.
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/ranger
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
@@ -269,14 +269,14 @@ if [ ! -z "$(ls -A /home)" ]; then
         if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
         chown $UTILISATEUR:users /home/$UTILISATEUR/.config/rofi
     fi
-    cp $CWD/../config/rofi/* /home/$UTILISATEUR/.config/rofi/.
+    cp $CWD/../../config/rofi/* /home/$UTILISATEUR/.config/rofi/.
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     chown -R $UTILISATEUR:users /home/$UTILISATEUR/.config/rofi
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
 
     
     #Xresources
-    cp $CWD/../config/Xresources /home/$UTILISATEUR/.Xresources
+    cp $CWD/../../config/Xresources /home/$UTILISATEUR/.Xresources
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi
     chown -R $UTILISATEUR:users /home/$UTILISATEUR/.Xresources
     if [ $? -ne 0 ]; then logMessage "1" "${msg_log}" ; fi

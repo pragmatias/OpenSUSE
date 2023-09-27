@@ -6,7 +6,7 @@ lftp
 links
 man-pages
 man-pages-fr
-man-pages-fr-extra
+#man-pages-fr-extra
 mlocate
 ncftp
 net-tools-deprecated
@@ -42,19 +42,19 @@ flash-player
 MozillaThunderbird
 MozillaThunderbird-translations-common
 nextcloud-client
-nextcloud-client-dolphin
+#nextcloud-client-dolphin
 nextcloud-client-doc
 nextcloud-client-lang
 qbittorrent
 qbittorrent-nox
-vivaldi
+#vivaldi
 chromium
 chromium-ffmpeg-extra
 
 # Developpement
 sublime-text
 kate
-code
+#code
 
 # Graphisme
 gimp
