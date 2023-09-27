@@ -2,7 +2,7 @@
 
 Add Leap VM configuration (Virtual Machine) with a minimal install & I3-gaps
 Modify Tumbleweed configuration with KDE default install & I3-gaps
-Modify Yast/Zypper conf with "--no-recommend"
+Modify Yast/Zypper conf with "--no-recommends"
 
 <h1 align="center">OpenSUSE Tumbleweed</h1>
 
@@ -38,7 +38,7 @@ All the work is based on the following resources :
 
 ### Requirement
  1. Install [OpenSUSE Tumbleweed](https://software.opensuse.org/distributions/tumbleweed) with the [KDE/Plasma Desktop](https://www.kde.org/plasma-desktop)
- 2. Install [GIT](https://git-scm.com/) : `sudo zypper in --no-recommend git`
+ 2. Install [GIT](https://git-scm.com/) : `sudo zypper in --no-recommends git`
  3. Get this git [repository](https://github.com/pragmatias/OpenSUSE) : `git clone https://github.com/pragmatias/OpenSUSE.git ~/tmp_install`
  4. Go to the scripts folder : `cd ~/tmp_install/scripts`
 
